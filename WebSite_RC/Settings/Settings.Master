@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Settings.master.cs" Inherits="WebSite.Settings.Settings" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="HeadSettings" runat="server">
+    
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="formSettings" runat="server">
+ 
+    <ajax:ToolkitScriptManager ID="ToolkitScriptManager" runat="server">
+    </ajax:ToolkitScriptManager>
+    <div>
+        <asp:ContentPlaceHolder ID="BodySettings" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

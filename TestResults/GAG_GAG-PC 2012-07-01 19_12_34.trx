@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="86d1eb04-0496-4a05-9586-7ab7e8ffeb55" name="GAG@GAG-PC 2012-07-01 19:12:34" runUser="GAG-PC\GAG" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="9e31ffdc-08ce-4399-8c6e-782a089cc61a">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="GAG_GAG-PC 2012-07-01 19_12_34">
+      <DeploymentItem filename="D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\Ultilitarios\bin\Debug\Ultilitarios.dll" />
+      <DeploymentItem filename="D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\bin\Debug\DataAcess.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-07-01T19:12:34.1414834-03:00" queuing="2012-07-01T19:12:48.9932527-03:00" start="2012-07-01T19:12:49.1782622-03:00" finish="2012-07-01T19:13:29.2403374-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AgruparPorEstado_Test" storage="d:\gustavo\dropbox\z.trabalhos\5. fundação iolanda pasca (fip)\fip_rc_desing\projetodeteste\bin\debug\projetodeteste.dll" id="ad8c38fc-9872-0ea3-99be-3747c9fafaad">
+      <Execution id="4330ec54-721c-4f74-931b-f113ad5bb21e" />
+      <TestMethod codeBase="D:/Gustavo/Dropbox/z.Trabalhos/5. Fundação Iolanda Pasca (FIP)/FIP_RC_Desing/ProjetoDeTeste/bin/Debug/ProjetoDeTeste.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjetoDeTeste.Usuario_Test, ProjetoDeTeste, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AgruparPorEstado_Test" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ad8c38fc-9872-0ea3-99be-3747c9fafaad" executionId="4330ec54-721c-4f74-931b-f113ad5bb21e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4330ec54-721c-4f74-931b-f113ad5bb21e" testId="ad8c38fc-9872-0ea3-99be-3747c9fafaad" testName="AgruparPorEstado_Test" computerName="GAG-PC" duration="00:00:36.8634133" startTime="2012-07-01T19:12:49.3102691-03:00" endTime="2012-07-01T19:13:27.8122634-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4330ec54-721c-4f74-931b-f113ad5bb21e">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ProjetoDeTeste.Usuario_Test.AgruparPorEstado_Test threw exception: 
+System.ArgumentException: The specified named connection is either not found in the configuration, not intended to be used with the EntityClient provider, or not valid.</Message>
+          <StackTrace>    at System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   at System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   at System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   at System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   at DataAcess.Context..ctor() in D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\DataModel.Designer.cs:line 59
+   at DataAcess.Usuario.AgruparPorEstado() in D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\Usuario.cs:line 181
+   at ProjetoDeTeste.Usuario_Test.AgruparPorEstado_Test() in D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\ProjetoDeTeste\Clases.cs:line 74
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

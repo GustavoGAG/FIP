@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ADOContextStoreContainer" CdmEntityContainer="Context">
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Status)">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deficiencia">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Deficiencia)">
+        <MappingFragment StoreEntitySet="Deficiencia">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Responsavel">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Responsavel)">
+        <MappingFragment StoreEntitySet="Responsavel">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Identidade" ColumnName="Identidade" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pesquisa">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Pesquisa)">
+        <MappingFragment StoreEntitySet="Pesquisa">
+          <ScalarProperty Name="MesGravidez" ColumnName="MesGravidez" />
+          <ScalarProperty Name="EstaGravida" ColumnName="EstaGravida" />
+          <ScalarProperty Name="BolsaFamilia" ColumnName="BolsaFamilia" />
+          <ScalarProperty Name="Inss" ColumnName="Inss" />
+          <ScalarProperty Name="RecebePensaoAlimenticia" ColumnName="RecebePensaoAlimenticia" />
+          <ScalarProperty Name="JaEstudou" ColumnName="JaEstudou" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuDeficiencia">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.UsuDeficiencia)">
+        <MappingFragment StoreEntitySet="UsuDeficiencia">
+          <ScalarProperty Name="IdDeficiencia" ColumnName="IdDeficiencia" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoMatricula">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.MotivoMatricula)">
+        <MappingFragment StoreEntitySet="MotivoMatricula">
+          <ScalarProperty Name="Motivo" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CertidaoNascimento">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.CertidaoNascimento)">
+        <MappingFragment StoreEntitySet="CertidaoNascimento">
+          <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+          <ScalarProperty Name="DataCertidao" ColumnName="DataCertidao" />
+          <ScalarProperty Name="Cartorio" ColumnName="Cartorio" />
+          <ScalarProperty Name="Folha" ColumnName="Folha" />
+          <ScalarProperty Name="Livro" ColumnName="Livro" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Usuario)">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="NomeMae" ColumnName="NomeMae" />
+          <ScalarProperty Name="NomePai" ColumnName="NomePai" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="IdResponsavel" ColumnName="IdResponsavel" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+          <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+          <ScalarProperty Name="IdMotivoMatricula" ColumnName="IdMotivoMatricula" />
+          <ScalarProperty Name="IdPesquisa" ColumnName="IdPesquisa" />
+          <ScalarProperty Name="IdCertidao" ColumnName="IdCertidao" />
+          <ScalarProperty Name="Cep" ColumnName="Cep" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="OrgaoEmissor" ColumnName="OrgaoEmissor" />
+          <ScalarProperty Name="Identidade" ColumnName="Identidade" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SerieEscola">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.SerieEscola)">
+        <MappingFragment StoreEntitySet="SerieEscola">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EscolaEscolhida">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.EscolaEscolhida)">
+        <MappingFragment StoreEntitySet="EscolaEscolhida">
+          <ScalarProperty Name="IdEscolaOrigem" ColumnName="IdEscolaEscolhida" />
+          <ScalarProperty Name="IdSerieAtual" ColumnName="IdSerieEscola" />
+          <ScalarProperty Name="IdEscolaDestino" ColumnName="IdEscolaDestino" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConselhoTutelar">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.ConselhoTutelar)">
+        <MappingFragment StoreEntitySet="ConselhoTutelar">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Cep" ColumnName="Cep" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Estado)">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cidade">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Cidade)">
+        <MappingFragment StoreEntitySet="Cidade">
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bairro">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Bairro)">
+        <MappingFragment StoreEntitySet="Bairro">
+          <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Escola">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Escola)">
+        <MappingFragment StoreEntitySet="Escola">
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+          <ScalarProperty Name="IdTipoEscola" ColumnName="IdTipoEscola" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Administrador">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Administrador)">
+        <MappingFragment StoreEntitySet="Administrador">
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+          <ScalarProperty Name="Organizacao" ColumnName="Organizao" />
+          <ScalarProperty Name="AutorRemoveu" ColumnName="AutoRemoveu" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="DataRemovido" ColumnName="DataRemovido" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEscola">
+      <EntityTypeMapping TypeName="IsTypeOf(DataAcess.TipoEscola)">
+        <MappingFragment StoreEntitySet="TipoEscola">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

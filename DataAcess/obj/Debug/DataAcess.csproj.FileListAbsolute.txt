@@ -1,0 +1,16 @@
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\bin\Debug\DataAcess.dll.config
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\bin\Debug\DataAcess.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\bin\Debug\DataAcess.pdb
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\bin\Debug\Ultilitarios.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\bin\Debug\Ultilitarios.pdb
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\obj\Debug\ResolveAssemblyReference.cache
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\obj\Debug\DataAcess.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\DataAcess\obj\Debug\DataAcess.pdb
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\bin\Debug\DataAcess.dll.config
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\bin\Debug\DataAcess.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\bin\Debug\DataAcess.pdb
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\bin\Debug\Ultilitarios.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\bin\Debug\Ultilitarios.pdb
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\obj\Debug\ResolveAssemblyReference.cache
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\obj\Debug\DataAcess.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\obj\Debug\DataAcess.pdb

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ADOContext.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ADOContextStoreContainer">
+    <EntitySet Name="Administrador" EntityType="ADOContext.Store.Administrador" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Bairro" EntityType="ADOContext.Store.Bairro" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="CertidaoNascimento" EntityType="ADOContext.Store.CertidaoNascimento" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Cidade" EntityType="ADOContext.Store.Cidade" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="ConselhoTutelar" EntityType="ADOContext.Store.ConselhoTutelar" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Deficiencia" EntityType="ADOContext.Store.Deficiencia" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Escola" EntityType="ADOContext.Store.Escola" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="EscolaEscolhida" EntityType="ADOContext.Store.EscolaEscolhida" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Estado" EntityType="ADOContext.Store.Estado" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="MotivoMatricula" EntityType="ADOContext.Store.MotivoMatricula" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Pesquisa" EntityType="ADOContext.Store.Pesquisa" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Responsavel" EntityType="ADOContext.Store.Responsavel" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="SerieEscola" EntityType="ADOContext.Store.SerieEscola" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Status" EntityType="ADOContext.Store.Status" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="TipoEscola" EntityType="ADOContext.Store.TipoEscola" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="Usuario" EntityType="ADOContext.Store.Usuario" store:Type="Tables" Schema="site_" />
+    <EntitySet Name="UsuDeficiencia" EntityType="ADOContext.Store.UsuDeficiencia" store:Type="Tables" Schema="site_" />
+  </EntityContainer>
+  <EntityType Name="Administrador">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+    <Property Name="Login" Type="varchar(max)" Nullable="false" />
+    <Property Name="Senha" Type="varchar(max)" Nullable="false" />
+    <Property Name="DataNascimento" Type="datetime" />
+    <Property Name="Cpf" Type="varchar(max)" Nullable="false" />
+    <Property Name="Telefone" Type="varchar(max)" />
+    <Property Name="Celular" Type="varchar(max)" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="Organizao" Type="varchar(max)" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="IdBairro" Type="bigint" Nullable="false" />
+    <Property Name="AutoRemoveu" Type="varchar(max)" />
+    <Property Name="DataRemovido" Type="datetime" />
+    <Property Name="Ativo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bairro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" />
+    <Property Name="IdCidade" Type="int" />
+  </EntityType>
+  <EntityType Name="CertidaoNascimento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Numero" Type="varchar" MaxLength="20" />
+    <Property Name="Livro" Type="varchar" MaxLength="20" />
+    <Property Name="Folha" Type="varchar" MaxLength="20" />
+    <Property Name="Cartorio" Type="varchar" MaxLength="255" />
+    <Property Name="DataCertidao" Type="datetime" />
+    <Property Name="IdCidade" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cidade">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Sigla" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ConselhoTutelar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+    <Property Name="Endereco" Type="varchar(max)" />
+    <Property Name="Telefone" Type="varchar(max)" />
+    <Property Name="Cep" Type="varchar(max)" />
+    <Property Name="Fax" Type="varchar(max)" />
+    <Property Name="IdBairro" Type="bigint" Nullable="false" />
+    <Property Name="Tipo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Deficiencia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Escola">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+    <Property Name="Telefone" Type="varchar(max)" />
+    <Property Name="Fax" Type="varchar(max)" />
+    <Property Name="Endereco" Type="varchar(max)" />
+    <Property Name="IdTipoEscola" Type="int" Nullable="false" />
+    <Property Name="IdBairro" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EscolaEscolhida">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="bigint" />
+    <Property Name="IdEscolaEscolhida" Type="int" />
+    <Property Name="IdEscolaDestino" Type="int" />
+    <Property Name="IdSerieEscola" Type="int" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+    <Property Name="Sigla" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="MotivoMatricula">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Pesquisa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JaEstudou" Type="varchar(max)" />
+    <Property Name="RecebePensaoAlimenticia" Type="varchar(max)" />
+    <Property Name="Inss" Type="varchar(max)" />
+    <Property Name="BolsaFamilia" Type="varchar(max)" />
+    <Property Name="EstaGravida" Type="varchar(max)" />
+    <Property Name="MesGravidez" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Responsavel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+    <Property Name="Cpf" Type="varchar(max)" Nullable="false" />
+    <Property Name="Identidade" Type="varchar(max)" />
+    <Property Name="Celular" Type="varchar(max)" />
+    <Property Name="Telefone" Type="varchar(max)" />
+    <Property Name="Email" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="SerieEscola">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoEscola">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+    <Property Name="Cpf" Type="varchar(max)" />
+    <Property Name="DataNascimento" Type="datetime" Nullable="false" />
+    <Property Name="Sexo" Type="varchar(max)" Nullable="false" />
+    <Property Name="Identidade" Type="varchar(max)" />
+    <Property Name="OrgaoEmissor" Type="varchar(max)" />
+    <Property Name="Endereco" Type="varchar(max)" />
+    <Property Name="Cep" Type="varchar(max)" />
+    <Property Name="IdCertidao" Type="int" />
+    <Property Name="IdPesquisa" Type="int" />
+    <Property Name="IdMotivoMatricula" Type="int" Nullable="false" />
+    <Property Name="IdCidade" Type="int" Nullable="false" />
+    <Property Name="IdStatus" Type="int" Nullable="false" />
+    <Property Name="IdBairro" Type="bigint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdResponsavel" Type="bigint" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="NomePai" Type="varchar(max)" />
+    <Property Name="NomeMae" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="UsuDeficiencia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="bigint" />
+    <Property Name="IdDeficiencia" Type="int" />
+  </EntityType>
+</Schema>
