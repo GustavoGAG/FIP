@@ -4,7 +4,35 @@
 <asp:Content ID="HeadMatricula" ContentPlaceHolderID="HeadMain" runat="server">
 </asp:Content>
 <asp:Content ID="BodyMatricula" ContentPlaceHolderID="BodyMain" runat="server">
-    <div runat="server" id="divAlert" visible="false" class="alerta">
+    <asp:UpdatePanel    runat="server">
+        
+        <ContentTemplate>
+            <script type="text/javascript">
+                var mascaras = $( function ()
+                {
+                    $( ".data" ).wijinputdate( 
+                {
+                    smartInputMode: false,
+                    dateFormat: "dd/MM/yyyy",
+                    culture: "pt-BR",
+                    showNullText: true,
+                    startYear: 1950,
+                    disableUserInput: false,
+                    keyDelay: 2000
+
+                } );
+
+
+
+                    $( ".cep" ).wijinputmask( { mask: "99999-999" } );
+                    $( ".telefone" ).wijinputmask( { mask: "(99)9999-9999" } );
+                    $( ".cpf" ).wijinputmask( { mask: "999.999.999-99" } );
+
+                } );
+        
+            </script>
+            
+             <div runat="server" id="divAlert" visible="false" class="alerta">
     </div>
     <section class="caixa1">
         <h3>
@@ -45,8 +73,7 @@
                 AutoCompleteType="None" />
         </div>
         <!-- Sexo -->
-        <asp:UpdatePanel ID="upSexo" runat="server">
-            <ContentTemplate>
+        
                 <div class="field">
                     <asp:Label ID="lblSexo" runat="server" class="lb1" Text="Sexo" />
                     <asp:DropDownList ID="ddlSexo" class="input2" runat="server" ToolTip="Sexo do Aluno"
@@ -59,8 +86,7 @@
                         SetFocusOnError="true" ControlToValidate="ddlSexo" InitialValue="0" Display="Dynamic"
                         ToolTip="Qual é seu sexo?" ValidationGroup="MtriculaVG" />
                 </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
+       
         <!-- Data Nascimento -->
         <div class="field">
             <asp:Label runat="server" class="lb1" AssociatedControlID="TxtDataNascimento" Text="Data de Nascimento:"
@@ -96,9 +122,7 @@
             <asp:TextBox ID="tbFolha" AutoCompleteType="None" class="input2" runat="server" MaxLength="10"
                 ToolTip="Livro em que foi Lavrado"></asp:TextBox>
         </div>
-        <asp:UpdatePanel ID="upCertidao" ChildrenAsTriggers="true" RenderMode="Block" UpdateMode="Always"
-            runat="server">
-            <ContentTemplate>
+     
                 <%--Estado Natal--%>
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Estado Natal:" ID="lblEstadoNatal" />
@@ -120,8 +144,7 @@
                         SetFocusOnError="true" ControlToValidate="ddlCidadeNatal" InitialValue="0" Display="Dynamic"
                         ValidationGroup="MtriculaVG" />
                 </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
+     
         <%--DataCertidao--%>
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="Data da Certidão:" ID="lblDataCertidao" />
@@ -139,8 +162,7 @@
             <asp:TextBox ID="txtEndereco" class="input" runat="server" MaxLength="150" required="Digite seu endereço atual"
                 ToolTip="Endereco em que reside. Ex.Rua Dois Irmãos, n 01" AutoCompleteType="HomeStreetAddress" />
         </div>
-        <asp:UpdatePanel ID="upEndereco" runat="server">
-            <ContentTemplate>
+ 
                 <%--Estado--%>
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Estado:" ID="lblEstado" />
@@ -169,8 +191,7 @@
                         SetFocusOnError="true" ControlToValidate="ddlBairro" InitialValue="0" Display="Dynamic"
                         ValidationGroup="MtriculaVG" />
                 </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
+         
         <%--CEP--%>
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="CEP:" ID="lblCep" />
@@ -179,8 +200,7 @@
         </div>
     </section>
     <%--Pais e Responsavel--%>
-    <asp:UpdatePanel ID="upResponsavel" runat="server">
-        <ContentTemplate>
+   
             <div>
                 <h3>
                     Dados dos Pais</h3>
@@ -188,13 +208,14 @@
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="Nome da Mãe:" ID="lblNomeCartorio" />
                         <asp:TextBox ID="TxtNomeMae" AutoCompleteType="None" class="input" runat="server"
-                            OnTextChanged="HabilitarCampoResponsavel" MaxLength="150" ToolTip="Nome da Mãe do Aluno"></asp:TextBox>
+                            OnTextChanged="HabilitarCampoResponsavel" AutoPostBack="True" MaxLength="150"
+                            ToolTip="Nome da Mãe do Aluno"></asp:TextBox>
                     </div>
                     <p />
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="Nome do Pai:" ID="lblPai" />
-                        <asp:TextBox ID="txtPai" AutoCompleteType="None" class="input" runat="server" MaxLength="150"
-                            ToolTip="Nome do Pai do Aluno" OnTextChanged="HabilitarCampoResponsavel"></asp:TextBox>
+                        <asp:TextBox ID="txtPai" AutoPostBack="True" AutoCompleteType="None" class="input"
+                            runat="server" MaxLength="150" ToolTip="Nome do Pai do Aluno" OnTextChanged="HabilitarCampoResponsavel"></asp:TextBox>
                     </div>
                 </section>
                 <p />
@@ -223,7 +244,7 @@
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="CPF:" ID="lblCpfResponsavel" />
                         <asp:TextBox ID="txtCpfResponsavel" AutoCompleteType="None" ValidationGroup="MtriculaVG"
-                             class="input2 cpf" runat="server"  ToolTip="CPF do Responsavel pelo Aluno"></asp:TextBox>
+                            class="input2 cpf" MaxLength="14" runat="server" ToolTip="CPF do Responsavel pelo Aluno"></asp:TextBox>
                     </div>
                     <p />
                     <%--RG Responsavel--%>
@@ -248,14 +269,12 @@
                     </div>
                 </section>
             </div>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+ 
     <p />
     <h3>
         Responda a Pesquisa abaixo:</h3>
     <section class="caixa1">
-        <asp:UpdatePanel ID="upPesquisa1" runat="server">
-            <ContentTemplate>
+        
                 <%--  Ja Estudou--%>
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Já Estudou?" ID="lblJaestudou" />
@@ -297,69 +316,93 @@
                         <asp:ListItem Selected="False">09</asp:ListItem>
                     </asp:DropDownList>
                 </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
+       
     </section>
     <p />
-    <h3>
-        .</h3>
-    <p />
-    <section class="caixa1">
-        <%--Pensao Alimenticia--%>
-        <div class="field1">
-            <asp:Label runat="server" class="lb1" Text="Recebe Pensão?" ID="lblpensao" />
-            <asp:RadioButtonList ID="RBLPensãoAlimenticia" required="Selecione uma opção." runat="server"
-                RepeatDirection="Horizontal">
-                <asp:ListItem>SIM</asp:ListItem>
-                <asp:ListItem>NÃO</asp:ListItem>
-            </asp:RadioButtonList>
-        </div>
-        <p />
-        <%--INSS--%>
-        <div class="field1">
-            <asp:Label runat="server" class="lb1" Text="Recebe INSS?" ID="lblInss" />
-            <asp:RadioButtonList ID="RBLINSS" runat="server" RepeatDirection="Horizontal">
-                <asp:ListItem>SIM</asp:ListItem>
-                <asp:ListItem>NÃO</asp:ListItem>
-            </asp:RadioButtonList>
-        </div>
-        <p />
-        <%--Rio Card--%>
-        <div class="field1">
-            <asp:Label runat="server" class="lb1" Text="Tem Rio Card?" ID="Label1" />
-            <asp:RadioButtonList ID="RBLRioCard" runat="server" RepeatDirection="Horizontal">
-                <asp:ListItem>SIM</asp:ListItem>
-                <asp:ListItem>NÃO</asp:ListItem>
-            </asp:RadioButtonList>
-        </div>
-        <p />
-        <%--Bolsa Familia--%>
-        <div class="field1">
-            <asp:Label runat="server" class="lb1" Text="Recebe Bolsa Familia?" ID="lblBolsaFammilia" />
-            <asp:RadioButtonList ID="RBLBolsaFamilia" runat="server" Height="26px" RepeatDirection="Horizontal">
-                <asp:ListItem>SIM</asp:ListItem>
-                <asp:ListItem>NÃO</asp:ListItem>
-            </asp:RadioButtonList>
-        </div>
-        <p />
-        <br />
-        <%--Deficiencia--%>
-        <div class="field1">
-            <asp:Label runat="server" class="lb1" Text="Possui alguma Deficiência?" ID="LblDeficiencia" />
-            <asp:RadioButtonList ID="RBLDeficiente" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ExibirEOcultarDeficiencia"
-                RepeatDirection="Horizontal">
-                <asp:ListItem>SIM</asp:ListItem>
-                <asp:ListItem>NÃO</asp:ListItem>
-            </asp:RadioButtonList>
-        </div>
-        <div class="field1">
-            <asp:CheckBoxList ID="CblDeficiencia" Visible="false" runat="server" RepeatColumns="3"
-                RepeatDirection="Horizontal" RepeatLayout="Table">
-            </asp:CheckBoxList>
-        </div>
-    </section>
+  
+            <h3>
+                .</h3>
+            <p />
+            <section class="caixa1">
+                <%--Pensao Alimenticia--%>
+                <div class="field">
+                    <asp:Label runat="server" class="lb1" Text="Recebe Pensão?" ID="lblpensao" />
+                    <asp:RadioButtonList ID="RBLPensãoAlimenticia" required="Selecione uma opção." runat="server"
+                        RepeatDirection="Horizontal">
+                        <asp:ListItem>SIM</asp:ListItem>
+                        <asp:ListItem>NÃO</asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <p />
+                <%--INSS--%>
+                <div class="field">
+                    <asp:Label runat="server" class="lb1" Text="Recebe INSS?" ID="lblInss" />
+                    <asp:RadioButtonList ID="RBLINSS" runat="server" RepeatDirection="Horizontal">
+                        <asp:ListItem>SIM</asp:ListItem>
+                        <asp:ListItem>NÃO</asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <p />
+                <%--Rio Card--%>
+                <div class="field">
+                    <asp:Label runat="server" class="lb1" Text="Tem Rio Card?" ID="Label1" />
+                    <asp:RadioButtonList ID="RBLRioCard" runat="server" RepeatDirection="Horizontal">
+                        <asp:ListItem>SIM</asp:ListItem>
+                        <asp:ListItem>NÃO</asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <p />
+                <%--Bolsa Familia--%>
+                <div class="field">
+                    <asp:Label runat="server" class="lb1" Text="Recebe Bolsa Familia?" ID="lblBolsaFammilia" />
+                    <asp:RadioButtonList ID="RBLBolsaFamilia" runat="server" Height="26px" RepeatDirection="Horizontal">
+                        <asp:ListItem>SIM</asp:ListItem>
+                        <asp:ListItem>NÃO</asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <p />
+                <br />
+                <%--Deficiencia--%>
+                <div class="field">
+                    <asp:Label runat="server" class="lb1" Text="Possui alguma Deficiência?" ID="LblDeficiencia" />
+                    <asp:RadioButtonList ID="RBLDeficiente" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ExibirEOcultarDeficiencia"
+                        RepeatDirection="Horizontal">
+                        <asp:ListItem>SIM</asp:ListItem>
+                        <asp:ListItem>NÃO</asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="field">
+                    <asp:CheckBoxList ID="CblDeficiencia" Visible="false" runat="server" RepeatColumns="3"
+                        RepeatDirection="Horizontal" RepeatLayout="Table">
+                    </asp:CheckBoxList>
+                </div>
+            </section>
+            <p />
+            <%--Finalizar Matricula--%>
+            <section class="caixa1">
+                <%--  Termos--%>
+                <div class="field">
+                    <asp:TextBox runat="server" ID="txtTermo" Rows="5" class="input" Enabled="false"
+                        Visible="true" TextMode="MultiLine" Width="600" ReadOnly="true">
+Eu responsável pela criança citada acima, autorizo ao presidente da fundação cultural social esportivo e comunitário de educação Iolanda da Páscoa Ferreira, Sr. Moisés Ferreira RG: 07681664-4/IFP, CPF: 816.490.457-00, a pleitear uma vaga na creche, escola pública ou faculdade para o meu filho.
+                    </asp:TextBox>
+                </div>
+                <%--Aceitar--%>
+                <div class="field">
+                    <asp:CheckBox ID="ckTermo" runat="server" AutoPostBack="true" OnCheckedChanged="AceitarTermo"
+                        Text="Aceitos os Termos acima" Checked="false" />
+                </div>
+                <p />
+                <%-- Botao--%>
+                <div class="field">
+                    <asp:Button ID="btnMatricularse" Enabled="false" CssClass="button" runat="server"
+                        ValidationGroup="MtriculaVG" Text="Go" OnClick="Matricularse" />
+                </div>
+            </section>
+        </ContentTemplate>
+    </asp:UpdatePanel>
     <%--Area Escola--%>
-    <asp:Panel ID="pnEscola" Visible="false" Enabled="false" runat="server" >
+    <asp:Panel ID="pnEscola" Visible="false" Enabled="false" runat="server">
         <h3>
             Escola Pretendida</h3>
         <section class="caixa1">
@@ -421,26 +464,4 @@
             </div>
         </section>
     </asp:Panel>
-    <p />
-    <%--Finalizar Matricula--%>
-    <section class="caixa1">
-        <%--  Termos--%>
-        <div class="field1">
-            <asp:TextBox runat="server" ID="txtTermo" Rows="5" class="input" Enabled="false"
-                Visible="true" TextMode="MultiLine" Width="600" ReadOnly="true">
-Eu responsável pela criança citada acima, autorizo ao presidente da fundação cultural social esportivo e comunitário de educação Iolanda da Páscoa Ferreira, Sr. Moisés Ferreira RG: 07681664-4/IFP, CPF: 816.490.457-00, a pleitear uma vaga na creche, escola pública ou faculdade para o meu filho.
-            </asp:TextBox>
-        </div>
-        <%--Aceitar--%>
-        <div class="field1">
-            <asp:CheckBox ID="ckTermo" runat="server" AutoPostBack="true" OnCheckedChanged="AceitarTermo"
-                Text="Aceitos os Termos acima" Checked="false" />
-        </div>
-        <p />
-        <%-- Botao--%>
-        <div class="field1">
-            <asp:Button ID="btnMatricularse" Enabled="false" CssClass="button" runat="server"
-                ValidationGroup="MtriculaVG" Text="Go" OnClick="Matricularse" />
-        </div>
-    </section>
 </asp:Content>

@@ -14,3 +14,11 @@ D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAce
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\obj\Debug\ResolveAssemblyReference.cache
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\obj\Debug\DataAcess.dll
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\DataAcess\obj\Debug\DataAcess.pdb
+D:\Gustavo\GitHub\FIP\DataAcess\bin\Debug\DataAcess.dll.config
+D:\Gustavo\GitHub\FIP\DataAcess\bin\Debug\DataAcess.dll
+D:\Gustavo\GitHub\FIP\DataAcess\bin\Debug\DataAcess.pdb
+D:\Gustavo\GitHub\FIP\DataAcess\bin\Debug\Ultilitarios.dll
+D:\Gustavo\GitHub\FIP\DataAcess\bin\Debug\Ultilitarios.pdb
+D:\Gustavo\GitHub\FIP\DataAcess\obj\Debug\ResolveAssemblyReference.cache
+D:\Gustavo\GitHub\FIP\DataAcess\obj\Debug\DataAcess.dll
+D:\Gustavo\GitHub\FIP\DataAcess\obj\Debug\DataAcess.pdb

@@ -2,24 +2,23 @@
 <publishData>
   <publishProfile publishUrl="ftp://fip24hr.com.br/apoiodematricula" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="FIP 24H" publishMethod="FTP" replaceMatchingFiles="True" userName="Gag" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3YZWCSludUqRJgmg4kBSEAAAAAACAAAAAAAQZgAAAAEAACAAAABeeaTYRaf88siaFofVrkNoZPmMJOC4yHti5d7RG+yZzgAAAAAOgAAAAAIAACAAAABCJ7pDk/tn1RvQ5v7yW1NJ68pFZvdRw9YQcpMejt2OBiAAAAAVHww+qnhmQAmyUiS8VyeTXN6gVWUYcUpUw7+PAQ/JL0AAAAC+gNWOpxtstVqu1y5ARB5QXVXTKKAsXOZxtjZ+PRJ81EgV7Yd9GC6l/q48CsJzN6iFFajR+Iy79jylJHmkG0Gv" SelectedForPublish="True">
     <file relUrl="Midia/Img/imagens/wrapbg.png" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Midia/Img/imagens/footerbg3.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Index.aspx" publishTime="06/27/2012 10:58:03" />
-    <file relUrl="Matricula.aspx" publishTime="07/02/2012 00:06:11" />
-    <file relUrl="Midia/Img/imagens/wraptop.jpg" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Midia/CSS/style.css" publishTime="06/28/2012 01:01:36" />
-    <file relUrl="Sobre.aspx" publishTime="06/26/2012 17:44:16" />
+    <file relUrl="Midia/CSS/style.css" publishTime="08/01/2012 01:12:02" />
+    <file relUrl="Sobre.aspx" publishTime="07/31/2012 02:06:42" />
+    <file relUrl="Midia/Img/imagens/rp.jpg" publishTime="06/26/2012 22:49:30" />
     <file relUrl="WebSite_RC.csproj" publishTime="07/24/2012 20:40:11" />
-    <file relUrl="bin/Ultilitarios.dll" publishTime="07/30/2012 09:38:21" />
+    <file relUrl="bin/Ultilitarios.dll" publishTime="08/01/2012 01:04:32" />
     <file relUrl="Midia/Img/imagens/footerimgbg.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/top.jpg" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Web.config" publishTime="07/13/2012 23:48:55" />
-    <file relUrl="Midia/Img/imagens/logo1.jpg" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Midia/Img/imagens/sidebarli2.gif" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Web.config" publishTime="08/01/2012 23:05:36" />
     <file relUrl="Assemblies/MySql.Web.dll" publishTime="07/10/2012 20:33:47" />
     <file relUrl="Settings/Bairro_CDT.aspx.designer.cs" publishTime="05/18/2012 21:31:16" />
     <file relUrl="Midia/Img/imagens/headerbg.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/footerblockdiv.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="icon.ico" publishTime="07/05/2012 01:19:19" />
     <file relUrl="Midia/Img/imagens/normalheader.jpg" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Settings/Cidade_CDT.aspx.cs" publishTime="06/19/2012 23:13:22" />
     <file relUrl="Public/EstatisticaCadastro.aspx.designer.cs" publishTime="07/02/2012 00:04:37" />
     <file relUrl="WebSite_RC.csproj.user" publishTime="07/24/2012 20:40:11" />
     <file relUrl="Midia/Img/imagens/footerbg.png" publishTime="06/25/2012 20:39:45" />
@@ -27,21 +26,21 @@
     <file relUrl="Settings.cs" publishTime="06/10/2012 00:00:46" />
     <file relUrl="Properties/AssemblyInfo.cs" publishTime="07/05/2012 01:23:10" />
     <file relUrl="Settings/Settings.Master" publishTime="05/24/2012 20:51:08" />
+    <file relUrl="App.Config" publishTime="07/06/2012 09:20:24" />
     <file relUrl="Public/Lista_Escola.aspx" publishTime="06/17/2012 14:32:12" />
     <file relUrl="Midia/Img/imagens/gradienttext.png" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="bin/WebSite.dll" publishTime="07/30/2012 09:38:38" />
     <file relUrl="Matricula_Print.aspx.cs" publishTime="07/01/2012 16:59:25" />
     <file relUrl="Matricula_Print.aspx.designer.cs" publishTime="06/27/2012 12:34:32" />
     <file relUrl="Midia/Img/imagens/activemenu.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Modal.Master" publishTime="07/02/2012 00:18:45" />
-    <file relUrl="Public/EstatisticaCadastro.aspx.cs" publishTime="07/02/2012 02:01:32" />
     <file relUrl="Midia/JavaScript/Mascaras.js" publishTime="06/28/2012 21:17:04" />
     <file relUrl="Assemblies/MySql.Data.Entity.dll" publishTime="07/10/2012 20:33:47" />
-    <file relUrl="bin/Business.dll" publishTime="07/30/2012 09:38:36" />
+    <file relUrl="bin/Business.dll" publishTime="08/02/2012 00:58:06" />
     <file relUrl="Midia/Img/imagens/banner4.jpg" publishTime="06/27/2012 11:25:27" />
-    <file relUrl="Matricula.aspx.cs" publishTime="07/30/2012 09:38:13" />
+    <file relUrl="Matricula.aspx.cs" publishTime="08/02/2012 00:40:57" />
     <file relUrl="Midia/Img/imagens/ft2.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Properties/Settings.settings" publishTime="07/05/2012 01:30:53" />
+    <file relUrl="Modais/Modal_Estatistica.aspx.designer.cs" publishTime="07/02/2012 00:20:50" />
     <file relUrl="Midia/JavaScript/jquery.tools.min.js" publishTime="06/06/2012 01:25:02" />
     <file relUrl="Midia/Img/imagens/footerbg.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Settings/Escola_CDT.aspx.cs" publishTime="06/19/2012 23:13:36" />
@@ -49,21 +48,21 @@
     <file relUrl="Midia/Img/imagens/normalhtml.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Settings/Login.aspx" publishTime="06/05/2012 01:22:20" />
     <file relUrl="Public/Lista_Escola.aspx.cs" publishTime="06/19/2012 23:13:12" />
-    <file relUrl="Settings/Deficiencia_CDT.aspx.designer.cs" publishTime="05/20/2012 19:55:12" />
+    <file relUrl="Settings/Cidade_CDT.aspx.designer.cs" publishTime="05/18/2012 18:58:00" />
     <file relUrl="Settings/ConselhoTutelar_CDT.aspx.designer.cs" publishTime="05/13/2012 19:47:36" />
     <file relUrl="Midia/Img/imagens/normalhtml2.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/footerbg1.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Settings/Deficiencia_CDT.aspx" publishTime="06/17/2012 14:31:44" />
     <file relUrl="packages.config" publishTime="05/13/2012 15:33:48" />
     <file relUrl="Public/Lista_Escola.aspx.designer.cs" publishTime="06/01/2012 23:44:28" />
-    <file relUrl="Midia/CSS/Mascaras.css" publishTime="06/28/2012 22:13:19" />
+    <file relUrl="Midia/CSS/Mascaras.css" publishTime="08/02/2012 00:13:07" />
     <file relUrl="Midia/Img/imagens/htmlbg.jpg" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Settings/Login.aspx.designer.cs" publishTime="06/05/2012 00:46:20" />
     <file relUrl="Midia/Img/imagens/banner3.jpg" publishTime="06/27/2012 11:19:19" />
     <file relUrl="Midia/Img/imagens/sidebarh2.jpg" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Index.aspx.designer.cs" publishTime="06/26/2012 17:35:49" />
     <file relUrl="Midia/Img/imagens/footerbg61.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/quote.png" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Default.Master.designer.cs" publishTime="06/30/2012 20:01:01" />
+    <file relUrl="Default.Master.designer.cs" publishTime="07/31/2012 21:49:27" />
     <file relUrl="Settings/Settings.Master.cs" publishTime="06/19/2012 23:13:46" />
     <file relUrl="Midia/Img/imagens/whitebullet.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Modal.Master.cs" publishTime="07/02/2012 00:17:59" />
@@ -72,7 +71,6 @@
     <file relUrl="Settings/Deficiencia_CDT.aspx.cs" publishTime="06/19/2012 23:13:32" />
     <file relUrl="Web.Release.config" publishTime="05/12/2012 16:10:16" />
     <file relUrl="Properties/Settings.Designer.cs" publishTime="07/05/2012 01:29:27" />
-    <file relUrl="Settings/Cidade_CDT.aspx" publishTime="06/17/2012 14:31:26" />
     <file relUrl="Assemblies/MySql.Data.dll" publishTime="07/10/2012 20:33:46" />
     <file relUrl="Settings/Login.aspx.cs" publishTime="06/19/2012 23:13:42" />
     <file relUrl="Settings/ConselhoTutelar_CDT.aspx" publishTime="06/17/2012 14:31:32" />
@@ -82,52 +80,55 @@
     <file relUrl="Midia/Img/imagens/sidebarbg.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Settings/ConselhoTutelar_CDT.aspx.cs" publishTime="06/19/2012 23:13:26" />
     <file relUrl="Settings/Settings.Master.designer.cs" publishTime="07/05/2012 01:55:49" />
-    <file relUrl="Midia/Img/imagens/footerbg3.jpg" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Matricula.aspx" publishTime="08/02/2012 00:58:01" />
     <file relUrl="Modais/Modal_Estatistica.aspx.cs" publishTime="07/02/2012 02:01:32" />
     <file relUrl="Modal.Master.designer.cs" publishTime="07/02/2012 00:18:24" />
-    <file relUrl="Midia/Img/imagens/rp.jpg" publishTime="06/26/2012 22:49:30" />
-    <file relUrl="Settings/Cidade_CDT.aspx.designer.cs" publishTime="05/18/2012 18:58:00" />
-    <file relUrl="Public/EstatisticaCadastro.aspx" publishTime="07/02/2012 00:13:41" />
+    <file relUrl="Midia/Img/imagens/sidebarli2.gif" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Settings/Cidade_CDT.aspx" publishTime="06/17/2012 14:31:26" />
     <file relUrl="Contato.aspx.designer.cs" publishTime="06/27/2012 23:35:06" />
+    <file relUrl="Public/EstatisticaCadastro.aspx" publishTime="07/02/2012 00:13:41" />
+    <file relUrl="Public/EstatisticaCadastro.aspx.cs" publishTime="07/02/2012 02:01:32" />
     <file relUrl="google45dc922c57694e61.html" publishTime="07/15/2012 09:57:00" />
     <file relUrl="Default.Master.cs" publishTime="06/19/2012 23:12:50" />
     <file relUrl="Contato.aspx" publishTime="07/01/2012 18:10:33" />
     <file relUrl="Settings/Escola_CDT.aspx.designer.cs" publishTime="07/05/2012 01:56:08" />
     <file relUrl="Settings/Bairro_CDT.aspx" publishTime="06/17/2012 14:31:18" />
-    <file relUrl="Modais/Modal_Estatistica.aspx" publishTime="07/02/2012 01:00:32" />
-    <file relUrl="Default.Master" publishTime="07/20/2012 01:05:53" />
-    <file relUrl="Matricula.aspx.designer.cs" publishTime="06/30/2012 20:09:27" />
+    <file relUrl="Default.Master" publishTime="08/02/2012 00:09:00" />
+    <file relUrl="Matricula.aspx.designer.cs" publishTime="08/02/2012 00:03:13" />
+    <file relUrl="Sobre.aspx.designer.cs" publishTime="07/31/2012 02:02:54" />
     <file relUrl="Index.aspx.cs" publishTime="06/19/2012 23:12:54" />
     <file relUrl="Sobre.aspx.cs" publishTime="06/26/2012 17:42:50" />
-    <file relUrl="Web.Debug.config" publishTime="05/12/2012 16:10:16" />
     <file relUrl="Midia/Img/imagens/ok.png" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Modais/Modal_Estatistica.aspx.designer.cs" publishTime="07/02/2012 00:20:50" />
-    <file relUrl="Index.aspx.designer.cs" publishTime="06/26/2012 17:35:49" />
-    <file relUrl="Settings/Cidade_CDT.aspx.cs" publishTime="06/19/2012 23:13:22" />
+    <file relUrl="Web.Debug.config" publishTime="05/12/2012 16:10:16" />
+    <file relUrl="Settings/Deficiencia_CDT.aspx.designer.cs" publishTime="05/20/2012 19:55:12" />
+    <file relUrl="Modais/Modal_Estatistica.aspx" publishTime="07/02/2012 01:00:32" />
+    <file relUrl="Midia/Img/imagens/wraptop.jpg" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Settings/Login.aspx.designer.cs" publishTime="06/05/2012 00:46:20" />
     <file relUrl="Contato.aspx.cs" publishTime="07/02/2012 01:32:15" />
-    <file relUrl="App.Config" publishTime="07/06/2012 09:20:24" />
-    <file relUrl="Sobre.aspx.designer.cs" publishTime="06/26/2012 17:42:50" />
+    <file relUrl="Midia/Img/imagens/logo1.jpg" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="bin/WebSite.dll" publishTime="08/02/2012 00:58:09" />
     <file relUrl="Matricula_Print.aspx" publishTime="07/02/2012 01:19:11" />
   </publishProfile>
   <publishProfile publishUrl="ftp://fip24hr.com.br/matricula24hr" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="FIP 24HR HMO" publishMethod="FTP" replaceMatchingFiles="False" userName="Gag" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3YZWCSludUqRJgmg4kBSEAAAAAACAAAAAAAQZgAAAAEAACAAAABkEMCY1b83fYfw0/9r4JHuB4G7ya20c5Qx667joWeRwAAAAAAOgAAAAAIAACAAAADcCFzyxACvIdJ/WRPnRSm0KYN/d1bj5aOiGiejVlfMIiAAAADt/sIaXAp34ck1ZAdxvSpkR5e907YECrlZfrSsvBKWFEAAAAAkSNs8AcYjH+mkb3qCeJhRJguietvWOZfxX7C1oayZDTAL0hAhDiKau2b89HWhON39ROzHHWzeUbNTpA57e0ab" SelectedForPublish="False">
     <file relUrl="Midia/Img/imagens/wrapbg.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/footerbg3.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Index.aspx" publishTime="06/27/2012 10:58:03" />
-    <file relUrl="Matricula.aspx" publishTime="07/02/2012 00:06:11" />
-    <file relUrl="Midia/Img/imagens/wraptop.jpg" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Midia/CSS/style.css" publishTime="06/28/2012 01:01:36" />
-    <file relUrl="Sobre.aspx" publishTime="06/26/2012 17:44:16" />
+    <file relUrl="Midia/CSS/style.css" publishTime="08/01/2012 01:12:02" />
+    <file relUrl="Settings/ConselhoTutelar_CDT.aspx.designer.cs" publishTime="05/13/2012 19:47:36" />
+    <file relUrl="Sobre.aspx" publishTime="07/31/2012 02:06:42" />
     <file relUrl="WebSite_RC.csproj" publishTime="07/24/2012 20:40:11" />
-    <file relUrl="bin/Ultilitarios.dll" publishTime="07/24/2012 19:47:43" />
+    <file relUrl="bin/Ultilitarios.dll" publishTime="08/01/2012 01:04:32" />
     <file relUrl="Midia/Img/imagens/footerimgbg.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/top.jpg" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Web.config" publishTime="07/24/2012 21:22:03" />
+    <file relUrl="Web.config" publishTime="08/01/2012 23:05:36" />
+    <file relUrl="Midia/Img/imagens/logo1.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Assemblies/MySql.Web.dll" publishTime="07/10/2012 20:33:47" />
     <file relUrl="Settings/Bairro_CDT.aspx.designer.cs" publishTime="05/18/2012 21:31:16" />
     <file relUrl="Midia/Img/imagens/headerbg.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/footerblockdiv.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="icon.ico" publishTime="07/05/2012 01:19:19" />
     <file relUrl="Midia/Img/imagens/normalheader.jpg" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Settings/Cidade_CDT.aspx.cs" publishTime="06/19/2012 23:13:22" />
     <file relUrl="Public/EstatisticaCadastro.aspx.designer.cs" publishTime="07/02/2012 00:04:37" />
     <file relUrl="WebSite_RC.csproj.user" publishTime="07/24/2012 20:40:11" />
     <file relUrl="Midia/Img/imagens/footerbg.png" publishTime="06/25/2012 20:39:45" />
@@ -135,20 +136,22 @@
     <file relUrl="Settings.cs" publishTime="06/10/2012 00:00:46" />
     <file relUrl="Properties/AssemblyInfo.cs" publishTime="07/05/2012 01:23:10" />
     <file relUrl="Settings/Settings.Master" publishTime="05/24/2012 20:51:08" />
-    <file relUrl="App.Config" publishTime="07/06/2012 09:20:24" />
     <file relUrl="Public/Lista_Escola.aspx" publishTime="06/17/2012 14:32:12" />
     <file relUrl="Midia/Img/imagens/gradienttext.png" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="bin/WebSite.dll" publishTime="08/01/2012 20:25:22" />
     <file relUrl="Matricula_Print.aspx.cs" publishTime="07/01/2012 16:59:25" />
     <file relUrl="Matricula_Print.aspx.designer.cs" publishTime="06/27/2012 12:34:32" />
     <file relUrl="Midia/Img/imagens/activemenu.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Modal.Master" publishTime="07/02/2012 00:18:45" />
+    <file relUrl="Public/EstatisticaCadastro.aspx.cs" publishTime="07/02/2012 02:01:32" />
     <file relUrl="Midia/JavaScript/Mascaras.js" publishTime="06/28/2012 21:17:04" />
     <file relUrl="Assemblies/MySql.Data.Entity.dll" publishTime="07/10/2012 20:33:47" />
-    <file relUrl="bin/Business.dll" publishTime="07/24/2012 20:57:52" />
+    <file relUrl="bin/Business.dll" publishTime="08/01/2012 01:04:35" />
     <file relUrl="Midia/Img/imagens/banner4.jpg" publishTime="06/27/2012 11:25:27" />
-    <file relUrl="Matricula.aspx.cs" publishTime="07/24/2012 21:21:36" />
+    <file relUrl="Matricula.aspx.cs" publishTime="08/01/2012 20:20:19" />
     <file relUrl="Midia/Img/imagens/ft2.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Properties/Settings.settings" publishTime="07/05/2012 01:30:53" />
+    <file relUrl="Modais/Modal_Estatistica.aspx.designer.cs" publishTime="07/02/2012 00:20:50" />
     <file relUrl="Midia/JavaScript/jquery.tools.min.js" publishTime="06/06/2012 01:25:02" />
     <file relUrl="Midia/Img/imagens/footerbg.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Settings/Escola_CDT.aspx.cs" publishTime="06/19/2012 23:13:36" />
@@ -156,21 +159,22 @@
     <file relUrl="Midia/Img/imagens/normalhtml.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Settings/Login.aspx" publishTime="06/05/2012 01:22:20" />
     <file relUrl="Public/Lista_Escola.aspx.cs" publishTime="06/19/2012 23:13:12" />
+    <file relUrl="Settings/Deficiencia_CDT.aspx.designer.cs" publishTime="05/20/2012 19:55:12" />
+    <file relUrl="Settings/Cidade_CDT.aspx.designer.cs" publishTime="05/18/2012 18:58:00" />
     <file relUrl="Midia/Img/imagens/rp.jpg" publishTime="06/26/2012 22:49:30" />
     <file relUrl="Midia/Img/imagens/normalhtml2.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/footerbg1.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Settings/Deficiencia_CDT.aspx" publishTime="06/17/2012 14:31:44" />
     <file relUrl="packages.config" publishTime="05/13/2012 15:33:48" />
     <file relUrl="Public/Lista_Escola.aspx.designer.cs" publishTime="06/01/2012 23:44:28" />
-    <file relUrl="Midia/CSS/Mascaras.css" publishTime="06/28/2012 22:13:19" />
+    <file relUrl="Midia/CSS/Mascaras.css" publishTime="08/01/2012 00:56:37" />
     <file relUrl="Midia/Img/imagens/htmlbg.jpg" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Settings/Login.aspx.designer.cs" publishTime="06/05/2012 00:46:20" />
-    <file relUrl="Default.Master" publishTime="07/20/2012 01:05:53" />
     <file relUrl="Midia/Img/imagens/banner3.jpg" publishTime="06/27/2012 11:19:19" />
     <file relUrl="Midia/Img/imagens/sidebarh2.jpg" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Index.aspx.designer.cs" publishTime="06/26/2012 17:35:49" />
     <file relUrl="Midia/Img/imagens/footerbg61.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/quote.png" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Default.Master.designer.cs" publishTime="06/30/2012 20:01:01" />
+    <file relUrl="Default.Master.designer.cs" publishTime="07/31/2012 21:49:27" />
     <file relUrl="Settings/Settings.Master.cs" publishTime="06/19/2012 23:13:46" />
     <file relUrl="Midia/Img/imagens/whitebullet.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Modal.Master.cs" publishTime="07/02/2012 00:17:59" />
@@ -179,43 +183,39 @@
     <file relUrl="Settings/Deficiencia_CDT.aspx.cs" publishTime="06/19/2012 23:13:32" />
     <file relUrl="Web.Release.config" publishTime="05/12/2012 16:10:16" />
     <file relUrl="Properties/Settings.Designer.cs" publishTime="07/05/2012 01:29:27" />
-    <file relUrl="Settings/Cidade_CDT.aspx" publishTime="06/17/2012 14:31:26" />
     <file relUrl="Assemblies/MySql.Data.dll" publishTime="07/10/2012 20:33:46" />
     <file relUrl="Settings/Login.aspx.cs" publishTime="06/19/2012 23:13:42" />
     <file relUrl="Settings/ConselhoTutelar_CDT.aspx" publishTime="06/17/2012 14:31:32" />
-    <file relUrl="bin/DataAcess.dll" publishTime="07/24/2012 20:57:47" />
+    <file relUrl="bin/DataAcess.dll" publishTime="08/01/2012 01:04:34" />
     <file relUrl="Midia/Img/imagens/lefth2.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/sidebarli.gif" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Midia/Img/imagens/sidebarbg.jpg" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Public/EstatisticaCadastro.aspx" publishTime="07/02/2012 00:13:41" />
     <file relUrl="Settings/Settings.Master.designer.cs" publishTime="07/05/2012 01:55:49" />
-    <file relUrl="Settings/ConselhoTutelar_CDT.aspx.designer.cs" publishTime="05/13/2012 19:47:36" />
+    <file relUrl="Matricula.aspx" publishTime="08/01/2012 01:20:07" />
     <file relUrl="Modais/Modal_Estatistica.aspx.cs" publishTime="07/02/2012 02:01:32" />
     <file relUrl="Modal.Master.designer.cs" publishTime="07/02/2012 00:18:24" />
     <file relUrl="Midia/Img/imagens/sidebarli2.gif" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Settings/Cidade_CDT.aspx.designer.cs" publishTime="05/18/2012 18:58:00" />
+    <file relUrl="Settings/Cidade_CDT.aspx" publishTime="06/17/2012 14:31:26" />
     <file relUrl="Contato.aspx.designer.cs" publishTime="06/27/2012 23:35:06" />
     <file relUrl="google45dc922c57694e61.html" publishTime="07/15/2012 09:57:00" />
     <file relUrl="Default.Master.cs" publishTime="06/19/2012 23:12:50" />
     <file relUrl="Contato.aspx" publishTime="07/01/2012 18:10:33" />
     <file relUrl="Settings/Escola_CDT.aspx.designer.cs" publishTime="07/05/2012 01:56:08" />
     <file relUrl="Settings/Bairro_CDT.aspx" publishTime="06/17/2012 14:31:18" />
-    <file relUrl="Midia/Img/imagens/ok.png" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="Modais/Modal_Estatistica.aspx" publishTime="07/02/2012 01:00:32" />
-    <file relUrl="Public/EstatisticaCadastro.aspx.cs" publishTime="07/02/2012 02:01:32" />
-    <file relUrl="Matricula.aspx.designer.cs" publishTime="06/30/2012 20:09:27" />
-    <file relUrl="Sobre.aspx.designer.cs" publishTime="06/26/2012 17:42:50" />
+    <file relUrl="Default.Master" publishTime="08/01/2012 01:40:34" />
+    <file relUrl="Matricula.aspx.designer.cs" publishTime="08/01/2012 01:16:03" />
     <file relUrl="Index.aspx.cs" publishTime="06/19/2012 23:12:54" />
     <file relUrl="Sobre.aspx.cs" publishTime="06/26/2012 17:42:50" />
     <file relUrl="Settings/ConselhoTutelar_CDT.aspx.cs" publishTime="06/19/2012 23:13:26" />
     <file relUrl="Web.Debug.config" publishTime="05/12/2012 16:10:16" />
-    <file relUrl="Settings/Deficiencia_CDT.aspx.designer.cs" publishTime="05/20/2012 19:55:12" />
-    <file relUrl="Modais/Modal_Estatistica.aspx.designer.cs" publishTime="07/02/2012 00:20:50" />
-    <file relUrl="Index.aspx.designer.cs" publishTime="06/26/2012 17:35:49" />
-    <file relUrl="Settings/Cidade_CDT.aspx.cs" publishTime="06/19/2012 23:13:22" />
+    <file relUrl="Sobre.aspx.designer.cs" publishTime="07/31/2012 02:02:54" />
+    <file relUrl="Modais/Modal_Estatistica.aspx" publishTime="07/02/2012 01:00:32" />
+    <file relUrl="Midia/Img/imagens/wraptop.jpg" publishTime="06/25/2012 20:39:45" />
+    <file relUrl="Settings/Login.aspx.designer.cs" publishTime="06/05/2012 00:46:20" />
     <file relUrl="Contato.aspx.cs" publishTime="07/02/2012 01:32:15" />
-    <file relUrl="Midia/Img/imagens/logo1.jpg" publishTime="06/25/2012 20:39:45" />
-    <file relUrl="bin/WebSite.dll" publishTime="07/24/2012 21:21:54" />
+    <file relUrl="App.Config" publishTime="07/06/2012 09:20:24" />
+    <file relUrl="Midia/Img/imagens/ok.png" publishTime="06/25/2012 20:39:45" />
     <file relUrl="Matricula_Print.aspx" publishTime="07/02/2012 01:19:11" />
   </publishProfile>
   <publishProfile publishUrl="ftp://192.168.1.10/fip24hr" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="LocalHost" publishMethod="FTP" replaceMatchingFiles="True" userName="Gag" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3YZWCSludUqRJgmg4kBSEAAAAAACAAAAAAAQZgAAAAEAACAAAAAM+ttU4yQ7PHMc9eedPdwVWACdSnT0pMiSCSC9GWwzVwAAAAAOgAAAAAIAACAAAADTkcmOsA0Lf0Z4WBVYhZxB1ymJaVW2/JjY+xlya/fVGyAAAACn9cR6CKnup2ui/476yN5d1qzRxXJpcczB2ttGlVfPSEAAAAB+WBAbIBNA3YKP6txoNjvdN9Vs7pOKgCtjGVNa0tUapP2I7rLrbZxVFTRONKvQ7wIK3PvuC77G7HlVGKcRSpNc" SelectedForPublish="False" />

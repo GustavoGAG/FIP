@@ -17,3 +17,12 @@ D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Busines
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Business\obj\Debug\ResolveAssemblyReference.cache
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Business\obj\Debug\Business.dll
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Business\obj\Debug\Business.pdb
+D:\Gustavo\GitHub\FIP\Business\bin\Debug\Business.dll
+D:\Gustavo\GitHub\FIP\Business\bin\Debug\Business.pdb
+D:\Gustavo\GitHub\FIP\Business\bin\Debug\DataAcess.dll
+D:\Gustavo\GitHub\FIP\Business\bin\Debug\Ultilitarios.dll
+D:\Gustavo\GitHub\FIP\Business\bin\Debug\DataAcess.pdb
+D:\Gustavo\GitHub\FIP\Business\bin\Debug\Ultilitarios.pdb
+D:\Gustavo\GitHub\FIP\Business\obj\Debug\ResolveAssemblyReference.cache
+D:\Gustavo\GitHub\FIP\Business\obj\Debug\Business.dll
+D:\Gustavo\GitHub\FIP\Business\obj\Debug\Business.pdb

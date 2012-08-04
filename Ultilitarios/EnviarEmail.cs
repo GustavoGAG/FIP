@@ -109,50 +109,41 @@ namespace Ultilitarios
         /// <summary>Envia o objeto email preenchido para o destinatario</summary>
         public void Enviar()
         {
+            //Se não houver um destinatario devinido retorna um erro
+            if(string.IsNullOrEmpty(destinatario))
+                throw new ArgumentException("Destinatario Inválido, verifique se foi digitado corretamente");
 
-            try
-            {
-                //Se não houver um destinatario devinido retorna um erro
-                if(string.IsNullOrEmpty(destinatario))
-                    throw new ArgumentException("Destinatario Inválido, verifique se foi digitado corretamente");
-
-                //Se não houver um remetente devinido retorna um erro
-                if(string.IsNullOrEmpty(remetente))
-                    throw new ArgumentException("Remetente Inválido, verifique se foi digitado corretamente");
+            //Se não houver um remetente devinido retorna um erro
+            if(string.IsNullOrEmpty(remetente))
+                throw new ArgumentException("Remetente Inválido, verifique se foi digitado corretamente");
 
 
-                //Cria um objeto de email               
-                Mail.MailMessage mail = new Mail.MailMessage();
+            //Cria um objeto de email               
+            Mail.MailMessage mail = new Mail.MailMessage();
 
-                //Define quem recebe o email
-                Mail.MailAddress maDestinatario = new Mail.MailAddress(destinatario);
+            //Define quem recebe o email
+            Mail.MailAddress maDestinatario = new Mail.MailAddress(destinatario);
 
-                mail.To.Add(maDestinatario);
+            mail.To.Add(maDestinatario);
 
-                //Define quem envia
-                Mail.MailAddress maRemetente = new Mail.MailAddress(remetente);
-                mail.From = maRemetente;
+            //Define quem envia
+            Mail.MailAddress maRemetente = new Mail.MailAddress(remetente);
+            mail.From = maRemetente;
 
-                //Declara que o corpo do email esta no formato html
-                mail.IsBodyHtml = true;
+            //Declara que o corpo do email esta no formato html
+            mail.IsBodyHtml = true;
 
-                //Define as informaçoes ao Corpo do email
-                mail.Body = mensagem;
+            //Define as informaçoes ao Corpo do email
+            mail.Body = mensagem;
 
-                //Define o nivel de importancia do email               
-                mail.Priority = Mail.MailPriority.Normal;
+            //Define o nivel de importancia do email               
+            mail.Priority = Mail.MailPriority.Normal;
 
-                //Define o Assunto
-                mail.Subject = assunto;
+            //Define o Assunto
+            mail.Subject = assunto;
 
-                //Envia o email
-                smtp.Send(mail);
-            }
-            catch
-            {
-                throw;
-            }
-
+            //Envia o email
+            smtp.Send(mail);
         }
 
 

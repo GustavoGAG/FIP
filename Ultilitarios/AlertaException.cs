@@ -38,20 +38,22 @@ namespace Ultilitarios
              string retValue = ae.MontarStringDoErro(erro);
             try
             {
-           
-                EnviarEmail mail = new EnviarEmail();
-                mail.Assunto = "Falha FIP 24HR " + erro.Message;
-                mail.Destinatario = "gustavo.americo@hotmail.com.br";
-                mail.Mensagem = retValue;
+
+                EnviarEmail mail = new EnviarEmail
+                                       {
+                                           Assunto = "Falha FIP 24HR " + erro.Message,
+                                           Destinatario = "gustavo.americo@hotmail.com.br",
+                                           Mensagem = retValue
+                                       };
                 mail.Enviar();
                 
             }
-            catch(Exception ex)
+            catch
             {
-                AlertaException.EnviarEmailSuporte(ex);
+               
             }
-            return retValue;
-          //  return "Houve um erro no sistema, solicito que tente mais tarde";
+          //  return retValue;
+            return "Houve um erro no sistema, solicito que tente mais tarde <br />" + erro.Message;
         }
 
         protected string MontarStringDoErro(Exception erro)

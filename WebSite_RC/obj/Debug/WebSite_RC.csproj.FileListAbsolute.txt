@@ -22,3 +22,15 @@ D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\WebSite
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\WebSite_RC\obj\Debug\ResolveAssemblyReference.cache
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\WebSite_RC\obj\Debug\WebSite.dll
 D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\WebSite_RC\obj\Debug\WebSite.pdb
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\WebSite.dll.config
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\WebSite.dll
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\WebSite.pdb
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\Business.dll
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\Ultilitarios.dll
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\DataAcess.dll
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\Business.pdb
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\Ultilitarios.pdb
+D:\Gustavo\GitHub\FIP\WebSite_RC\bin\DataAcess.pdb
+D:\Gustavo\GitHub\FIP\WebSite_RC\obj\Debug\ResolveAssemblyReference.cache
+D:\Gustavo\GitHub\FIP\WebSite_RC\obj\Debug\WebSite.dll
+D:\Gustavo\GitHub\FIP\WebSite_RC\obj\Debug\WebSite.pdb

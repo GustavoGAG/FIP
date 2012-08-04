@@ -123,29 +123,21 @@ namespace Business
         /// <returns>DropDownList com as cidade de um Estado</returns>
         public static void Pesquisar(int idEstado, DropDownList ddlCidade)
         {
-            try
-            {
-                ddlCidade.Items.Clear();
-                ListItem li = new ListItem();
-                li.Text = "Selecione".ToUpper();
-                li.Value = "0";
+            ddlCidade.Items.Clear();
 
-                ddlCidade.Items.Add(li);
-                foreach (Cidade c in cidade.Pesquisar(idEstado))
-                {
-                    li = new ListItem();
-                    li.Text = c.Nome.ToUpper();
-                    li.Value = Convert.ToString(c.Id);
-                    ddlCidade.Items.Add(li);
-
-                }
-            }
-            catch  
+            ddlCidade.Items.Add(new ListItem
+                                    {
+                                        Text = "Selecione".ToUpper(), Value = "0"
+                                    });
+            foreach (Cidade c in cidade.Pesquisar(idEstado))
             {
-                throw ;
-                
+
+                ddlCidade.Items.Add(new ListItem
+                                        {
+                                            Text = c.Nome.ToUpper(), Value = Convert.ToString(c.Id)
+                                        });
+
             }
-            
         }
 
         /// <summary>Retorna todas as cidade de um Estado</summary>

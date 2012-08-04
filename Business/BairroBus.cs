@@ -24,25 +24,28 @@ namespace Business
         /// <param name="nomeBairro">Nome do Bairro</param>
         /// <param name="idCidade">O id da Cidade a que o Bairro pertence</param>
         /// <returns>Retorna um texto informando se o Bairro foi ou não cadastrado</returns>
-        public static string Inserir(string nomeBairro, int idCidade)
+        public static string Inserir(string nomeBairro,int idCidade)
         {
             try
             {
-                if (bairro.ValidarExistencia(idCidade, nomeBairro))
+                if(bairro.ValidarExistencia(idCidade,nomeBairro))
                 {
                     bairro = new Bairro();
                     bairro.IdCidade = idCidade;
                     bairro.Nome = nomeBairro;
 
                     bairro.Inserir(bairro);
-                        retValue = "Bairro Cadastrado com Sucesso";
-                     
+                    retValue = "Bairro Cadastrado com Sucesso";
+
                 }
                 else
                     retValue = "O Bairro já esta Cadastrado";
 
             }
-            catch (Exception ex) { retValue = ex.Message; }
+            catch(Exception ex)
+            {
+                retValue = ex.Message;
+            }
             return retValue;
         }
 
@@ -55,9 +58,9 @@ namespace Business
         {
             try
             {
-                if (bairro.ValidarExistencia(idBairro) == true)
+                if(bairro.ValidarExistencia(idBairro) == true)
                 {
-                    if (bairro.Apagar(idBairro) > 0)
+                    if(bairro.Apagar(idBairro) > 0)
                         return "Item Apagado com Sucesso";
                     else
                         return "Erro ao Apagar, Tente Novamente";
@@ -67,7 +70,10 @@ namespace Business
                     return "O ID do Bairro não existe.";
                 }
             }
-            catch (Exception ex) { return ex.Message; }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
 
         }
 
@@ -78,14 +84,14 @@ namespace Business
         /// <param name="nomeBairro">Nome do Bairro que será alterado no Banco de Dados</param>
         /// <param name="idCidade">O id da Cidade a que o Bairro pertence, e que será alterado no Banco de Dados</param>
         /// <returns>Retorna um texto informando se o Bairro foi ou não alterado</returns>
-        public static string Editar(int idBairro, string nomeBairro, int idCidade)
+        public static string Editar(int idBairro,string nomeBairro,int idCidade)
         {
             try
             {
-                if (bairro.ValidarExistencia(nomeBairro))
+                if(bairro.ValidarExistencia(nomeBairro))
                 {
-                    int intRet = bairro.Editar(idBairro, nomeBairro, idCidade);
-                    if (intRet == 1)
+                    int intRet = bairro.Editar(idBairro,nomeBairro,idCidade);
+                    if(intRet == 1)
                         return "Alterçoes salvas com Sucesso";
                     else
                         return "Erro ao Concluir as alterações, tente novamente";
@@ -93,7 +99,10 @@ namespace Business
                 else
                     return "Esse Bairro já Existe";
             }
-            catch (Exception ex) { return ex.Message; }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
 
         }
 
@@ -104,11 +113,11 @@ namespace Business
         public static DataTable Pesquisar(int idCidade)
         {
             dTable = new DataTable();
-            dTable.Columns.Add("id", typeof(string));
-            dTable.Columns.Add("nomeBairro", typeof(string));
+            dTable.Columns.Add("id",typeof(string));
+            dTable.Columns.Add("nomeBairro",typeof(string));
             try
             {
-                foreach (Bairro b in bairro.Pesquisar(idCidade))
+                foreach(Bairro b in bairro.Pesquisar(idCidade))
                 {
                     DataRow dRow = dTable.NewRow();
                     dRow["id"] = b.Id.ToString();
@@ -119,7 +128,7 @@ namespace Business
 
 
             }
-            catch (Exception b)
+            catch(Exception b)
             {
                 DataRow dRow = dTable.NewRow();
                 dRow["id"] = b.GetHashCode();
@@ -134,31 +143,24 @@ namespace Business
         /// <param name="ddlBairro">DropDownList que Recebera os Bairro</param>
         /// <param name="idCidade">ID da Cidade em que o Bairro se localiza</param>
         /// <returns>Retorna DropDownList Preenchida</returns>
-        public static DropDownList Pesquisar(DropDownList ddlBairro, int idCidade)
+        public static DropDownList Pesquisar(DropDownList ddlBairro,int idCidade)
         {
+            ddlBairro.Items.Clear();
+            ListItem li = new ListItem();
+            li.Text = "Selecione".ToUpper();
+            li.Value = "0";
 
-            try
+            ddlBairro.Items.Add(li);
+            foreach(Bairro b in bairro.Pesquisar(idCidade))
             {
-                ddlBairro.Items.Clear();
-                ListItem li = new ListItem();
-                li.Text = "Selecione".ToUpper();
-                li.Value = "0";
 
-                ddlBairro.Items.Add(li);
-                foreach (Bairro b in bairro.Pesquisar(idCidade))
-                {
-                    li = new ListItem();
-                    li.Text = b.Nome.ToUpper();
-                    li.Value = b.IdCidade.ToString() ;
-                    ddlBairro.Items.Add(li);
+                ddlBairro.Items.Add
+                    (new ListItem
+                         {
+                             Text = b.Nome.ToUpper(), Value = Convert.ToString(b.IdCidade)
+                         }
+                    );
 
-                }
-
-            }
-
-            catch
-            {
-                throw;
             }
             return ddlBairro;
 
@@ -166,37 +168,24 @@ namespace Business
 
         /// <summary>Preenche uma DropDownList com uma lista de Bairros de uma Determinada Cidade</summary>
         /// <param name="ddlBairro">DropDownList que Recebera os Bairro</param>
+        /// <param name="ddlBairro1"> </param>
         /// <param name="idCidade">ID da Cidade em que o Bairro se localiza</param>
         /// <returns>Retorna DropDownList Preenchida</returns>
-        public static DropDownList Pesquisar(DropDownList ddlBairro, DropDownList ddlBairro1, int idCidade)
+        public static DropDownList Pesquisar(DropDownList ddlBairro,DropDownList ddlBairro1,int idCidade)
         {
+            ddlBairro.Items.Clear();
+            ddlBairro1.Items.Clear();
+            ListItem li = new ListItem {Text = "Selecione", Value = "0"};
 
-            try
+            ddlBairro.Items.Add(li);
+            ddlBairro1.Items.Add(li);
+            foreach(Bairro b in bairro.Pesquisar(idCidade))
             {
-                ddlBairro.Items.Clear();
-                ddlBairro1.Items.Clear();
-                ListItem li = new ListItem();
-                li.Text = "Selecione";
-                li.Value = "0";
-
+                li = new ListItem {Text = b.Nome.ToUpper(), Value = b.IdCidade.ToString()};
                 ddlBairro.Items.Add(li);
                 ddlBairro1.Items.Add(li);
-                foreach (Bairro b in bairro.Pesquisar(idCidade))
-                {
-                    li = new ListItem();
-                    li.Text = b.Nome.ToUpper();
-                    li.Value = b.IdCidade.ToString();
-                    ddlBairro.Items.Add(li);
-                    ddlBairro1.Items.Add(li);
-                }
-
             }
-
-            catch  
-            {
-                throw;
-            }
-            return ddlBairro  ;
+            return ddlBairro;
 
         }
 
