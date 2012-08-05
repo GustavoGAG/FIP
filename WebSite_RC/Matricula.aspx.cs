@@ -75,14 +75,14 @@ namespace WebSite
                 if(!IsPostBack)
                 {
                     PreencheDDLEstado();
-                    divAlert.Visible = false;
+                    divAlerta.Visible = false;
                 }
 
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "Page_Load" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "Page_Load" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
         }
 
@@ -146,14 +146,14 @@ namespace WebSite
 
             catch(AlertaException erro)
             {
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
                 CancelarMatricula();
             }
             catch(Exception ex)
             {
-                divAlert.InnerHtml = "Matricularse Erro" + AlertaException.EnviarEmailSuporte(ex);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml =   AlertaException.EnviarEmailSuporte(ex);
+                divAlerta.Visible = true;
                 CancelarMatricula();
 
             }
@@ -199,13 +199,13 @@ namespace WebSite
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
             #endregion
 
@@ -352,13 +352,13 @@ namespace WebSite
             #region Exceçoes
             catch(AlertaException erro)
             {
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "CancelarMatricula Erro:" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "CancelarMatricula Erro:" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
             #endregion
         }
@@ -388,13 +388,13 @@ namespace WebSite
 
             catch(AlertaException erro)
             {
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "ExibirEOcultarDeficiencia" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "ExibirEOcultarDeficiencia" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
 
         }
@@ -457,13 +457,13 @@ ddlEstado,ddlEstadoNatal);
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "PreencheDDLEstado" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "PreencheDDLEstado" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
             #endregion
         }
@@ -483,13 +483,13 @@ ddlEstado,ddlEstadoNatal);
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "CarregarDDLCidadeNatal" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "CarregarDDLCidadeNatal" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
             #endregion
 
@@ -509,13 +509,13 @@ ddlEstado,ddlEstadoNatal);
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "CarregarDDLCidade" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "CarregarDDLCidade" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
             #endregion
         }
@@ -532,13 +532,13 @@ ddlEstado,ddlEstadoNatal);
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "CarregarDDLBairroEndereco" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "CarregarDDLBairroEndereco" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
             #endregion
         }
@@ -558,13 +558,13 @@ ddlEstado,ddlEstadoNatal);
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "CarregarDDLCidadeEscola" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "CarregarDDLCidadeEscola" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
             #endregion
 
@@ -584,13 +584,13 @@ ddlEstado,ddlEstadoNatal);
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
             }
             catch(Exception error)
             {
-                divAlert.InnerHtml = "PreencheDDLBairroEscola" + AlertaException.EnviarEmailSuporte(error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = "PreencheDDLBairroEscola" + AlertaException.EnviarEmailSuporte(error);
+                divAlerta.Visible = true;
             }
             #endregion
         }

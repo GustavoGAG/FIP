@@ -13,13 +13,13 @@ namespace WebSite {
     public partial class Matricula {
         
         /// <summary>
-        /// Controle divAlert.
+        /// Controle divAlerta.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAlert;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAlerta;
         
         /// <summary>
         /// Controle lblNome.

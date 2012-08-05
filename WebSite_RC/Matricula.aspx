@@ -32,7 +32,7 @@
         
             </script>
             
-             <div runat="server" id="divAlert" visible="false" class="alerta">
+             <div runat="server" id="divAlerta" visible="false" class="alerta">
     </div>
     <section class="caixa1">
         <h3>

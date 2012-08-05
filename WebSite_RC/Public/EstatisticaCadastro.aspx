@@ -4,7 +4,7 @@
 <asp:Content ID="EstatisticaCadastroHead" ContentPlaceHolderID="HeadMain" runat="server">
 </asp:Content>
 <asp:Content ID="EstatisticaCadastroBody" ContentPlaceHolderID="BodyMain" runat="server">
-    <div runat="server" id="divAlert" visible="false" class="alerta">
+    <div runat="server" id="divAlerta" visible="false" class="alerta">
     </div>
     <asp:ListView ID="lvEstatisticaEstado" runat="server" ItemPlaceholderID="item" EditIndex="-1"
         OnItemDataBound="PreencherListViewEstado">

@@ -3,6 +3,7 @@ using System.Collections.Specialized;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Business;
+using Ferramentas;
 
 namespace WebSite.Settings
 {
@@ -16,7 +17,7 @@ namespace WebSite.Settings
                 {
                     int idEstado = 0;
                     int idCidade = 0;
-                    if (Request.QueryString != null && Request.QueryString.Count > 0)
+                    if (Request.QueryString.Count > 0)
                     {
                         int.TryParse(Request.QueryString["cid"], out idCidade);
                         int.TryParse(Request.QueryString["est"], out idEstado);
@@ -34,7 +35,19 @@ namespace WebSite.Settings
 
                 }
             }
-            catch { }
+            catch(AlertaException erro)
+            {
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
+
+            }
+            catch(Exception ex)
+            {
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(ex);
+                divAlerta.Visible = true;
+
+
+            }
 
         }
 
@@ -89,7 +102,19 @@ namespace WebSite.Settings
                 }
 
             }
-            catch { }
+            catch(AlertaException erro)
+            {
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
+
+            }
+            catch(Exception ex)
+            {
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(ex);
+                divAlerta.Visible = true;
+
+
+            }
         }
 
 
@@ -112,9 +137,9 @@ namespace WebSite.Settings
                                 int.TryParse(Request.QueryString["cid"], out idCidade);
 
                             if (!string.IsNullOrEmpty(txtBairro.Text))
-                                lblAlert.Text = BairroBus.Editar(int.Parse(lblId.Text), txtBairro.Text, idCidade);
+                                divAlerta.InnerHtml= BairroBus.Editar(int.Parse(lblId.Text),txtBairro.Text,idCidade);
 
-                            lblAlert.Visible = true;
+                            divAlerta.Visible = true;
                             break;
                         }
                     #endregion
@@ -123,8 +148,8 @@ namespace WebSite.Settings
                     case "Delete":
                         {
                             Label lblId = (e.Item.FindControl("lblId")) as Label;
-                            lblAlert.Text = BairroBus.Apagar(int.Parse(lblId.Text));
-                            lblAlert.Visible = true;
+                            divAlerta.InnerHtml = BairroBus.Apagar(int.Parse(lblId.Text));
+                            divAlerta.Visible = true;
                             break;
                         }
                     #endregion
@@ -137,18 +162,30 @@ namespace WebSite.Settings
                             int idCidade = 0;
                             int.TryParse(Request.QueryString["cid"], out idCidade);
                             if (idCidade != 0)
-                                lblAlert.Text = BairroBus.Inserir(txtBairro.Text, idCidade);
+                                divAlerta.InnerHtml = BairroBus.Inserir(txtBairro.Text,idCidade);
                             else
-                                lblAlert.Text = "Selecione uma Cidade.";
+                                divAlerta.InnerHtml = "Selecione uma Cidade.";
 
-                            lblAlert.Visible = true;
+                            divAlerta.Visible = true;
                             break;
                         }
                     #endregion
 
                 }
             }
-            catch { }
+            catch(AlertaException erro)
+            {
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
+         
+            }
+            catch(Exception ex)
+            {
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(ex);
+                divAlerta.Visible = true;
+            
+
+            }
         }
 
         #endregion
@@ -221,8 +258,19 @@ namespace WebSite.Settings
                 query = Request.Url.AbsolutePath + query;
 
             }
-            catch (Exception ex)
-            { query = ex.Message; }
+            catch(AlertaException erro)
+            {
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
+
+            }
+            catch(Exception ex)
+            {
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(ex);
+                divAlerta.Visible = true;
+
+
+            }
             return query;
 
 

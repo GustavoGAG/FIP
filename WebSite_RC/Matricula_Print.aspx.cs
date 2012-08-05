@@ -42,15 +42,15 @@ namespace WebSite
             #region Exception
             catch(AlertaException alerta)
             {
-                divAlert.InnerHtml = alerta.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = alerta.Alerta;
+                divAlerta.Visible = true;
                 rpMatricula.Visible = false;
                 pnPesquisa.Visible = true;
             }
             catch(Exception er)
             {
-                divAlert.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
+                divAlerta.Visible = true;
             }
             #endregion
         }
@@ -69,15 +69,15 @@ namespace WebSite
             #region Exceptions
             catch(AlertaException alerta)
             {
-                divAlert.InnerHtml = alerta.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = alerta.Alerta;
+                divAlerta.Visible = true;
                 rpMatricula.Visible = false;
                 pnPesquisa.Visible = true;
             }
             catch(Exception er)
             {
-                divAlert.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
+                divAlerta.Visible = true;
             }
             #endregion
         }
@@ -133,22 +133,22 @@ namespace WebSite
             catch(FormatException Error)
             {
 
-                divAlert.InnerHtml = Error.Message;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = Error.Message;
+                divAlerta.Visible = true;
                 rpMatricula.Visible = false;
                 pnPesquisa.Visible = true;
             }
             catch(AlertaException alerta)
             {
-                divAlert.InnerHtml = alerta.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = alerta.Alerta;
+                divAlerta.Visible = true;
                 rpMatricula.Visible = false;
                 pnPesquisa.Visible = true;
             }
             catch(Exception er)
             {
-                divAlert.InnerHtml = AlertaException.EnviarEmailSuporte(er);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(er);
+                divAlerta.Visible = true;
                 pnMatricula.Visible = false;
                 pnPesquisa.Visible = true;
             }
@@ -315,21 +315,21 @@ namespace WebSite
             #region Exceptions
             catch(ArgumentNullException Error)
             {
-                divAlert.InnerHtml = Error.Message;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = Error.Message;
+                divAlerta.Visible = true;
                 rpMatricula.Visible = false;
             }
             catch(AlertaException alerta)
             {
-                divAlert.InnerHtml = alerta.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = alerta.Alerta;
+                divAlerta.Visible = true;
                 rpMatricula.Visible = false;
                 pnPesquisa.Visible = true;
             }
             catch(Exception er)
             {
-                divAlert.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
+                divAlerta.Visible = true;
                 pnMatricula.Visible = false;
                 pnPesquisa.Visible = false;
             }

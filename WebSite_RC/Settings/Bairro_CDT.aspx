@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <asp:Label ID="lblAlert" runat="server" Visible="false" />
+                <div ID="divAlerta" runat="server" Visible="false" />
             </td>
         </tr>
     </table>

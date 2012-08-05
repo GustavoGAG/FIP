@@ -30,12 +30,12 @@ namespace WebSite
                     enviarEmail.Assunto = txtAssunto.Text;
                     enviarEmail.Mensagem = mensagemEmail;
                     enviarEmail.Enviar();
-                    divAlert.Visible = false;
+                    divAlerta.Visible = false;
                 }
                 else
                 {
-                    divAlert.InnerHtml = "O campo nome e o campo mensagem não pode ficar vazio ";
-                    divAlert.Visible = true;
+                    divAlerta.InnerHtml = "O campo nome e o campo mensagem não pode ficar vazio ";
+                    divAlerta.Visible = true;
 
                 }
 
@@ -43,13 +43,13 @@ namespace WebSite
             }
             catch(AlertaException er)
             {
-                divAlert.InnerHtml = er.Message;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = er.Message;
+                divAlerta.Visible = true;
             }
             catch(Exception er)
             {                 
-                divAlert.InnerHtml = AlertaException.EnviarEmailSuporte(er);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(er);
+                divAlerta.Visible = true;
             }
 
         }

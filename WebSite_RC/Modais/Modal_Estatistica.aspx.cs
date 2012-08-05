@@ -26,14 +26,14 @@ namespace WebSite
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
 
             }
             catch(Exception Error)
             {
-                divAlert.InnerHtml = AlertaException.EnviarEmailSuporte(Error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(Error);
+                divAlerta.Visible = true;
 
             }
 
@@ -52,14 +52,14 @@ namespace WebSite
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = erro.Alerta;
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
 
             }
             catch(Exception Error)
             {
-                divAlert.InnerHtml = AlertaException.EnviarEmailSuporte(Error);
-                divAlert.Visible = true;
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(Error);
+                divAlerta.Visible = true;
 
             }
 
