@@ -78,13 +78,13 @@
     <Compile Include="UsuDeficienciaBus.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Dropbox\z.Trabalhos\z.DLLs\Ultilitarios\Ferramentas.csproj">
+      <Project>{560AC010-3C76-4FF1-9F4F-E998C6494C5C}</Project>
+      <Name>Ferramentas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAcess\DataAcess.csproj">
       <Project>{F8563C3B-C597-4F59-9978-5286D20708B4}</Project>
       <Name>DataAcess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ultilitarios\Ultilitarios.csproj">
-      <Project>{560AC010-3C76-4FF1-9F4F-E998C6494C5C}</Project>
-      <Name>Ultilitarios</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

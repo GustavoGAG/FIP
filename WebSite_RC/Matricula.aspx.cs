@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Web.UI.WebControls;
 using Business;
-using Ultilitarios;
+using Ferramentas;
 namespace WebSite
 {
     public partial class Matricula:System.Web.UI.Page
@@ -146,8 +146,7 @@ namespace WebSite
 
             catch(AlertaException erro)
             {
-
-                divAlert.InnerHtml = "Alerta Erro Matricularse <br />" + erro.Alerta;
+                divAlert.InnerHtml = erro.Alerta;
                 divAlert.Visible = true;
                 CancelarMatricula();
             }

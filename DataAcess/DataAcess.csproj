@@ -87,9 +87,9 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ultilitarios\Ultilitarios.csproj">
+    <ProjectReference Include="..\..\..\Dropbox\z.Trabalhos\z.DLLs\Ultilitarios\Ferramentas.csproj">
       <Project>{560AC010-3C76-4FF1-9F4F-E998C6494C5C}</Project>
-      <Name>Ultilitarios</Name>
+      <Name>Ferramentas</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

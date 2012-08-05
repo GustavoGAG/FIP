@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcess", "DataAcess\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{3100A9A9-6A9C-42F5-9427-C0241876D472}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultilitarios", "Ultilitarios\Ultilitarios.csproj", "{560AC010-3C76-4FF1-9F4F-E998C6494C5C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoDeTeste", "ProjetoDeTeste\ProjetoDeTeste.csproj", "{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B2E42FB8-715D-4459-B5CA-E081A6B3795A}"
@@ -17,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution_RC.vsmdi = Solution_RC.vsmdi
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferramentas", "..\..\Dropbox\z.Trabalhos\z.DLLs\Ultilitarios\Ferramentas.csproj", "{560AC010-3C76-4FF1-9F4F-E998C6494C5C}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -40,13 +40,13 @@ Global
 		{3100A9A9-6A9C-42F5-9427-C0241876D472}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3100A9A9-6A9C-42F5-9427-C0241876D472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3100A9A9-6A9C-42F5-9427-C0241876D472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Release|Any CPU.Build.0 = Release|Any CPU
 		{560AC010-3C76-4FF1-9F4F-E998C6494C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{560AC010-3C76-4FF1-9F4F-E998C6494C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{560AC010-3C76-4FF1-9F4F-E998C6494C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{560AC010-3C76-4FF1-9F4F-E998C6494C5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

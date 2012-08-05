@@ -5,8 +5,8 @@ using System.Text;
 using DataAcess;
 using System.Data;
 using System.Web.UI.WebControls;
-using Ultilitarios;
- 
+using Ferramentas;
+
 namespace Business
 {
     /// <summary>
@@ -32,13 +32,13 @@ namespace Business
         /// <param name="idCidade">id da Cidade em que a Escola está localizada</param>
         /// <param name="idBairro">id do Bairro em que a Escola está localizada</param>
         /// <returns>Retorna um texto informando se a Escola foi ou não cadastrada com sucesso</returns>
-        public static string Inserir(string nome, string telefone, string fax, int idTipoEscola, int idEstado, int idCidade, int idBairro)
+        public static string Inserir(string nome,string telefone,string fax,int idTipoEscola,int idEstado,int idCidade,int idBairro)
         {
             try
             {
-                if (escola.ValidarExistencia(nome))
+                if(escola.ValidarExistencia(nome))
                     return "Já existe uma escola Cadastrada com esse Nome";
-                if (escola.ValidarExistencia(telefone, fax))
+                if(escola.ValidarExistencia(telefone,fax))
                     return "Ja existe outra escola usando esse numero de Telefone";
 
                 escola.Nome = nome;
@@ -46,20 +46,20 @@ namespace Business
                 escola.Fax = fax;
                 escola.IdTipoEscola = idTipoEscola;
                 escola.IdBairro = idBairro;
-             
 
-                if (escola.Inserir(escola) > 0)
-                    return "Escola Cadastrada com Sucesso";
+
+                escola.Inserir(escola);
+                return "Escola Cadastrada com Sucesso";
             }
-            catch (Exception er)
+            catch(Exception er)
             {
-                AlertaException.EnviarEmailSuporte(er);
+                return AlertaException.EnviarEmailSuporte(er);
             }
-            return null;
+
 
         }
 
-         
+
         /// <summary>
         /// Pesquisar Cidade
         /// </summary>
@@ -71,17 +71,17 @@ namespace Business
             {
                 return escola.Pesquisar(idCidade);
             }
-            catch (Exception)
+            catch(Exception)
             {
-                
+
                 throw;
             }
-           
-              
+
+
 
         }
-   
-    
-    
+
+
+
     }
 }

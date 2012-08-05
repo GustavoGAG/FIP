@@ -63,24 +63,24 @@
         <!-- Orgão Emissor -->
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="Orgão Emissor:" ID="lblorgaoemisor" />
-            <asp:TextBox ID="TxtOrgaoEmissor" class="input2" runat="server" MaxLength="15" ToolTip="Orgão Emissor da Identidade"
-                AutoCompleteType="None" />
+            <asp:TextBox ID="TxtOrgaoEmissor" ValidationGroup="MtriculaVG" class="input2" runat="server"
+                MaxLength="15" ToolTip="Orgão Emissor da Identidade" AutoCompleteType="None" />
         </div>
         <!-- CPF -->
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="CPF:" ID="lblCPF" AssociatedControlID="TxtCPF" />
-            <asp:TextBox ID="TxtCPF" class="input2  cpf" runat="server" MaxLength="14" ToolTip="Número de CPF do Aluno"
-                AutoCompleteType="None" />
+            <asp:TextBox ValidationGroup="MtriculaVG" ID="TxtCPF" class="input2  cpf" runat="server"
+                MaxLength="14" ToolTip="Número de CPF do Aluno" AutoCompleteType="None" />
         </div>
         <!-- Sexo -->
-        
-                <div class="field">
+                      <div class="field">
                     <asp:Label ID="lblSexo" runat="server" class="lb1" Text="Sexo" />
                     <asp:DropDownList ID="ddlSexo" class="input2" runat="server" ToolTip="Sexo do Aluno"
-                        AutoPostBack="true" OnSelectedIndexChanged="HabilitarDesabilitarAreaGravidez">
-                        <asp:ListItem Text="Selecione" Selected="True" Value="0"></asp:ListItem>
-                        <asp:ListItem Text="Feminino" Value="Feminino"></asp:ListItem>
-                        <asp:ListItem Text="Masculino" Value="Masculino"></asp:ListItem>
+                        AutoPostBack="true" OnSelectedIndexChanged="HabilitarDesabilitarAreaGravidez"
+                        ValidationGroup="vgSexo">
+                        <asp:ListItem Text="SELECIONE" Value="0"></asp:ListItem>
+                        <asp:ListItem Text="FEMININO" Value="Feminino"></asp:ListItem>
+                        <asp:ListItem Text="MASCULINO" Value="Masculino"></asp:ListItem>
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="SexoRFV" runat="server" ErrorMessage="*Escolha o Sexo"
                         SetFocusOnError="true" ControlToValidate="ddlSexo" InitialValue="0" Display="Dynamic"
@@ -102,32 +102,33 @@
         <%--Cartorio--%>
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="Cartorio:" ID="lbl" />
-            <asp:TextBox ID="TxtCartorio" class="input2" runat="server" MaxLength="30" ToolTip="Cartorio em que foi escrito"></asp:TextBox>
+            <asp:TextBox ID="TxtCartorio" ValidationGroup="MtriculaVG" class="input2" runat="server"
+                MaxLength="30" ToolTip="Cartorio em que foi escrito"/>
         </div>
         <%-- Certidão Numero--%>
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="Número da Certidão:" ID="lblCertidaoNascimento" />
-            <asp:TextBox ID="TxtNCertidao" class="input2" runat="server" MaxLength="15" ToolTip="Número da Certidão de Nascimento"
-                AutoCompleteType="None" />
+            <asp:TextBox ID="TxtNCertidao" ValidationGroup="MtriculaVG"  class="input2" runat="server"
+                MaxLength="15" ToolTip="Número da Certidão de Nascimento" AutoCompleteType="None" />
         </div>
         <%--Livro--%>
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="Livro:" ID="lblLivro" />
-            <asp:TextBox ID="TxtLivro" class="input2" runat="server" MaxLength="10" ToolTip="Livro em que foi Lavrado"
-                AutoCompleteType="None" />
+            <asp:TextBox ID="TxtLivro" ValidationGroup="MtriculaVG" class="input2" runat="server"
+                MaxLength="10" ToolTip="Livro em que foi Lavrado" AutoCompleteType="None" />
         </div>
         <%--Folha--%>
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="Folha:" ID="lblFolha" />
-            <asp:TextBox ID="tbFolha" AutoCompleteType="None" class="input2" runat="server" MaxLength="10"
-                ToolTip="Livro em que foi Lavrado"></asp:TextBox>
+            <asp:TextBox ID="tbFolha" ValidationGroup="MtriculaVG" AutoCompleteType="None" class="input2"
+                runat="server" MaxLength="10" ToolTip="Livro em que foi Lavrado"></asp:TextBox>
         </div>
      
                 <%--Estado Natal--%>
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Estado Natal:" ID="lblEstadoNatal" />
-                    <asp:DropDownList ID="ddlEstadoNatal" class="input2" runat="server" ToolTip="Estado em que Nasceu."
-                        AutoPostBack="true" OnSelectedIndexChanged="CarregarDDLCidadeNatal">
+                    <asp:DropDownList ID="ddlEstadoNatal" class="input2" ValidationGroup="vgCertidao"
+                        runat="server" ToolTip="Estado em que Nasceu." AutoPostBack="true" OnSelectedIndexChanged="CarregarDDLCidadeNatal">
                         <asp:ListItem Text="SELECIONE" Value="0"></asp:ListItem>
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="EstadoNatalRFG" runat="server" ErrorMessage="*Campo Obrigatório"
@@ -137,7 +138,8 @@
                 <%-- Cidade Natal--%>
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Cidade Natal:" ID="lblNaturalidade" />
-                    <asp:DropDownList ID="ddlCidadeNatal" class="input2" runat="server" ToolTip="Cidade em que Nasceu">
+                    <asp:DropDownList ID="ddlCidadeNatal" class="input2" runat="server" ValidationGroup="vgCertidao"
+                        ToolTip="Cidade em que Nasceu">
                         <asp:ListItem Text="SELECIONE" Value="0"></asp:ListItem>
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="CidadeNatalRFG" runat="server" ErrorMessage="*Campo Obrigatório"
@@ -148,7 +150,7 @@
         <%--DataCertidao--%>
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="Data da Certidão:" ID="lblDataCertidao" />
-            <asp:TextBox ID="TxtDataCertidao" onkeydown="Mascara(this,Data);" class="input2 data"
+            <asp:TextBox ID="TxtDataCertidao" class="input2 data" ValidationGroup="MtriculaVG"
                 runat="server" MaxLength="10" ToolTip="Data em que a certidão foi lavrada" AutoCompleteType="None"></asp:TextBox>
         </div>
     </section>
@@ -160,14 +162,15 @@
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="Endereco:" ID="lblEndereco" />
             <asp:TextBox ID="txtEndereco" class="input" runat="server" MaxLength="150" required="Digite seu endereço atual"
-                ToolTip="Endereco em que reside. Ex.Rua Dois Irmãos, n 01" AutoCompleteType="HomeStreetAddress" />
+                ValidationGroup="MtriculaVG" ToolTip="Endereco em que reside. Ex.Rua Dois Irmãos, n 01"
+                AutoCompleteType="HomeStreetAddress" />
         </div>
  
                 <%--Estado--%>
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Estado:" ID="lblEstado" />
                     <asp:DropDownList ID="ddlEstado" class="input2" runat="server" ToolTip="Estado em que você mora."
-                        AutoPostBack="true" OnSelectedIndexChanged="CarregarDDLCidade">
+                        ValidationGroup="vgEndereco" AutoPostBack="true" OnSelectedIndexChanged="CarregarDDLCidade">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="EstadoRFV" runat="server" ErrorMessage="*Campo Obrigatório"
                         SetFocusOnError="true" ControlToValidate="ddlEstado" InitialValue="0" Display="Dynamic"
@@ -177,14 +180,15 @@
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Cidade:" ID="lblCidade" />
                     <asp:DropDownList ID="DDLCidade" class="input2" runat="server" ToolTip="Cidade em que você mora."
-                        AutoPostBack="true" OnSelectedIndexChanged="CarregarDDLBairroEndereco">
+                        ValidationGroup="vgEndereco" AutoPostBack="true" OnSelectedIndexChanged="CarregarDDLBairroEndereco">
                         <asp:ListItem Text="SELECIONE" Value="0"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <%--Bairro--%>
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Bairro:" ID="lblBairro" />
-                    <asp:DropDownList ID="ddlBairro" class="input2" runat="server" ToolTip="Bairro em que você mora.">
+                    <asp:DropDownList ID="ddlBairro" class="input2" runat="server" ValidationGroup="vgEndereco"
+                        ToolTip="Bairro em que você mora.">
                         <asp:ListItem Text="SELECIONE" Value="0"></asp:ListItem>
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Selecione um Bairro"
@@ -208,14 +212,15 @@
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="Nome da Mãe:" ID="lblNomeCartorio" />
                         <asp:TextBox ID="TxtNomeMae" AutoCompleteType="None" class="input" runat="server"
-                            OnTextChanged="HabilitarCampoResponsavel" AutoPostBack="True" MaxLength="150"
-                            ToolTip="Nome da Mãe do Aluno"></asp:TextBox>
+                            ValidationGroup="vgResponsavel" OnTextChanged="HabilitarCampoResponsavel" AutoPostBack="True"
+                            MaxLength="150" ToolTip="Nome da Mãe do Aluno"></asp:TextBox>
                     </div>
                     <p />
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="Nome do Pai:" ID="lblPai" />
                         <asp:TextBox ID="txtPai" AutoPostBack="True" AutoCompleteType="None" class="input"
-                            runat="server" MaxLength="150" ToolTip="Nome do Pai do Aluno" OnTextChanged="HabilitarCampoResponsavel"></asp:TextBox>
+                            ValidationGroup="vgResponsavel" runat="server" MaxLength="150" ToolTip="Nome do Pai do Aluno"
+                            OnTextChanged="HabilitarCampoResponsavel"></asp:TextBox>
                     </div>
                 </section>
                 <p />
@@ -224,7 +229,7 @@
                 <section class="caixa1">
                     <div class="field">
                         <asp:RadioButtonList ID="rblResponsavel" RepeatDirection="Horizontal" runat="server"
-                            RepeatColumns="3" AutoPostBack="true" OnSelectedIndexChanged="HabilitarCampoResponsavel">
+                            ValidationGroup="vgResponsavel" RepeatColumns="3" AutoPostBack="true" OnSelectedIndexChanged="HabilitarCampoResponsavel">
                             <asp:ListItem Text="Mãe" Value="Mãe" Selected="False" />
                             <asp:ListItem Text="Pai" Value="Pai" Selected="False" />
                             <asp:ListItem Text="Outros" Value="Outros" Selected="False" />
@@ -237,7 +242,8 @@
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="Nome:" ID="lblResponsavel" />
                         <asp:TextBox ID="txtNomeResponsavel" AutoCompleteType="None" required="Digite o nome do Responsavel"
-                            Enabled="false" class="input" runat="server" MaxLength="150" ToolTip="Nome do Responsavel" />
+                            ValidationGroup="MtriculaVG" Enabled="false" class="input" runat="server" MaxLength="150"
+                            ToolTip="Nome do Responsavel" />
                     </div>
                     <p />
                     <%-- Cpf Responsavel--%>
@@ -251,21 +257,21 @@
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="RG:" ID="lblRGResponsavel" />
                         <asp:TextBox ID="TxtRGResponsavel" AutoCompleteType="None" Enabled="true" class="input2"
-                            runat="server" MaxLength="15" ToolTip="Número da Identidade"></asp:TextBox>
+                            ValidationGroup="MtriculaVG" runat="server" MaxLength="15" ToolTip="Número da Identidade"/>
                     </div>
                     <p />
                     <%--Telefone--%>
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="Telefone:" ID="lblTelefone" />
                         <asp:TextBox ID="TbTelefone" AutoCompleteType="HomePhone" Enabled="true" class="input2 telefone"
-                            runat="server" MaxLength="15" ToolTip="Número de Telefone"></asp:TextBox>
+                            ValidationGroup="MtriculaVG" runat="server" MaxLength="15" ToolTip="Número de Telefone"></asp:TextBox>
                     </div>
                     <p />
                     <%--Celular--%>
                     <div class="field">
                         <asp:Label runat="server" class="lb1" Text="Celular:" ID="lblCelular" />
                         <asp:TextBox ID="TbCelular" AutoCompleteType="Cellular" Enabled="true" class="input2 telefone"
-                            runat="server" MaxLength="15" ToolTip="Número de Celular"></asp:TextBox>
+                            ValidationGroup="MtriculaVG" runat="server" MaxLength="15" ToolTip="Número de Celular"/>
                     </div>
                 </section>
             </div>
@@ -295,7 +301,7 @@
                 <%--   Gravida--%>
                 <div class="field">
                     <asp:Label runat="server" class="lb1" Text="Esta gravida?" ID="lblGravida" Visible="false" />
-                    <asp:DropDownList ID="DDLGravida" Visible="false" class="input2" runat="server" AutoPostBack="true"
+                    <asp:DropDownList ID="DDLGravida" Visible="false" class="input2" runat="server" AutoPostBack="true" 
                         OnSelectedIndexChanged="Gravida">
                         <asp:ListItem Selected="True">NÃO</asp:ListItem>
                         <asp:ListItem>SIM</asp:ListItem>

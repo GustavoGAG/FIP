@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Ultilitarios;
+using Ferramentas;
 
 namespace WebSite
 {
@@ -25,7 +25,7 @@ namespace WebSite
                  string    mensagemEmail = MontarMensagem();
 
                     ///Envia a mensagem do usuario para o email abaixo
-                    Ultilitarios.EnviarEmail enviarEmail = new Ultilitarios.EnviarEmail();
+                    Ferramentas.EnviarEmail enviarEmail = new Ferramentas.EnviarEmail();
                     enviarEmail.Destinatario = "gustavo.americo@hotmail.com.br";
                     enviarEmail.Assunto = txtAssunto.Text;
                     enviarEmail.Mensagem = mensagemEmail;

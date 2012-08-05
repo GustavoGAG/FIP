@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Web.UI.WebControls;
 using Business;
-using Ultilitarios;
+using Ferramentas;
 namespace WebSite
 {
     public partial class Matricula:System.Web.UI.Page
@@ -72,12 +72,12 @@ namespace WebSite
         {
             try
             {
-                if (!IsPostBack)
+                if(!IsPostBack)
                 {
                     PreencheDDLEstado();
                     divAlert.Visible = false;
                 }
-                
+
             }
             catch(Exception error)
             {
@@ -140,16 +140,14 @@ namespace WebSite
 
                 CadastrarDeficiencia(_idUsuario);
                 CadastrarEscolaEscolhida(_idUsuario);
-
+                if(_idUsuario > 0)
+                    Response.Redirect("Matricula_Print.aspx?id=" + _idUsuario);
             }
 
             catch(AlertaException erro)
             {
 
-                divAlert.InnerHtml = "Alerta Erro Matricularse <br />" + erro.Alerta;
-
-                divAlert.InnerHtml += "<br /> <br />" + AlertaException.EnviarEmailSuporte(erro);
-
+                divAlert.InnerHtml = erro.Alerta;
                 divAlert.Visible = true;
                 CancelarMatricula();
             }
@@ -160,8 +158,7 @@ namespace WebSite
                 CancelarMatricula();
 
             }
-            if(_idUsuario > 0)
-                Response.Redirect("Matricula_Print.aspx?id=" + _idUsuario);
+          
 
         }
 

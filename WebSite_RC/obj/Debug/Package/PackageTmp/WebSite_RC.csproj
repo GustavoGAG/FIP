@@ -287,13 +287,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Dropbox\z.Trabalhos\z.DLLs\Ultilitarios\Ferramentas.csproj">
+      <Project>{560AC010-3C76-4FF1-9F4F-E998C6494C5C}</Project>
+      <Name>Ferramentas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Business\Business.csproj">
       <Project>{3100A9A9-6A9C-42F5-9427-C0241876D472}</Project>
       <Name>Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ultilitarios\Ultilitarios.csproj">
-      <Project>{560AC010-3C76-4FF1-9F4F-E998C6494C5C}</Project>
-      <Name>Ultilitarios</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Business;
 using System.Data;
-using Ultilitarios;
+using Ferramentas;
 
 namespace WebSite
 {
@@ -49,7 +49,7 @@ namespace WebSite
             }
             catch(Exception er)
             {
-                divAlert.InnerHtml = Ultilitarios.AlertaException.EnviarEmailSuporte(er);
+                divAlert.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
                 divAlert.Visible = true;
             }
             #endregion
@@ -76,7 +76,7 @@ namespace WebSite
             }
             catch(Exception er)
             {
-                divAlert.InnerHtml = Ultilitarios.AlertaException.EnviarEmailSuporte(er);
+                divAlert.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
                 divAlert.Visible = true;
             }
             #endregion
@@ -328,7 +328,7 @@ namespace WebSite
             }
             catch(Exception er)
             {
-                divAlert.InnerHtml = Ultilitarios.AlertaException.EnviarEmailSuporte(er);
+                divAlert.InnerHtml = Ferramentas.AlertaException.EnviarEmailSuporte(er);
                 divAlert.Visible = true;
                 pnMatricula.Visible = false;
                 pnPesquisa.Visible = false;

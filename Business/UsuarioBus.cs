@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using DataAcess;
-using Ultilitarios;
+using Ferramentas;
 using MySql.Data.MySqlClient;
 
 namespace Business
@@ -21,8 +21,6 @@ namespace Business
 
         #endregion
 
-
-
         /// <summary>
         /// Inserir dados de um Usuário no Banco de Dados
         /// </summary>
@@ -36,7 +34,6 @@ namespace Business
         /// <param name="cep">CEP do Usuário</param>
         /// <param name="idCertidao">id da Certidão do Usuário</param>
         /// <param name="idPesquisa">id do Formulário de Pesquisa preenchido pelo Usuário</param>
-        /// <param name="idEscola">id da Escola do Usuário</param>
         /// <param name="idMotivoMatricula">id das informações referentes ao Motivo da Matrícula preenchido pelo Usuário</param>
         /// <param name="idCidade">id da Cidade do Usuário</param>
         /// <param name="idStatus">id do Status do Usuário</param>
@@ -58,8 +55,8 @@ namespace Business
             long idResponsavel,string nomePai,
             string nomeMae)
         {
-            try
-            {
+          
+
                 usuario = new Usuario()
                 {
 
@@ -90,23 +87,6 @@ namespace Business
                     return usuario.Inserir();
 
                 throw new AlertaException("Você já esta cadastrado");
-
-            }
-            #region Exception
-            catch(MySqlException er)
-            {
-                throw new AlertaException(er.Message);
-
-            }
-            catch(UpdateException upEx)
-            {
-                throw new AlertaException(upEx.Message);
-            }
-            catch(Exception)
-            {
-                throw;
-            }
-            #endregion
 
         }
 
