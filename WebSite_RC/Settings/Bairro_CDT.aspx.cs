@@ -7,25 +7,25 @@ using Ferramentas;
 
 namespace WebSite.Settings
 {
-    public partial class Bairro_CDT : System.Web.UI.Page
+    public partial class Bairro_CDT:System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender,EventArgs e)
         {
             try
             {
-                if (!IsPostBack)
+                if(!IsPostBack)
                 {
                     int idEstado = 0;
                     int idCidade = 0;
-                    if (Request.QueryString.Count > 0)
+                    if(Request.QueryString.Count > 0)
                     {
-                        int.TryParse(Request.QueryString["cid"], out idCidade);
-                        int.TryParse(Request.QueryString["est"], out idEstado);
+                        int.TryParse(Request.QueryString["cid"],out idCidade);
+                        int.TryParse(Request.QueryString["est"],out idEstado);
 
                     }
 
                     EstadoBus.TodosEstados(ddlEstado);
-                    CidadeBus.Pesquisar(idEstado, ddlCidade);
+                    CidadeBus.Pesquisar(idEstado,ddlCidade);
 
                     ddlCidade.Items.FindByValue(idCidade.ToString()).Selected = true;
                     ddlEstado.Items.FindByValue(idEstado.ToString()).Selected = true;
@@ -51,7 +51,7 @@ namespace WebSite.Settings
 
         }
 
-        protected void NewBairro(object sender, EventArgs e)
+        protected void NewBairro(object sender,EventArgs e)
         {
             lvBairro.EditIndex = -1;
             lvBairro.InsertItemPosition = InsertItemPosition.FirstItem;
@@ -67,35 +67,37 @@ namespace WebSite.Settings
 
         #region DropDownList
         /// <summary>Envia o ID do Estado selecionado para URL</summary>
-        protected void CarregarCidade(object sender, EventArgs e)
+        protected void CarregarCidade(object sender,EventArgs e)
         {
             Response.Redirect("Bairro_CDT.aspx?est=" + ddlEstado.SelectedValue);
 
         }
         /// <summary>Envia o ID da Cidade selecionado para URL</summary>
-        protected void CarregarListView(object sender, EventArgs e)
+        protected void CarregarListView(object sender,EventArgs e)
         {
-          Response.Redirect( QueryString(ddlCidade.SelectedValue));
+            Response.Redirect(QueryString(ddlCidade.SelectedValue));
         }
         #endregion
 
         #region ListView Bairros
 
         /// <summary>Vincula os Objetos aos dados</summary>
-        protected void DataBound(object sender, ListViewItemEventArgs e)
+        protected void DataBound(object sender,ListViewItemEventArgs e)
         {
             try
             {
-                if (e.Item.ItemType == ListViewItemType.DataItem)
+                if(e.Item.ItemType == ListViewItemType.DataItem)
                 {
                     Label lblId = (Label)e.Item.FindControl("lblId");
-                    lblId.Text = DataBinder.Eval(e.Item.DataItem, "id").ToString();
+                    lblId.Text = DataBinder.Eval(e.Item.DataItem,"id").ToString();
 
                     Label lblBairro = (Label)e.Item.FindControl("lblBairro");
-                    lblBairro.Text = DataBinder.Eval(e.Item.DataItem, "nomeBairro").ToString();
 
-                    Button btEditar = (Button)e.Item.FindControl("btEditar");
-                    Button btApagar = (Button)e.Item.FindControl("btApagar");
+                    Button btEditar = (Button)e.Item.FindControl("btEditar") ?? (Button)e.Item.FindControl("btSave");
+                    Button btApagar = (Button)e.Item.FindControl("btApagar") ?? (Button)e.Item.FindControl("btCancel");
+
+                     
+                    lblBairro.Text =  DataBinder.Eval(e.Item.DataItem,"nomeBairro").ToString();
                     btEditar.CommandArgument = lblId.Text;
                     btApagar.CommandArgument = lblId.Text;
 
@@ -118,12 +120,12 @@ namespace WebSite.Settings
         }
 
 
-        protected void ItemComando(object sender, ListViewCommandEventArgs e)
+        protected void ItemComando(object sender,ListViewCommandEventArgs e)
         {
             try
             {
 
-                switch (e.CommandName)
+                switch(e.CommandName)
                 {
                     #region UPDATE
                     case "Update":
@@ -133,11 +135,11 @@ namespace WebSite.Settings
 
                             int idCidade = 0;
 
-                            if (!string.IsNullOrEmpty(Request.QueryString["cid"]))
-                                int.TryParse(Request.QueryString["cid"], out idCidade);
+                            if(!string.IsNullOrEmpty(Request.QueryString["cid"]))
+                                int.TryParse(Request.QueryString["cid"],out idCidade);
 
-                            if (!string.IsNullOrEmpty(txtBairro.Text))
-                                divAlerta.InnerHtml= BairroBus.Editar(int.Parse(lblId.Text),txtBairro.Text,idCidade);
+                            if(!string.IsNullOrEmpty(txtBairro.Text))
+                                divAlerta.InnerHtml = BairroBus.Editar(int.Parse(lblId.Text),txtBairro.Text,idCidade);
 
                             divAlerta.Visible = true;
                             break;
@@ -160,8 +162,8 @@ namespace WebSite.Settings
 
                             TextBox txtBairro = (TextBox)e.Item.FindControl("txtBairro");
                             int idCidade = 0;
-                            int.TryParse(Request.QueryString["cid"], out idCidade);
-                            if (idCidade != 0)
+                            int.TryParse(Request.QueryString["cid"],out idCidade);
+                            if(idCidade != 0)
                                 divAlerta.InnerHtml = BairroBus.Inserir(txtBairro.Text,idCidade);
                             else
                                 divAlerta.InnerHtml = "Selecione uma Cidade.";
@@ -177,33 +179,31 @@ namespace WebSite.Settings
             {
                 divAlerta.InnerHtml = erro.Alerta;
                 divAlerta.Visible = true;
-         
+
             }
             catch(Exception ex)
             {
                 divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(ex);
                 divAlerta.Visible = true;
-            
+
 
             }
         }
 
         #endregion
 
-
-        protected void FecharInsert()
+        private void FecharInsert()
         {
             lvBairro.InsertItemPosition = InsertItemPosition.None;
-            Button NewBairro = (Button)lvBairro.FindControl("NewBairro");
-            NewBairro.Visible = true;
+            btNewBairro.Visible = !btNewBairro.Visible;
 
         }
 
-        protected void Editing(object sender, ListViewEditEventArgs e)
+        protected void Editing(object sender,ListViewEditEventArgs e)
         {
 
             int idCidade = 0;
-            int.TryParse(ddlCidade.SelectedValue, out idCidade);
+            int.TryParse(ddlCidade.SelectedValue,out idCidade);
             FecharInsert();
             lvBairro.EditIndex = e.NewEditIndex;
             CarregarListView(idCidade);
@@ -211,28 +211,28 @@ namespace WebSite.Settings
         }
 
         #region Operaçoes ListView
-        protected void Inserting(object sender, ListViewInsertEventArgs e)
+        protected void Inserting(object sender,ListViewInsertEventArgs e)
         {
 
         }
 
-        protected void Canceling(object sender, ListViewCancelEventArgs e)
+        protected void Canceling(object sender,ListViewCancelEventArgs e)
         {
             int idCidade = 0;
-            int.TryParse(ddlCidade.SelectedValue, out idCidade);
-            if (e.CancelMode == ListViewCancelMode.CancelingInsert)
+            int.TryParse(ddlCidade.SelectedValue,out idCidade);
+            if(e.CancelMode == ListViewCancelMode.CancelingInsert)
                 FecharInsert();
             else
                 lvBairro.EditIndex = -1;
             CarregarListView(idCidade);
         }
 
-        protected void Updating(object sender, ListViewUpdateEventArgs e)
+        protected void Updating(object sender,ListViewUpdateEventArgs e)
         {
 
         }
 
-        protected void Deleting(object sender, ListViewDeleteEventArgs e)
+        protected void Deleting(object sender,ListViewDeleteEventArgs e)
         {
 
         }
@@ -245,15 +245,15 @@ namespace WebSite.Settings
             {
 
                 NameValueCollection nvc = new NameValueCollection();
-                foreach (string key in Request.QueryString.Keys)
-                    nvc.Add(key, Request.QueryString[key]);
+                foreach(string key in Request.QueryString.Keys)
+                    nvc.Add(key,Request.QueryString[key]);
 
-                nvc.Set("cid", idCidade);
+                nvc.Set("cid",idCidade);
 
-                foreach (string key in nvc.Keys)
+                foreach(string key in nvc.Keys)
                     query += key + "=" + nvc[key] + "&";
 
-                if (!string.IsNullOrEmpty(query))
+                if(!string.IsNullOrEmpty(query))
                     query = "?" + query.TrimEnd('&');
                 query = Request.Url.AbsolutePath + query;
 

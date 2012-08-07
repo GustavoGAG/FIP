@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/Settings.Master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/SettingsPage.Master" AutoEventWireup="true"
     CodeBehind="Deficiencia_CDT.aspx.cs" Inherits="WebSite.Settings.Deficiencia_CDT" %>
 
 <asp:Content ID="TituloDeficiencia_CDT" ContentPlaceHolderID="HeadSettings" runat="server">

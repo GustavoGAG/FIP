@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/Settings.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="WebSite.Settings.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/SettingsPage.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="WebSite.Settings.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadSettings" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodySettings" runat="server">

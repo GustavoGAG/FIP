@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/Settings.Master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/SettingsPage.Master" AutoEventWireup="true"
     CodeBehind="Escola_CDT.aspx.cs" Inherits="WebSite.Settings.Escola_CDT" %>
 
 <asp:Content ID="HeadEscolaCDT" ContentPlaceHolderID="HeadSettings" runat="server">
@@ -35,9 +35,7 @@
                     <asp:TextBox ID="txtTelefone" runat="server" MaxLength="14" />
                 </td>
                 <td>
-                    <ajax:MaskedEditExtender ID="MaskedEditExtender1" TargetControlID="txtTelefone" MaskType="Number"
-                        Mask="(099)9999-9999" runat="server" ClearMaskOnLostFocus="false" ClipboardText="true"
-                        ClipboardEnabled="true" />
+                
                     <asp:RequiredFieldValidator ID="rfvTelefone" ControlToValidate="txtTelefone" Display="Dynamic"
                         runat="server" ErrorMessage="* Campo Obrigatorio" SetFocusOnError="true" ValidationGroup="vgCadastro" />
                 </td>
@@ -50,9 +48,7 @@
                     <asp:TextBox ID="txtFax" runat="server" MaxLength="14" />
                 </td>
                 <td>
-                    <ajax:MaskedEditExtender ID="mskTelefone" TargetControlID="txtFax" MaskType="Number"
-                        Mask="(099)9999-9999" runat="server" ClearMaskOnLostFocus="false" ClipboardText="true"
-                        ClipboardEnabled="true" />
+               
                 </td>
             </tr>
             <tr>
@@ -257,7 +253,7 @@
             <EmptyDataTemplate>
             <tr>
             <td>
-            Sem informação no banco
+            Não há escolas cadastradas
             </td>
             </tr>
             </EmptyDataTemplate>

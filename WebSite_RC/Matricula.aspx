@@ -22,13 +22,25 @@
 
                 } );
 
-
+                
 
                     $( ".cep" ).wijinputmask( { mask: "99999-999" } );
                     $( ".telefone" ).wijinputmask( { mask: "(99)9999-9999" } );
                     $( ".cpf" ).wijinputmask( { mask: "999.999.999-99" } );
 
                 } );
+    
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+    var texto = mascara.substring(i);
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+}
+         
         
             </script>
             
@@ -69,8 +81,8 @@
         <!-- CPF -->
         <div class="field">
             <asp:Label runat="server" class="lb1" Text="CPF:" ID="lblCPF" AssociatedControlID="TxtCPF" />
-            <asp:TextBox ValidationGroup="MtriculaVG" ID="TxtCPF" class="input2  cpf" runat="server"
-                MaxLength="14" ToolTip="Número de CPF do Aluno" AutoCompleteType="None" />
+            <asp:TextBox ValidationGroup="MtriculaVG" ID="TxtCPF" class="input2  cpf" onKeyUp="JavaScript:mascaraTexto(even,999.999.999-99);"
+                runat="server" MaxLength="14" ToolTip="Número de CPF do Aluno" AutoCompleteType="None" />
         </div>
         <!-- Sexo -->
                       <div class="field">
@@ -91,8 +103,8 @@
         <div class="field">
             <asp:Label runat="server" class="lb1" AssociatedControlID="TxtDataNascimento" Text="Data de Nascimento:"
                 ID="lblDataNascimento" />
-            <asp:TextBox ID="TxtDataNascimento" class="input2 data" ValidationGroup="MtriculaVG"
-                type="text" required="Digite a data em que nasceu" runat="server" MaxLength="10"
+            <asp:TextBox ID="TxtDataNascimento" class="input2" ValidationGroup="MtriculaVG" type="text"
+                required="Digite a data em que nasceu" runat="server" MaxLength="10" OnKeyPress="mascaraTexto(##/##/####, this);"
                 ToolTip="Data de Nascimento" AutoCompleteType="Disabled" />
         </div>
     </section>
