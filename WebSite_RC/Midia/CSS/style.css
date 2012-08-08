@@ -1,0 +1,275 @@
+﻿@import url("fonte/droidsans.css");
+@import url("fonte/fertigo.css");
+@import url("fonte/texgyre.css");
+
+* {padding:0; margin:0;}
+ul {list-style:none;}
+a {color:#1b78a8; text-decoration:none;}
+a img {border:none;}
+.clear {
+ clear:both;
+ line-height:1px; height:1px;
+}
+
+
+.clear:after {
+ display:block; 
+ visibility:hidden; 
+ clear:both; 
+ height:0; 
+ content: "."; 
+}
+
+/*===============  ==========================*/
+
+section, header, footer, article, nav {display:block;}
+body { background:url(../Img/imagens/htmlbg.jpg) left top repeat-x; font-size:62.5%; color:#333; font-family: Verdana, Geneva, sans-serif;}
+body.normalpage {background:url(../Img/imagens/normalhtml.jpg) left top repeat-x;}
+#page {width:100%; height:100%; background: url(../Img/imagens/headerbg.jpg) center top no-repeat; }
+
+/*===============  ==========================*/
+
+body.normalpage #page {
+	background:url(../Img/imagens/banner4.jpg) center top no-repeat;
+	height:300px;
+}
+
+
+/*===============  ==========================*/
+
+#bodywrap { width:1032px; margin: 0 auto;}
+#top {height:366px;}
+body.normalpage #top {
+	height:210px;
+}
+
+
+/*===============  ==========================*/
+
+#rp { height:100px; width:640px; margin:0 auto; float:left; margin-right:10px; background:url(../Img/imagens/rp.jpg)}
+/*===============  ==========================*/
+
+#tit1, #tit2 { height:40px; width:640px; margin:0 auto; float:left; margin-right:10px; background-color:#FFFF99}
+
+/*===============  ==========================*/
+
+body.normalpage #top #normalheader {height:81px;}
+
+#contentwrap { background:url(../Img/imagens/wrapbg.png) center top no-repeat;}
+#contents { margin:0 26px 0 26px; background:url(../Img/imagens/wraptop.jpg) 0 30px repeat-x; min-height:300px; padding:45px 15px 0 15px;}
+#top nav {height:74px; width:980px; margin:0 auto; font-family:'TeXGyreAdventor', Arial, sans-serif}
+#homeheader { height:292px; width:980px; margin:0 auto;}
+
+/*===============  ==========================*/
+
+#sitename {display:block; float:left; padding:18px 0 0 0;}
+#sitename a {display:block; background:url(../Img/imagens/portfoliologo.gif) no-repeat; height:42px; width:170px; float:left; text-indent:-5000px; overflow:hidden;}
+
+/*===============  ==========================*/
+
+#sitenav {
+	display:block;
+	float:right;
+	height:59px;
+	font-size:1.6em;
+	font-family:'TeXGyreAdventor', Arial, sans-serif;
+	padding-top:4px;
+	padding-right: 10px;
+	margin-right: 190px;
+}
+
+/*===============  ==========================*/
+
+#sitenav li {font-weight:bold; display:inline;}
+#sitenav li a {display:block; float:left; color:#00688B; padding:5px 15px 5px 15px;}
+#sitenav li a:hover {color:#ccc; text-shadow:#000 1px 1px 1px;}
+#sitenav li.current a {color:#fff; background:url(../Img/imagens/activemenu.png) center bottom no-repeat;}
+
+#topcolumns {margin-bottom:25px;}
+#topcolumns .col {width:30%; margin:6px; float:left; padding:0 9px;}
+#topcolumns img.imgright {float:right; margin-left:10px;}
+
+#contents p {font-size:1.2em; line-height:20px;}
+#contents li {font-size:1.2em;}
+
+h2 {font-family:'TeXGyreAdventor', Arial, sans-serif;}
+h3 {font-family:'DroidSansBold', Arial, sans-serif; font-weight:normal;}
+
+#normalpage h2, #topcolumns h2 {font-size:2.2em; margin-bottom:10px; color:#2d2d2d;}
+
+#topcolumns h2 {text-shadow:#fff 1px 1px 1px;}
+#normalpage {background:url(../Img/imagens/sidebarbg.jpg) 650px 0 repeat-y; min-height:200px;}
+
+#left { width:640px; float:left;}
+
+#sidebar {width:298px; float:right;}
+
+#normalpage #left h2 {display:block; background:url(../Img/imagens/lefth2.jpg) left center no-repeat; line-height:27px; padding:5px 10px 10px 10px;}
+#normalpage #sidebar h2 {display:block; background:url(../Img/imagens/sidebarh2.jpg) left center no-repeat; line-height:27px; padding:5px 10px 10px 10px;}
+#normalpage p {margin-bottom:15px;}
+
+#left article { padding:0 10px;}
+
+#contents a:hover {text-decoration:underline; color:#036;}
+
+#normalpage h3 {font-size:1.8em; color:#2885b5; margin-bottom:10px;}
+#normalpage h4 {font:bold 1.6em "Trebuchet MS", Arial, Helvetica, sans-serif; color:#000; margin-bottom:10px;}
+.caixa1 h1 {font:bold 2.6em "Trebuchet MS", Arial, Helvetica, sans-serif; color:#000; margin:auto;}
+
+#sidebar article {padding:10px;}
+blockquote {display:block; background:url(../Img/imagens/quote.png) left top no-repeat; padding-left:25px; font-style:italic; font-family:Georgia, "Times New Roman", Times, serif!important;}
+.testimonials blockquote {border-bottom:solid 1px #ddd; padding-bottom:10px; margin-bottom:10px;}
+blockquote p {margin-bottom:5px!important;}
+blockquote cite {display:block; font:italic 1.2em "Trebuchet MS", Arial, Helvetica, sans-serif; color:#000;}
+
+
+/*===============  ==========================*/
+
+#pagefooter {background:url(../Img/imagens/footerbg3.jpg) repeat-x; height:60px; width:100%; padding-top:11px;}
+
+#pagefooter h2 {font:bold 2.2em TeXGyreAdventor, Arial, sans-serif; color:#ddd; text-shadow:#222 1px 1px 1px; margin-bottom:10px;}
+#pagefooter p {font-size:1.2em; color:#666; line-height:1.8em;}
+#credits p {display:block; height:18px; width:940px; padding:20px; margin:0 auto; font-size:1.0em;}
+#credits p #designcredit {float:right; display:block;}
+#credits p .copyright {float:left; display:block;}
+#credits a {color:#fff;}
+
+#contents.normalcontents {background-image:none!important;}
+
+
+
+
+
+#sidebar .sbwrap {padding:10px;}
+#sidebar ul li {display:block; height:31px;}
+#sidebar ul li a { line-height:20px; border-bottom:solid 1px #ddd; padding:5px 0 0 25px; background:url(imagens/sidebarli.gif) left 7px no-repeat; display:block;}
+#sidebar ul li a:hover {background:url(../Img/imagens/sidebarli2.gif) left 7px no-repeat; color:#036;}
+
+
+.sbwrap.twocol li {width:49%; float:left;}
+
+/*=============== formulario de cadastro ==========================*/
+
+#cadastro {
+ 
+    width: 600px;
+    padding: 15px;
+    background: #CAFF70;
+    overflow:auto;
+    border: 1px solid #cccccc;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; 
+    -moz-box-shadow: 2px 2px 2px #cccccc;
+    -webkit-box-shadow: 2px 2px 2px #cccccc;
+    box-shadow: 2px 2px 2px #cccccc;
+ 
+    }
+
+    .caixa1 {
+	display:block;
+	float:left;
+	height:auto;
+	margin: auto;
+    width: 600px;
+    padding: 20px;
+    background: #ccff99;
+}
+	
+	.lb1 {
+    font-family: Arial, Verdana;
+    text-shadow: 2px 2px 2px #ccc;
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right:10px;
+    text-align: right;
+    width: 145px;
+    line-height: 25px;
+    font-size: 14px;
+    
+    }
+
+
+	.input{
+    font-family: Arial, Verdana;
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #b9bdc1;
+    width: 396px;
+    color: #797979;
+	
+    }
+	
+	.input2{
+    font-family: Arial, Verdana;
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #b9bdc1;
+    width: 120px;
+    color: #797979;
+	float:left;
+    margin-top:5px;
+    
+    }
+	
+	.hint{
+    display:none;
+    }
+	
+	.field:hover .hint {
+    position: absolute;
+    display: block;
+    margin: -30px 0 0 455px;
+    color: #FFFFFF;
+    padding: 7px 10px;
+    background: rgba(0, 0, 0, 0.6);
+ 
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    }
+	.button{
+    float: right;
+    margin:10px 55px 10px 0;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px 10px;
+    cursor:pointer;
+    color: #fff;
+ 
+    text-align: center;
+    text-shadow: 0 -1px 1px #64799e;
+ 
+    /* Background gradient */
+    background: #a5b8da;
+    background: -moz-linear-gradient(top, #a5b8da 0%, #7089b3 100%);
+    background: -webkit-gradient (linear, 0% 0%, 0% 100%, from(#a5b8da), to(#7089b3));
+ 
+    /* Border style */
+    border: 1px solid #5c6f91;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+ 
+    /* Box shadow */
+    -moz-box-shadow: inset 0 1px 0 0 #aec3e5;
+    -webkit-box-shadow: inset 0 1px 0 0 #aec3e5;
+    box-shadow: inset 0 1px 0 0 #aec3e5;
+ 
+    }
+    
+    /*================= Formulario de contatos ================================================*/
+    
+.form {padding:15px;}
+.form p, .form span, .form input, .form label {font-size:1.2em;}
+.form .field {padding:5px;}
+.form label {display:block; padding:5px 0 3px 0; font-weight:bold; color:#555;}
+.form .textfield {display:block; height:25px; line-height:25px; border:solid 1px #ccc; padding:3px; width:90%;}
+.form .text-area {display:block; width:90%; border:solid 1px #ccc; padding:3px;}
+.form .buttton {padding: 15px 0 0; height:45px;}
+input.btn {display:block; height:30px; padding:0 15px 0 15px; float:left; border:solid 1px; border-color:#bbb #999 #999 #bbb; font: bold 1.4em 'TeXGyreAdventor', Arial, sans-serif; color:#777; background:#efefef;}
+.text-area:focus, .textfield:focus {border:solid 1px #666;}
+    
+    
+     /*=================================================================*/

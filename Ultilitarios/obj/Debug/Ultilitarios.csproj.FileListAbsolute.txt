@@ -1,0 +1,15 @@
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\Ultilitarios\bin\Debug\Ultilitarios.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\Ultilitarios\bin\Debug\Ultilitarios.pdb
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\Ultilitarios\obj\Debug\ResolveAssemblyReference.cache
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\Ultilitarios\obj\Debug\Ultilitarios.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\FIP_RC_Desing\Ultilitarios\obj\Debug\Ultilitarios.pdb
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Ultilitarios\bin\Debug\Ultilitarios.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Ultilitarios\bin\Debug\Ultilitarios.pdb
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Ultilitarios\obj\Debug\ResolveAssemblyReference.cache
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Ultilitarios\obj\Debug\Ultilitarios.dll
+D:\Gustavo\Dropbox\z.Trabalhos\5. Fundação Iolanda Pasca (FIP)\WebSite\Ultilitarios\obj\Debug\Ultilitarios.pdb
+D:\Gustavo\GitHub\FIP\Ultilitarios\bin\Debug\Ultilitarios.dll
+D:\Gustavo\GitHub\FIP\Ultilitarios\bin\Debug\Ultilitarios.pdb
+D:\Gustavo\GitHub\FIP\Ultilitarios\obj\Debug\ResolveAssemblyReference.cache
+D:\Gustavo\GitHub\FIP\Ultilitarios\obj\Debug\Ultilitarios.dll
+D:\Gustavo\GitHub\FIP\Ultilitarios\obj\Debug\Ultilitarios.pdb

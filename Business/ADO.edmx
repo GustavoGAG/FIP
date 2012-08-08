@@ -1,0 +1,2672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DataAcess.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DataAcessStoreContainer">
+          <EntitySet Name="administrador" EntityType="DataAcess.Store.administrador" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="bairro" EntityType="DataAcess.Store.bairro" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="certidaonascimento" EntityType="DataAcess.Store.certidaonascimento" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="cidade" EntityType="DataAcess.Store.cidade" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="conselhotutelar" EntityType="DataAcess.Store.conselhotutelar" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="deficiencia" EntityType="DataAcess.Store.deficiencia" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="escola" EntityType="DataAcess.Store.escola" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="escolaescolhida" EntityType="DataAcess.Store.escolaescolhida" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="estado" EntityType="DataAcess.Store.estado" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="motivomatricula" EntityType="DataAcess.Store.motivomatricula" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="pesquisa" EntityType="DataAcess.Store.pesquisa" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="responsavel" EntityType="DataAcess.Store.responsavel" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="serieescola" EntityType="DataAcess.Store.serieescola" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="status" EntityType="DataAcess.Store.status" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="tipoescola" EntityType="DataAcess.Store.tipoescola" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="usuario" EntityType="DataAcess.Store.usuario" store:Type="Tables" Schema="fip" />
+          <EntitySet Name="usudeficiencia" EntityType="DataAcess.Store.usudeficiencia" store:Type="Tables" Schema="fip" />
+          <AssociationSet Name="FK_Bairro_Administrador_fk" Association="DataAcess.Store.FK_Bairro_Administrador_fk">
+            <End Role="bairro" EntitySet="bairro" />
+            <End Role="administrador" EntitySet="administrador" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bairro_ibfk_1" Association="DataAcess.Store.FK_bairro_ibfk_1">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="bairro" EntitySet="bairro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_certidaonascimento_ibfk_1" Association="DataAcess.Store.FK_certidaonascimento_ibfk_1">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="certidaonascimento" EntitySet="certidaonascimento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_certidaonascimento_ibfk_2" Association="DataAcess.Store.FK_certidaonascimento_ibfk_2">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="certidaonascimento" EntitySet="certidaonascimento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cidade_Administrador_fk" Association="DataAcess.Store.FK_Cidade_Administrador_fk">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="administrador" EntitySet="administrador" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cidade_ibfk_1" Association="DataAcess.Store.FK_cidade_ibfk_1">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="cidade" EntitySet="cidade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_conselhotutelar_ibfk_1" Association="DataAcess.Store.FK_conselhotutelar_ibfk_1">
+            <End Role="bairro" EntitySet="bairro" />
+            <End Role="conselhotutelar" EntitySet="conselhotutelar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_conselhotutelar_ibfk_2" Association="DataAcess.Store.FK_conselhotutelar_ibfk_2">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="conselhotutelar" EntitySet="conselhotutelar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_conselhotutelar_ibfk_3" Association="DataAcess.Store.FK_conselhotutelar_ibfk_3">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="conselhotutelar" EntitySet="conselhotutelar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_escola_ibfk_1" Association="DataAcess.Store.FK_escola_ibfk_1">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="escola" EntitySet="escola" />
+          </AssociationSet>
+          <AssociationSet Name="FK_escola_ibfk_2" Association="DataAcess.Store.FK_escola_ibfk_2">
+            <End Role="tipoescola" EntitySet="tipoescola" />
+            <End Role="escola" EntitySet="escola" />
+          </AssociationSet>
+          <AssociationSet Name="FK_escola_ibfk_3" Association="DataAcess.Store.FK_escola_ibfk_3">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="escola" EntitySet="escola" />
+          </AssociationSet>
+          <AssociationSet Name="FK_escola_ibfk_4" Association="DataAcess.Store.FK_escola_ibfk_4">
+            <End Role="bairro" EntitySet="bairro" />
+            <End Role="escola" EntitySet="escola" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EscolaDestino" Association="DataAcess.Store.FK_EscolaDestino">
+            <End Role="escola" EntitySet="escola" />
+            <End Role="escolaescolhida" EntitySet="escolaescolhida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EscolaOrigem" Association="DataAcess.Store.FK_EscolaOrigem">
+            <End Role="escola" EntitySet="escola" />
+            <End Role="escolaescolhida" EntitySet="escolaescolhida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Status_Usuario" Association="DataAcess.Store.FK_Status_Usuario">
+            <End Role="status" EntitySet="status" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_1" Association="DataAcess.Store.FK_usuario_ibfk_1">
+            <End Role="certidaonascimento" EntitySet="certidaonascimento" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_3" Association="DataAcess.Store.FK_usuario_ibfk_3">
+            <End Role="pesquisa" EntitySet="pesquisa" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_4" Association="DataAcess.Store.FK_usuario_ibfk_4">
+            <End Role="serieescola" EntitySet="serieescola" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_5" Association="DataAcess.Store.FK_usuario_ibfk_5">
+            <End Role="motivomatricula" EntitySet="motivomatricula" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_6" Association="DataAcess.Store.FK_usuario_ibfk_6">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_7" Association="DataAcess.Store.FK_usuario_ibfk_7">
+            <End Role="responsavel" EntitySet="responsavel" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_8" Association="DataAcess.Store.FK_usuario_ibfk_8">
+            <End Role="bairro" EntitySet="bairro" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_9" Association="DataAcess.Store.FK_usuario_ibfk_9">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioDeficiencia" Association="DataAcess.Store.FK_UsuarioDeficiencia">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="usudeficiencia" EntitySet="usudeficiencia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioEscolaEscolhida" Association="DataAcess.Store.FK_UsuarioEscolaEscolhida">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="escolaescolhida" EntitySet="escolaescolhida" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuDeficiencia_Deficiencia" Association="DataAcess.Store.FK_UsuDeficiencia_Deficiencia">
+            <End Role="deficiencia" EntitySet="deficiencia" />
+            <End Role="usudeficiencia" EntitySet="usudeficiencia" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="administrador">
+          <Key>
+            <PropertyRef Name="IdAdministrador" />
+          </Key>
+          <Property Name="IdAdministrador" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="longtext" />
+          <Property Name="Login" Type="longtext" />
+          <Property Name="Senha" Type="longtext" Nullable="false" />
+          <Property Name="DataNascimento" Type="datetime" />
+          <Property Name="Cpf" Type="longtext" Nullable="false" />
+          <Property Name="Telefone" Type="longtext" />
+          <Property Name="Celular" Type="longtext" />
+          <Property Name="Email" Type="longtext" />
+          <Property Name="Organizacao" Type="longtext" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdCidade" Type="int" Nullable="false" />
+          <Property Name="IdBairro" Type="int" Nullable="false" />
+          <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+          <Property Name="AutorRemoveu" Type="longtext" />
+          <Property Name="DataRemovido" Type="datetime" />
+          <Property Name="Ativo" Type="int" />
+        </EntityType>
+        <EntityType Name="bairro">
+          <Key>
+            <PropertyRef Name="IdBairro" />
+          </Key>
+          <Property Name="IdBairro" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="longtext" />
+          <Property Name="IdCidade" Type="int" />
+        </EntityType>
+        <EntityType Name="certidaonascimento">
+          <Key>
+            <PropertyRef Name="IdCertidao" />
+          </Key>
+          <Property Name="IdCertidao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Numero" Type="longtext" />
+          <Property Name="Livro" Type="longtext" />
+          <Property Name="Folha" Type="longtext" />
+          <Property Name="Cartorio" Type="longtext" />
+          <Property Name="DataCertidao" Type="datetime" />
+          <Property Name="IdCidade" Type="int" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="cidade">
+          <Key>
+            <PropertyRef Name="IdCidade" />
+          </Key>
+          <Property Name="IdCidade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="longtext" />
+          <Property Name="Sigla" Type="longtext" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="conselhotutelar">
+          <Key>
+            <PropertyRef Name="IdConselho" />
+          </Key>
+          <Property Name="IdConselho" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="longtext" />
+          <Property Name="Endereco" Type="longtext" />
+          <Property Name="Telefone" Type="longtext" />
+          <Property Name="Cep" Type="longtext" />
+          <Property Name="Fax" Type="longtext" />
+          <Property Name="IdBairro" Type="int" />
+          <Property Name="IdCidade" Type="int" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="deficiencia">
+          <Key>
+            <PropertyRef Name="IdDeficiencia" />
+          </Key>
+          <Property Name="IdDeficiencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Deficiencia1" Type="longtext" />
+        </EntityType>
+        <EntityType Name="escola">
+          <Key>
+            <PropertyRef Name="IdEscola" />
+          </Key>
+          <Property Name="IdEscola" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="longtext" />
+          <Property Name="Telefone" Type="longtext" />
+          <Property Name="Fax" Type="longtext" />
+          <Property Name="IdCidade" Type="int" />
+          <Property Name="IdTipoEscola" Type="int" />
+          <Property Name="IdEstado" Type="int" />
+          <Property Name="IdBairro" Type="int" />
+        </EntityType>
+        <EntityType Name="escolaescolhida">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="IdEscolaOrigem" Type="int" />
+          <Property Name="IdEscolaDestino" Type="int" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="IdEstado" />
+          </Key>
+          <Property Name="IdEstado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="longtext" />
+          <Property Name="Sigla" Type="longtext" />
+        </EntityType>
+        <EntityType Name="motivomatricula">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Motivo" Type="longtext" />
+        </EntityType>
+        <EntityType Name="pesquisa">
+          <Key>
+            <PropertyRef Name="IdPesquisa" />
+          </Key>
+          <Property Name="IdPesquisa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="JaEstudou" Type="longtext" />
+          <Property Name="RecebePensaoAlimenticia" Type="longtext" />
+          <Property Name="Inss" Type="longtext" />
+          <Property Name="BolsaFamilia" Type="longtext" />
+          <Property Name="EstaGravida" Type="longtext" />
+          <Property Name="MesGravidez" Type="longtext" />
+        </EntityType>
+        <EntityType Name="responsavel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdetidadeResponsavel" Type="longtext" />
+          <Property Name="NomePai" Type="longtext" />
+          <Property Name="NomeMae" Type="longtext" />
+          <Property Name="NomeResponsavel" Type="longtext" />
+          <Property Name="CelularResponsavel" Type="longtext" />
+          <Property Name="TelefoneResponsavel" Type="longtext" />
+          <Property Name="cpfResponsavel" Type="longtext" />
+        </EntityType>
+        <EntityType Name="serieescola">
+          <Key>
+            <PropertyRef Name="IdSerie" />
+          </Key>
+          <Property Name="IdSerie" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Serie" Type="longtext" />
+        </EntityType>
+        <EntityType Name="status">
+          <Key>
+            <PropertyRef Name="IdStatus" />
+          </Key>
+          <Property Name="IdStatus" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="longtext" />
+        </EntityType>
+        <EntityType Name="tipoescola">
+          <Key>
+            <PropertyRef Name="IdTipoEscola" />
+          </Key>
+          <Property Name="IdTipoEscola" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TipoEscola1" Type="longtext" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="longtext" />
+          <Property Name="Cpf" Type="longtext" />
+          <Property Name="DataNascimento" Type="datetime" Nullable="false" />
+          <Property Name="Sexo" Type="longtext" Nullable="false" />
+          <Property Name="Identidade" Type="longtext" />
+          <Property Name="OrgaoEmissor" Type="longtext" />
+          <Property Name="Endereco" Type="longtext" />
+          <Property Name="Cep" Type="longtext" />
+          <Property Name="IdCertidao" Type="int" />
+          <Property Name="IdPesquisa" Type="int" />
+          <Property Name="IdEscola" Type="int" />
+          <Property Name="IdMotivoMatricula" Type="int" />
+          <Property Name="IdCidade" Type="int" />
+          <Property Name="IdStatus" Type="int" />
+          <Property Name="IdBairro" Type="int" />
+          <Property Name="IdEstado" Type="int" />
+          <Property Name="IdResponsavel" Type="int" />
+          <Property Name="DataCadastro" Type="datetime" />
+        </EntityType>
+        <EntityType Name="usudeficiencia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="IdDeficiencia" Type="int" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <Association Name="FK_Bairro_Administrador_fk">
+          <End Role="bairro" Type="DataAcess.Store.bairro" Multiplicity="1" />
+          <End Role="administrador" Type="DataAcess.Store.administrador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="administrador">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bairro_ibfk_1">
+          <End Role="cidade" Type="DataAcess.Store.cidade" Multiplicity="0..1" />
+          <End Role="bairro" Type="DataAcess.Store.bairro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="bairro">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_certidaonascimento_ibfk_1">
+          <End Role="cidade" Type="DataAcess.Store.cidade" Multiplicity="0..1" />
+          <End Role="certidaonascimento" Type="DataAcess.Store.certidaonascimento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="certidaonascimento">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_certidaonascimento_ibfk_2">
+          <End Role="estado" Type="DataAcess.Store.estado" Multiplicity="0..1" />
+          <End Role="certidaonascimento" Type="DataAcess.Store.certidaonascimento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="certidaonascimento">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cidade_Administrador_fk">
+          <End Role="cidade" Type="DataAcess.Store.cidade" Multiplicity="1" />
+          <End Role="administrador" Type="DataAcess.Store.administrador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="administrador">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cidade_ibfk_1">
+          <End Role="estado" Type="DataAcess.Store.estado" Multiplicity="0..1" />
+          <End Role="cidade" Type="DataAcess.Store.cidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="cidade">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_conselhotutelar_ibfk_1">
+          <End Role="bairro" Type="DataAcess.Store.bairro" Multiplicity="0..1" />
+          <End Role="conselhotutelar" Type="DataAcess.Store.conselhotutelar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="conselhotutelar">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_conselhotutelar_ibfk_2">
+          <End Role="cidade" Type="DataAcess.Store.cidade" Multiplicity="0..1" />
+          <End Role="conselhotutelar" Type="DataAcess.Store.conselhotutelar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="conselhotutelar">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_conselhotutelar_ibfk_3">
+          <End Role="estado" Type="DataAcess.Store.estado" Multiplicity="0..1" />
+          <End Role="conselhotutelar" Type="DataAcess.Store.conselhotutelar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="conselhotutelar">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_escola_ibfk_1">
+          <End Role="cidade" Type="DataAcess.Store.cidade" Multiplicity="0..1" />
+          <End Role="escola" Type="DataAcess.Store.escola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="escola">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_escola_ibfk_2">
+          <End Role="tipoescola" Type="DataAcess.Store.tipoescola" Multiplicity="0..1" />
+          <End Role="escola" Type="DataAcess.Store.escola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoescola">
+              <PropertyRef Name="IdTipoEscola" />
+            </Principal>
+            <Dependent Role="escola">
+              <PropertyRef Name="IdTipoEscola" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_escola_ibfk_3">
+          <End Role="estado" Type="DataAcess.Store.estado" Multiplicity="0..1" />
+          <End Role="escola" Type="DataAcess.Store.escola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="escola">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_escola_ibfk_4">
+          <End Role="bairro" Type="DataAcess.Store.bairro" Multiplicity="0..1" />
+          <End Role="escola" Type="DataAcess.Store.escola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="escola">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EscolaDestino">
+          <End Role="escola" Type="DataAcess.Store.escola" Multiplicity="0..1" />
+          <End Role="escolaescolhida" Type="DataAcess.Store.escolaescolhida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="escola">
+              <PropertyRef Name="IdEscola" />
+            </Principal>
+            <Dependent Role="escolaescolhida">
+              <PropertyRef Name="IdEscolaDestino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EscolaOrigem">
+          <End Role="escola" Type="DataAcess.Store.escola" Multiplicity="0..1" />
+          <End Role="escolaescolhida" Type="DataAcess.Store.escolaescolhida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="escola">
+              <PropertyRef Name="IdEscola" />
+            </Principal>
+            <Dependent Role="escolaescolhida">
+              <PropertyRef Name="IdEscolaOrigem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Status_Usuario">
+          <End Role="status" Type="DataAcess.Store.status" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status">
+              <PropertyRef Name="IdStatus" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_ibfk_1">
+          <End Role="certidaonascimento" Type="DataAcess.Store.certidaonascimento" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="certidaonascimento">
+              <PropertyRef Name="IdCertidao" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdCertidao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_ibfk_3">
+          <End Role="pesquisa" Type="DataAcess.Store.pesquisa" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pesquisa">
+              <PropertyRef Name="IdPesquisa" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdPesquisa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_ibfk_4">
+          <End Role="serieescola" Type="DataAcess.Store.serieescola" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="serieescola">
+              <PropertyRef Name="IdSerie" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdEscola" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_ibfk_5">
+          <End Role="motivomatricula" Type="DataAcess.Store.motivomatricula" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="motivomatricula">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdMotivoMatricula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_ibfk_6">
+          <End Role="cidade" Type="DataAcess.Store.cidade" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_ibfk_7">
+          <End Role="responsavel" Type="DataAcess.Store.responsavel" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="responsavel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdResponsavel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_ibfk_8">
+          <End Role="bairro" Type="DataAcess.Store.bairro" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuario_ibfk_9">
+          <End Role="estado" Type="DataAcess.Store.estado" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioDeficiencia">
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="0..1" />
+          <End Role="usudeficiencia" Type="DataAcess.Store.usudeficiencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="usudeficiencia">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioEscolaEscolhida">
+          <End Role="usuario" Type="DataAcess.Store.usuario" Multiplicity="0..1" />
+          <End Role="escolaescolhida" Type="DataAcess.Store.escolaescolhida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="escolaescolhida">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuDeficiencia_Deficiencia">
+          <End Role="deficiencia" Type="DataAcess.Store.deficiencia" Multiplicity="0..1" />
+          <End Role="usudeficiencia" Type="DataAcess.Store.usudeficiencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="deficiencia">
+              <PropertyRef Name="IdDeficiencia" />
+            </Principal>
+            <Dependent Role="usudeficiencia">
+              <PropertyRef Name="IdDeficiencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataAcess" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ADOContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Administrador" EntityType="DataAcess.Administrador" />
+          <EntitySet Name="Bairro" EntityType="DataAcess.Bairro" />
+          <EntitySet Name="CertidaoNascimento" EntityType="DataAcess.certidaonascimento" />
+          <EntitySet Name="Cidade" EntityType="DataAcess.Cidade" />
+          <EntitySet Name="ConselhoTutelar" EntityType="DataAcess.ConselhoTutelar" />
+          <EntitySet Name="Deficiencia" EntityType="DataAcess.Deficiencia" />
+          <EntitySet Name="Escola" EntityType="DataAcess.Escola" />
+          <EntitySet Name="EscolaEscolhida" EntityType="DataAcess.EscolaEscolhida" />
+          <EntitySet Name="Estado" EntityType="DataAcess.Estado" />
+          <EntitySet Name="motivomatricula" EntityType="DataAcess.MotivoMatricula" />
+          <EntitySet Name="Pesquisa" EntityType="DataAcess.Pesquisa" />
+          <EntitySet Name="Responsavel" EntityType="DataAcess.Responsavel" />
+          <EntitySet Name="SerieEscola" EntityType="DataAcess.SerieEscola" />
+          <EntitySet Name="Status" EntityType="DataAcess.Status" />
+          <EntitySet Name="TipoEscola" EntityType="DataAcess.TipoEscola" />
+          <EntitySet Name="Usuario" EntityType="DataAcess.Usuario" />
+          <EntitySet Name="UsuDeficiencia" EntityType="DataAcess.UsuDeficiencia" />
+          <AssociationSet Name="Bairro_Administrador_fk" Association="DataAcess.Bairro_Administrador_fk">
+            <End Role="bairro" EntitySet="Bairro" />
+            <End Role="administrador" EntitySet="Administrador" />
+          </AssociationSet>
+          <AssociationSet Name="Cidade_Administrador_fk" Association="DataAcess.Cidade_Administrador_fk">
+            <End Role="cidade" EntitySet="Cidade" />
+            <End Role="administrador" EntitySet="Administrador" />
+          </AssociationSet>
+          <AssociationSet Name="bairro_ibfk_1" Association="DataAcess.bairro_ibfk_1">
+            <End Role="cidade" EntitySet="Cidade" />
+            <End Role="bairro" EntitySet="Bairro" />
+          </AssociationSet>
+          <AssociationSet Name="conselhotutelar_ibfk_1" Association="DataAcess.conselhotutelar_ibfk_1">
+            <End Role="bairro" EntitySet="Bairro" />
+            <End Role="conselhotutelar" EntitySet="ConselhoTutelar" />
+          </AssociationSet>
+          <AssociationSet Name="escola_ibfk_4" Association="DataAcess.escola_ibfk_4">
+            <End Role="bairro" EntitySet="Bairro" />
+            <End Role="escola" EntitySet="Escola" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_8" Association="DataAcess.usuario_ibfk_8">
+            <End Role="bairro" EntitySet="Bairro" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="certidaonascimento_ibfk_1" Association="DataAcess.certidaonascimento_ibfk_1">
+            <End Role="cidade" EntitySet="Cidade" />
+            <End Role="certidaonascimento" EntitySet="CertidaoNascimento" />
+          </AssociationSet>
+          <AssociationSet Name="certidaonascimento_ibfk_2" Association="DataAcess.certidaonascimento_ibfk_2">
+            <End Role="estado" EntitySet="Estado" />
+            <End Role="certidaonascimento" EntitySet="CertidaoNascimento" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_1" Association="DataAcess.usuario_ibfk_1">
+            <End Role="certidaonascimento" EntitySet="CertidaoNascimento" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="cidade_ibfk_1" Association="DataAcess.cidade_ibfk_1">
+            <End Role="estado" EntitySet="Estado" />
+            <End Role="cidade" EntitySet="Cidade" />
+          </AssociationSet>
+          <AssociationSet Name="conselhotutelar_ibfk_2" Association="DataAcess.conselhotutelar_ibfk_2">
+            <End Role="cidade" EntitySet="Cidade" />
+            <End Role="conselhotutelar" EntitySet="ConselhoTutelar" />
+          </AssociationSet>
+          <AssociationSet Name="escola_ibfk_1" Association="DataAcess.escola_ibfk_1">
+            <End Role="cidade" EntitySet="Cidade" />
+            <End Role="escola" EntitySet="Escola" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_6" Association="DataAcess.usuario_ibfk_6">
+            <End Role="cidade" EntitySet="Cidade" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="conselhotutelar_ibfk_3" Association="DataAcess.conselhotutelar_ibfk_3">
+            <End Role="estado" EntitySet="Estado" />
+            <End Role="conselhotutelar" EntitySet="ConselhoTutelar" />
+          </AssociationSet>
+          <AssociationSet Name="UsuDeficiencia_Deficiencia" Association="DataAcess.UsuDeficiencia_Deficiencia">
+            <End Role="deficiencia" EntitySet="Deficiencia" />
+            <End Role="usudeficiencia" EntitySet="UsuDeficiencia" />
+          </AssociationSet>
+          <AssociationSet Name="escola_ibfk_2" Association="DataAcess.escola_ibfk_2">
+            <End Role="tipoescola" EntitySet="TipoEscola" />
+            <End Role="escola" EntitySet="Escola" />
+          </AssociationSet>
+          <AssociationSet Name="escola_ibfk_3" Association="DataAcess.escola_ibfk_3">
+            <End Role="estado" EntitySet="Estado" />
+            <End Role="escola" EntitySet="Escola" />
+          </AssociationSet>
+          <AssociationSet Name="EscolaDestino" Association="DataAcess.EscolaDestino">
+            <End Role="escola" EntitySet="Escola" />
+            <End Role="escolaescolida" EntitySet="EscolaEscolhida" />
+          </AssociationSet>
+          <AssociationSet Name="EscolaOrigem" Association="DataAcess.EscolaOrigem">
+            <End Role="escola" EntitySet="Escola" />
+            <End Role="escolaescolida" EntitySet="EscolaEscolhida" />
+          </AssociationSet>
+          <AssociationSet Name="UsuarioEscolaEscolhida" Association="DataAcess.UsuarioEscolaEscolhida">
+            <End Role="usuario" EntitySet="Usuario" />
+            <End Role="escolaescolida" EntitySet="EscolaEscolhida" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_9" Association="DataAcess.usuario_ibfk_9">
+            <End Role="estado" EntitySet="Estado" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_5" Association="DataAcess.usuario_ibfk_5">
+            <End Role="motivomatricula" EntitySet="motivomatricula" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_3" Association="DataAcess.usuario_ibfk_3">
+            <End Role="pesquisa" EntitySet="Pesquisa" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_7" Association="DataAcess.usuario_ibfk_7">
+            <End Role="responsavel" EntitySet="Responsavel" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_4" Association="DataAcess.usuario_ibfk_4">
+            <End Role="serieescola" EntitySet="SerieEscola" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="Status_Usuario" Association="DataAcess.Status_Usuario">
+            <End Role="status" EntitySet="Status" />
+            <End Role="usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="UsuarioDeficiencia" Association="DataAcess.UsuarioDeficiencia">
+            <End Role="usuario" EntitySet="Usuario" />
+            <End Role="usudeficiencia" EntitySet="UsuDeficiencia" />
+          </AssociationSet>
+          <EntitySet Name="administrador1Set" EntityType="DataAcess.administrador1" />
+          <EntitySet Name="bairro1Set" EntityType="DataAcess.bairro1" />
+          <EntitySet Name="certidaonascimento1Set" EntityType="DataAcess.certidaonascimento1" />
+          <EntitySet Name="cidade1Set" EntityType="DataAcess.cidade1" />
+          <EntitySet Name="conselhotutelar1Set" EntityType="DataAcess.conselhotutelar1" />
+          <EntitySet Name="deficiencia1Set" EntityType="DataAcess.deficiencia1" />
+          <EntitySet Name="escola1Set" EntityType="DataAcess.escola1" />
+          <EntitySet Name="escolaescolhida1Set" EntityType="DataAcess.escolaescolhida1" />
+          <EntitySet Name="estado1Set" EntityType="DataAcess.estado1" />
+          <EntitySet Name="motivomatricula1Set" EntityType="DataAcess.motivomatricula1" />
+          <EntitySet Name="pesquisa1Set" EntityType="DataAcess.pesquisa1" />
+          <EntitySet Name="responsavel1Set" EntityType="DataAcess.responsavel1" />
+          <EntitySet Name="serieescola1Set" EntityType="DataAcess.serieescola1" />
+          <EntitySet Name="status1Set" EntityType="DataAcess.status1" />
+          <EntitySet Name="tipoescola1Set" EntityType="DataAcess.tipoescola1" />
+          <EntitySet Name="usuario1Set" EntityType="DataAcess.usuario1" />
+          <EntitySet Name="usudeficiencia1Set" EntityType="DataAcess.usudeficiencia1" />
+          <AssociationSet Name="FK_Bairro_Administrador_fk" Association="DataAcess.FK_Bairro_Administrador_fk">
+            <End Role="bairro1" EntitySet="bairro1Set" />
+            <End Role="administrador1" EntitySet="administrador1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cidade_Administrador_fk" Association="DataAcess.FK_Cidade_Administrador_fk">
+            <End Role="cidade1" EntitySet="cidade1Set" />
+            <End Role="administrador1" EntitySet="administrador1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bairro_ibfk_1" Association="DataAcess.FK_bairro_ibfk_1">
+            <End Role="cidade1" EntitySet="cidade1Set" />
+            <End Role="bairro1" EntitySet="bairro1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_conselhotutelar_ibfk_1" Association="DataAcess.FK_conselhotutelar_ibfk_1">
+            <End Role="bairro1" EntitySet="bairro1Set" />
+            <End Role="conselhotutelar1" EntitySet="conselhotutelar1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_escola_ibfk_4" Association="DataAcess.FK_escola_ibfk_4">
+            <End Role="bairro1" EntitySet="bairro1Set" />
+            <End Role="escola1" EntitySet="escola1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_8" Association="DataAcess.FK_usuario_ibfk_8">
+            <End Role="bairro1" EntitySet="bairro1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_certidaonascimento_ibfk_1" Association="DataAcess.FK_certidaonascimento_ibfk_1">
+            <End Role="cidade1" EntitySet="cidade1Set" />
+            <End Role="certidaonascimento1" EntitySet="certidaonascimento1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_certidaonascimento_ibfk_2" Association="DataAcess.FK_certidaonascimento_ibfk_2">
+            <End Role="estado1" EntitySet="estado1Set" />
+            <End Role="certidaonascimento1" EntitySet="certidaonascimento1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_1" Association="DataAcess.FK_usuario_ibfk_1">
+            <End Role="certidaonascimento1" EntitySet="certidaonascimento1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cidade_ibfk_1" Association="DataAcess.FK_cidade_ibfk_1">
+            <End Role="estado1" EntitySet="estado1Set" />
+            <End Role="cidade1" EntitySet="cidade1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_conselhotutelar_ibfk_2" Association="DataAcess.FK_conselhotutelar_ibfk_2">
+            <End Role="cidade1" EntitySet="cidade1Set" />
+            <End Role="conselhotutelar1" EntitySet="conselhotutelar1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_escola_ibfk_1" Association="DataAcess.FK_escola_ibfk_1">
+            <End Role="cidade1" EntitySet="cidade1Set" />
+            <End Role="escola1" EntitySet="escola1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_6" Association="DataAcess.FK_usuario_ibfk_6">
+            <End Role="cidade1" EntitySet="cidade1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_conselhotutelar_ibfk_3" Association="DataAcess.FK_conselhotutelar_ibfk_3">
+            <End Role="estado1" EntitySet="estado1Set" />
+            <End Role="conselhotutelar1" EntitySet="conselhotutelar1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuDeficiencia_Deficiencia" Association="DataAcess.FK_UsuDeficiencia_Deficiencia">
+            <End Role="deficiencia1" EntitySet="deficiencia1Set" />
+            <End Role="usudeficiencia1" EntitySet="usudeficiencia1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_escola_ibfk_2" Association="DataAcess.FK_escola_ibfk_2">
+            <End Role="tipoescola1" EntitySet="tipoescola1Set" />
+            <End Role="escola1" EntitySet="escola1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_escola_ibfk_3" Association="DataAcess.FK_escola_ibfk_3">
+            <End Role="estado1" EntitySet="estado1Set" />
+            <End Role="escola1" EntitySet="escola1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EscolaDestino" Association="DataAcess.FK_EscolaDestino">
+            <End Role="escola1" EntitySet="escola1Set" />
+            <End Role="escolaescolhida1" EntitySet="escolaescolhida1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EscolaOrigem" Association="DataAcess.FK_EscolaOrigem">
+            <End Role="escola1" EntitySet="escola1Set" />
+            <End Role="escolaescolhida1" EntitySet="escolaescolhida1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioEscolaEscolhida" Association="DataAcess.FK_UsuarioEscolaEscolhida">
+            <End Role="usuario1" EntitySet="usuario1Set" />
+            <End Role="escolaescolhida1" EntitySet="escolaescolhida1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_9" Association="DataAcess.FK_usuario_ibfk_9">
+            <End Role="estado1" EntitySet="estado1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_5" Association="DataAcess.FK_usuario_ibfk_5">
+            <End Role="motivomatricula1" EntitySet="motivomatricula1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_3" Association="DataAcess.FK_usuario_ibfk_3">
+            <End Role="pesquisa1" EntitySet="pesquisa1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_7" Association="DataAcess.FK_usuario_ibfk_7">
+            <End Role="responsavel1" EntitySet="responsavel1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuario_ibfk_4" Association="DataAcess.FK_usuario_ibfk_4">
+            <End Role="serieescola1" EntitySet="serieescola1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Status_Usuario" Association="DataAcess.FK_Status_Usuario">
+            <End Role="status1" EntitySet="status1Set" />
+            <End Role="usuario1" EntitySet="usuario1Set" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioDeficiencia" Association="DataAcess.FK_UsuarioDeficiencia">
+            <End Role="usuario1" EntitySet="usuario1Set" />
+            <End Role="usudeficiencia1" EntitySet="usudeficiencia1Set" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Administrador">
+          <Key>
+            <PropertyRef Name="IdAdministrador" />
+          </Key>
+          <Property Name="IdAdministrador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" />
+          <Property Name="Login" Type="String" />
+          <Property Name="Senha" Type="String" Nullable="false" />
+          <Property Name="DataNascimento" Type="DateTime" />
+          <Property Name="Cpf" Type="String" Nullable="false" />
+          <Property Name="Telefone" Type="String" />
+          <Property Name="Celular" Type="String" />
+          <Property Name="Email" Type="String" />
+          <Property Name="Organizacao" Type="String" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdCidade" Type="Int32" Nullable="false" />
+          <Property Name="IdBairro" Type="Int32" Nullable="false" />
+          <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+          <Property Name="AutorRemoveu" Type="String" />
+          <Property Name="DataRemovido" Type="DateTime" />
+          <Property Name="Ativo" Type="Int32" />
+          <NavigationProperty Name="FK_Bairro" Relationship="DataAcess.Bairro_Administrador_fk" FromRole="administrador" ToRole="bairro" />
+          <NavigationProperty Name="FK_Cidade" Relationship="DataAcess.Cidade_Administrador_fk" FromRole="administrador" ToRole="cidade" />
+        </EntityType>
+        <EntityType Name="Bairro">
+          <Key>
+            <PropertyRef Name="IdBairro" />
+          </Key>
+          <Property Name="IdBairro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bairro1" Type="String" />
+          <Property Name="IdCidade" Type="Int32" />
+          <NavigationProperty Name="FK_Administrador" Relationship="DataAcess.Bairro_Administrador_fk" FromRole="bairro" ToRole="administrador" />
+          <NavigationProperty Name="FK_Cidade" Relationship="DataAcess.bairro_ibfk_1" FromRole="bairro" ToRole="cidade" />
+          <NavigationProperty Name="FK_ConselhoTutelar" Relationship="DataAcess.conselhotutelar_ibfk_1" FromRole="bairro" ToRole="conselhotutelar" />
+          <NavigationProperty Name="FK_Escola" Relationship="DataAcess.escola_ibfk_4" FromRole="bairro" ToRole="escola" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.usuario_ibfk_8" FromRole="bairro" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="certidaonascimento">
+          <Key>
+            <PropertyRef Name="IdCertidao" />
+          </Key>
+          <Property Name="IdCertidao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Numero" Type="String" />
+          <Property Name="Livro" Type="String" />
+          <Property Name="Folha" Type="String" />
+          <Property Name="Cartorio" Type="String" />
+          <Property Name="DataCertidao" Type="DateTime" />
+          <Property Name="IdCidade" Type="Int32" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="FK_Cidade" Relationship="DataAcess.certidaonascimento_ibfk_1" FromRole="certidaonascimento" ToRole="cidade" />
+          <NavigationProperty Name="FK_Estado" Relationship="DataAcess.certidaonascimento_ibfk_2" FromRole="certidaonascimento" ToRole="estado" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.usuario_ibfk_1" FromRole="certidaonascimento" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="Cidade">
+          <Key>
+            <PropertyRef Name="IdCidade" />
+          </Key>
+          <Property Name="IdCidade" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cidade1" Type="String" />
+          <Property Name="Sigla" Type="String" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="FK_Administrador" Relationship="DataAcess.Cidade_Administrador_fk" FromRole="cidade" ToRole="administrador" />
+          <NavigationProperty Name="FK_Bairro" Relationship="DataAcess.bairro_ibfk_1" FromRole="cidade" ToRole="bairro" />
+          <NavigationProperty Name="FK_CertidaoNascimento" Relationship="DataAcess.certidaonascimento_ibfk_1" FromRole="cidade" ToRole="certidaonascimento" />
+          <NavigationProperty Name="FK_Estado" Relationship="DataAcess.cidade_ibfk_1" FromRole="cidade" ToRole="estado" />
+          <NavigationProperty Name="FK_ConselhoTutelar" Relationship="DataAcess.conselhotutelar_ibfk_2" FromRole="cidade" ToRole="conselhotutelar" />
+          <NavigationProperty Name="FK_Escola" Relationship="DataAcess.escola_ibfk_1" FromRole="cidade" ToRole="escola" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.usuario_ibfk_6" FromRole="cidade" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="ConselhoTutelar">
+          <Key>
+            <PropertyRef Name="IdConselho" />
+          </Key>
+          <Property Name="IdConselho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" />
+          <Property Name="Endereco" Type="String" />
+          <Property Name="Telefone" Type="String" />
+          <Property Name="Cep" Type="String" />
+          <Property Name="Fax" Type="String" />
+          <Property Name="IdBairro" Type="Int32" />
+          <Property Name="IdCidade" Type="Int32" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="FK_Bairro" Relationship="DataAcess.conselhotutelar_ibfk_1" FromRole="conselhotutelar" ToRole="bairro" />
+          <NavigationProperty Name="FK_Cidade" Relationship="DataAcess.conselhotutelar_ibfk_2" FromRole="conselhotutelar" ToRole="cidade" />
+          <NavigationProperty Name="FK_Estado" Relationship="DataAcess.conselhotutelar_ibfk_3" FromRole="conselhotutelar" ToRole="estado" />
+        </EntityType>
+        <EntityType Name="Deficiencia">
+          <Key>
+            <PropertyRef Name="IdDeficiencia" />
+          </Key>
+          <Property Name="IdDeficiencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Deficiencia1" Type="String" />
+          <NavigationProperty Name="FK_UsuDeficiencia" Relationship="DataAcess.UsuDeficiencia_Deficiencia" FromRole="deficiencia" ToRole="usudeficiencia" />
+        </EntityType>
+        <EntityType Name="Escola">
+          <Key>
+            <PropertyRef Name="IdEscola" />
+          </Key>
+          <Property Name="IdEscola" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Escola1" Type="String" />
+          <Property Name="Telefone" Type="String" />
+          <Property Name="Fax" Type="String" />
+          <Property Name="IdCidade" Type="Int32" />
+          <Property Name="IdTipoEscola" Type="Int32" />
+          <Property Name="IdEstado" Type="Int32" />
+          <Property Name="IdBairro" Type="Int32" />
+          <NavigationProperty Name="FK_Bairro" Relationship="DataAcess.escola_ibfk_4" FromRole="escola" ToRole="bairro" />
+          <NavigationProperty Name="FK_Cidade" Relationship="DataAcess.escola_ibfk_1" FromRole="escola" ToRole="cidade" />
+          <NavigationProperty Name="FK_TipoEscola" Relationship="DataAcess.escola_ibfk_2" FromRole="escola" ToRole="tipoescola" />
+          <NavigationProperty Name="FK_Estado" Relationship="DataAcess.escola_ibfk_3" FromRole="escola" ToRole="estado" />
+          <NavigationProperty Name="FK_EscolaDestino" Relationship="DataAcess.EscolaDestino" FromRole="escola" ToRole="escolaescolida" />
+          <NavigationProperty Name="FK_EscolaOrigem" Relationship="DataAcess.EscolaOrigem" FromRole="escola" ToRole="escolaescolida" />
+        </EntityType>
+        <EntityType Name="EscolaEscolhida">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="IdEscolaOrigem" Type="Int32" />
+          <Property Name="IdEscolaDestino" Type="Int32" />
+          <NavigationProperty Name="FK_EscolaDestino" Relationship="DataAcess.EscolaDestino" FromRole="escolaescolida" ToRole="escola" />
+          <NavigationProperty Name="FK_EscolaOrigem" Relationship="DataAcess.EscolaOrigem" FromRole="escolaescolida" ToRole="escola" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.UsuarioEscolaEscolhida" FromRole="escolaescolida" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="IdEstado" />
+          </Key>
+          <Property Name="IdEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" />
+          <Property Name="Sigla" Type="String" />
+          <NavigationProperty Name="FK_CertidaoNascimento" Relationship="DataAcess.certidaonascimento_ibfk_2" FromRole="estado" ToRole="certidaonascimento" />
+          <NavigationProperty Name="FK_Cidade" Relationship="DataAcess.cidade_ibfk_1" FromRole="estado" ToRole="cidade" />
+          <NavigationProperty Name="FK_ConselhoTutelar" Relationship="DataAcess.conselhotutelar_ibfk_3" FromRole="estado" ToRole="conselhotutelar" />
+          <NavigationProperty Name="FK_Escola" Relationship="DataAcess.escola_ibfk_3" FromRole="estado" ToRole="escola" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.usuario_ibfk_9" FromRole="estado" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="MotivoMatricula">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Motivo" Type="String" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.usuario_ibfk_5" FromRole="motivomatricula" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="Pesquisa">
+          <Key>
+            <PropertyRef Name="IdPesquisa" />
+          </Key>
+          <Property Name="IdPesquisa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JaEstudou" Type="String" />
+          <Property Name="RecebePensaoAlimenticia" Type="String" />
+          <Property Name="Inss" Type="String" />
+          <Property Name="BolsaFamilia" Type="String" />
+          <Property Name="EstaGravida" Type="String" />
+          <Property Name="MesGravidez" Type="String" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.usuario_ibfk_3" FromRole="pesquisa" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="Responsavel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdetidadeResponsavel" Type="String" />
+          <Property Name="NomePai" Type="String" />
+          <Property Name="NomeMae" Type="String" />
+          <Property Name="NomeResponsavel" Type="String" />
+          <Property Name="CelularResponsavel" Type="String" />
+          <Property Name="TelefoneResponsavel" Type="String" />
+          <Property Name="cpfResponsavel" Type="String" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.usuario_ibfk_7" FromRole="responsavel" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="SerieEscola">
+          <Key>
+            <PropertyRef Name="IdSerie" />
+          </Key>
+          <Property Name="IdSerie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Serie" Type="String" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.usuario_ibfk_4" FromRole="serieescola" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="IdStatus" />
+          </Key>
+          <Property Name="IdStatus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status1" Type="String" />
+          <NavigationProperty Name="FK_Usuario" Relationship="DataAcess.Status_Usuario" FromRole="status" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="TipoEscola">
+          <Key>
+            <PropertyRef Name="IdTipoEscola" />
+          </Key>
+          <Property Name="IdTipoEscola" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoEscola1" Type="String" />
+          <NavigationProperty Name="FK_Escola" Relationship="DataAcess.escola_ibfk_2" FromRole="tipoescola" ToRole="escola" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" />
+          <Property Name="Cpf" Type="String" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" />
+          <Property Name="Sexo" Type="String" Nullable="false" />
+          <Property Name="Identidade" Type="String" />
+          <Property Name="OrgaoEmissor" Type="String" />
+          <Property Name="Endereco" Type="String" />
+          <Property Name="Cep" Type="String" />
+          <Property Name="IdCertidao" Type="Int32" />
+          <Property Name="IdPesquisa" Type="Int32" />
+          <Property Name="IdEscola" Type="Int32" />
+          <Property Name="IdMotivoMatricula" Type="Int32" />
+          <Property Name="IdCidade" Type="Int32" />
+          <Property Name="IdStatus" Type="Int32" />
+          <Property Name="IdBairro" Type="Int32" />
+          <Property Name="IdEstado" Type="Int32" />
+          <Property Name="IdResponsavel" Type="Int32" />
+          <Property Name="DataCadastro" Type="DateTime" />
+          <NavigationProperty Name="FK_Bairro" Relationship="DataAcess.usuario_ibfk_8" FromRole="usuario" ToRole="bairro" />
+          <NavigationProperty Name="FK_CertidaoNascimento" Relationship="DataAcess.usuario_ibfk_1" FromRole="usuario" ToRole="certidaonascimento" />
+          <NavigationProperty Name="FK_Cidade" Relationship="DataAcess.usuario_ibfk_6" FromRole="usuario" ToRole="cidade" />
+          <NavigationProperty Name="FK_EscolaEscolida" Relationship="DataAcess.UsuarioEscolaEscolhida" FromRole="usuario" ToRole="escolaescolida" />
+          <NavigationProperty Name="FK_Estado" Relationship="DataAcess.usuario_ibfk_9" FromRole="usuario" ToRole="estado" />
+          <NavigationProperty Name="FK_MotivoMatricula" Relationship="DataAcess.usuario_ibfk_5" FromRole="usuario" ToRole="motivomatricula" />
+          <NavigationProperty Name="FK_Pesquisa" Relationship="DataAcess.usuario_ibfk_3" FromRole="usuario" ToRole="pesquisa" />
+          <NavigationProperty Name="FK_Rresponsavel" Relationship="DataAcess.usuario_ibfk_7" FromRole="usuario" ToRole="responsavel" />
+          <NavigationProperty Name="FK_SerieEscola" Relationship="DataAcess.usuario_ibfk_4" FromRole="usuario" ToRole="serieescola" />
+          <NavigationProperty Name="FK_Status" Relationship="DataAcess.Status_Usuario" FromRole="usuario" ToRole="status" />
+          <NavigationProperty Name="FK_DeficienciaUsuario" Relationship="DataAcess.UsuarioDeficiencia" FromRole="usuario" ToRole="usudeficiencia" />
+        </EntityType>
+        <EntityType Name="UsuDeficiencia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="IdDeficiencia" Type="Int32" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="FK_Deficiencia" Relationship="DataAcess.UsuDeficiencia_Deficiencia" FromRole="usudeficiencia" ToRole="deficiencia" />
+          <NavigationProperty Name="FK_UsuarioDeficiente" Relationship="DataAcess.UsuarioDeficiencia" FromRole="usudeficiencia" ToRole="usuario" />
+        </EntityType>
+        <Association Name="Bairro_Administrador_fk">
+          <End Role="bairro" Type="DataAcess.Bairro" Multiplicity="1" />
+          <End Role="administrador" Type="DataAcess.Administrador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="administrador">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cidade_Administrador_fk">
+          <End Role="cidade" Type="DataAcess.Cidade" Multiplicity="1" />
+          <End Role="administrador" Type="DataAcess.Administrador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="administrador">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bairro_ibfk_1">
+          <End Role="cidade" Type="DataAcess.Cidade" Multiplicity="0..1" />
+          <End Role="bairro" Type="DataAcess.Bairro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="bairro">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="conselhotutelar_ibfk_1">
+          <End Role="bairro" Type="DataAcess.Bairro" Multiplicity="0..1" />
+          <End Role="conselhotutelar" Type="DataAcess.ConselhoTutelar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="conselhotutelar">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="escola_ibfk_4">
+          <End Role="bairro" Type="DataAcess.Bairro" Multiplicity="0..1" />
+          <End Role="escola" Type="DataAcess.Escola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="escola">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_8">
+          <End Role="bairro" Type="DataAcess.Bairro" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="certidaonascimento_ibfk_1">
+          <End Role="cidade" Type="DataAcess.Cidade" Multiplicity="0..1" />
+          <End Role="certidaonascimento" Type="DataAcess.certidaonascimento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="certidaonascimento">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="certidaonascimento_ibfk_2">
+          <End Role="estado" Type="DataAcess.Estado" Multiplicity="0..1" />
+          <End Role="certidaonascimento" Type="DataAcess.certidaonascimento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="certidaonascimento">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_1">
+          <End Role="certidaonascimento" Type="DataAcess.certidaonascimento" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="certidaonascimento">
+              <PropertyRef Name="IdCertidao" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdCertidao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="cidade_ibfk_1">
+          <End Role="estado" Type="DataAcess.Estado" Multiplicity="0..1" />
+          <End Role="cidade" Type="DataAcess.Cidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="cidade">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="conselhotutelar_ibfk_2">
+          <End Role="cidade" Type="DataAcess.Cidade" Multiplicity="0..1" />
+          <End Role="conselhotutelar" Type="DataAcess.ConselhoTutelar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="conselhotutelar">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="escola_ibfk_1">
+          <End Role="cidade" Type="DataAcess.Cidade" Multiplicity="0..1" />
+          <End Role="escola" Type="DataAcess.Escola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="escola">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_6">
+          <End Role="cidade" Type="DataAcess.Cidade" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="conselhotutelar_ibfk_3">
+          <End Role="estado" Type="DataAcess.Estado" Multiplicity="0..1" />
+          <End Role="conselhotutelar" Type="DataAcess.ConselhoTutelar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="conselhotutelar">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UsuDeficiencia_Deficiencia">
+          <End Role="deficiencia" Type="DataAcess.Deficiencia" Multiplicity="0..1" />
+          <End Role="usudeficiencia" Type="DataAcess.UsuDeficiencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="deficiencia">
+              <PropertyRef Name="IdDeficiencia" />
+            </Principal>
+            <Dependent Role="usudeficiencia">
+              <PropertyRef Name="IdDeficiencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="escola_ibfk_2">
+          <End Role="tipoescola" Type="DataAcess.TipoEscola" Multiplicity="0..1" />
+          <End Role="escola" Type="DataAcess.Escola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoescola">
+              <PropertyRef Name="IdTipoEscola" />
+            </Principal>
+            <Dependent Role="escola">
+              <PropertyRef Name="IdTipoEscola" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="escola_ibfk_3">
+          <End Role="estado" Type="DataAcess.Estado" Multiplicity="0..1" />
+          <End Role="escola" Type="DataAcess.Escola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="escola">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EscolaDestino">
+          <End Role="escola" Type="DataAcess.Escola" Multiplicity="0..1" />
+          <End Role="escolaescolida" Type="DataAcess.EscolaEscolhida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="escola">
+              <PropertyRef Name="IdEscola" />
+            </Principal>
+            <Dependent Role="escolaescolida">
+              <PropertyRef Name="IdEscolaDestino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EscolaOrigem">
+          <End Role="escola" Type="DataAcess.Escola" Multiplicity="0..1" />
+          <End Role="escolaescolida" Type="DataAcess.EscolaEscolhida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="escola">
+              <PropertyRef Name="IdEscola" />
+            </Principal>
+            <Dependent Role="escolaescolida">
+              <PropertyRef Name="IdEscolaOrigem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UsuarioEscolaEscolhida">
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="0..1" />
+          <End Role="escolaescolida" Type="DataAcess.EscolaEscolhida" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="escolaescolida">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_9">
+          <End Role="estado" Type="DataAcess.Estado" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="IdEstado" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_5">
+          <End Role="motivomatricula" Type="DataAcess.MotivoMatricula" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="motivomatricula">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdMotivoMatricula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_3">
+          <End Role="pesquisa" Type="DataAcess.Pesquisa" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pesquisa">
+              <PropertyRef Name="IdPesquisa" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdPesquisa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_7">
+          <End Role="responsavel" Type="DataAcess.Responsavel" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="responsavel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdResponsavel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_4">
+          <End Role="serieescola" Type="DataAcess.SerieEscola" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="serieescola">
+              <PropertyRef Name="IdSerie" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdEscola" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Status_Usuario">
+          <End Role="status" Type="DataAcess.Status" Multiplicity="0..1" />
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status">
+              <PropertyRef Name="IdStatus" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="IdStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UsuarioDeficiencia">
+          <End Role="usuario" Type="DataAcess.Usuario" Multiplicity="0..1" />
+          <End Role="usudeficiencia" Type="DataAcess.UsuDeficiencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="usudeficiencia">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="administrador1">
+          <Key>
+            <PropertyRef Name="IdAdministrador" />
+          </Key>
+          <Property Type="Int32" Name="IdAdministrador" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" />
+          <Property Type="String" Name="Login" />
+          <Property Type="String" Name="Senha" Nullable="false" />
+          <Property Type="DateTime" Name="DataNascimento" />
+          <Property Type="String" Name="Cpf" Nullable="false" />
+          <Property Type="String" Name="Telefone" />
+          <Property Type="String" Name="Celular" />
+          <Property Type="String" Name="Email" />
+          <Property Type="String" Name="Organizacao" />
+          <Property Type="Int32" Name="IdEstado" Nullable="false" />
+          <Property Type="DateTime" Name="DataCadastro" Nullable="false" />
+          <Property Type="String" Name="AutorRemoveu" />
+          <Property Type="DateTime" Name="DataRemovido" />
+          <Property Type="Int32" Name="Ativo" />
+          <NavigationProperty Name="bairro" Relationship="DataAcess.FK_Bairro_Administrador_fk" FromRole="administrador1" ToRole="bairro1" />
+          <NavigationProperty Name="cidade" Relationship="DataAcess.FK_Cidade_Administrador_fk" FromRole="administrador1" ToRole="cidade1" />
+        </EntityType>
+        <EntityType Name="bairro1">
+          <Key>
+            <PropertyRef Name="IdBairro" />
+          </Key>
+          <Property Type="Int32" Name="IdBairro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" />
+          <NavigationProperty Name="administrador" Relationship="DataAcess.FK_Bairro_Administrador_fk" FromRole="bairro1" ToRole="administrador1" />
+          <NavigationProperty Name="cidade" Relationship="DataAcess.FK_bairro_ibfk_1" FromRole="bairro1" ToRole="cidade1" />
+          <NavigationProperty Name="conselhotutelar" Relationship="DataAcess.FK_conselhotutelar_ibfk_1" FromRole="bairro1" ToRole="conselhotutelar1" />
+          <NavigationProperty Name="escola" Relationship="DataAcess.FK_escola_ibfk_4" FromRole="bairro1" ToRole="escola1" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_usuario_ibfk_8" FromRole="bairro1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="certidaonascimento1">
+          <Key>
+            <PropertyRef Name="IdCertidao" />
+          </Key>
+          <Property Type="Int32" Name="IdCertidao" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Numero" />
+          <Property Type="String" Name="Livro" />
+          <Property Type="String" Name="Folha" />
+          <Property Type="String" Name="Cartorio" />
+          <Property Type="DateTime" Name="DataCertidao" />
+          <NavigationProperty Name="cidade" Relationship="DataAcess.FK_certidaonascimento_ibfk_1" FromRole="certidaonascimento1" ToRole="cidade1" />
+          <NavigationProperty Name="estado" Relationship="DataAcess.FK_certidaonascimento_ibfk_2" FromRole="certidaonascimento1" ToRole="estado1" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_usuario_ibfk_1" FromRole="certidaonascimento1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="cidade1">
+          <Key>
+            <PropertyRef Name="IdCidade" />
+          </Key>
+          <Property Type="Int32" Name="IdCidade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" />
+          <Property Type="String" Name="Sigla" />
+          <NavigationProperty Name="administrador" Relationship="DataAcess.FK_Cidade_Administrador_fk" FromRole="cidade1" ToRole="administrador1" />
+          <NavigationProperty Name="bairro" Relationship="DataAcess.FK_bairro_ibfk_1" FromRole="cidade1" ToRole="bairro1" />
+          <NavigationProperty Name="certidaonascimento" Relationship="DataAcess.FK_certidaonascimento_ibfk_1" FromRole="cidade1" ToRole="certidaonascimento1" />
+          <NavigationProperty Name="estado" Relationship="DataAcess.FK_cidade_ibfk_1" FromRole="cidade1" ToRole="estado1" />
+          <NavigationProperty Name="conselhotutelar" Relationship="DataAcess.FK_conselhotutelar_ibfk_2" FromRole="cidade1" ToRole="conselhotutelar1" />
+          <NavigationProperty Name="escola" Relationship="DataAcess.FK_escola_ibfk_1" FromRole="cidade1" ToRole="escola1" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_usuario_ibfk_6" FromRole="cidade1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="conselhotutelar1">
+          <Key>
+            <PropertyRef Name="IdConselho" />
+          </Key>
+          <Property Type="Int32" Name="IdConselho" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" />
+          <Property Type="String" Name="Endereco" />
+          <Property Type="String" Name="Telefone" />
+          <Property Type="String" Name="Cep" />
+          <Property Type="String" Name="Fax" />
+          <NavigationProperty Name="bairro" Relationship="DataAcess.FK_conselhotutelar_ibfk_1" FromRole="conselhotutelar1" ToRole="bairro1" />
+          <NavigationProperty Name="cidade" Relationship="DataAcess.FK_conselhotutelar_ibfk_2" FromRole="conselhotutelar1" ToRole="cidade1" />
+          <NavigationProperty Name="estado" Relationship="DataAcess.FK_conselhotutelar_ibfk_3" FromRole="conselhotutelar1" ToRole="estado1" />
+        </EntityType>
+        <EntityType Name="deficiencia1">
+          <Key>
+            <PropertyRef Name="IdDeficiencia" />
+          </Key>
+          <Property Type="Int32" Name="IdDeficiencia" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Deficiencia1" />
+          <NavigationProperty Name="usudeficiencia" Relationship="DataAcess.FK_UsuDeficiencia_Deficiencia" FromRole="deficiencia1" ToRole="usudeficiencia1" />
+        </EntityType>
+        <EntityType Name="escola1">
+          <Key>
+            <PropertyRef Name="IdEscola" />
+          </Key>
+          <Property Type="Int32" Name="IdEscola" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" />
+          <Property Type="String" Name="Telefone" />
+          <Property Type="String" Name="Fax" />
+          <NavigationProperty Name="bairro" Relationship="DataAcess.FK_escola_ibfk_4" FromRole="escola1" ToRole="bairro1" />
+          <NavigationProperty Name="cidade" Relationship="DataAcess.FK_escola_ibfk_1" FromRole="escola1" ToRole="cidade1" />
+          <NavigationProperty Name="tipoescola" Relationship="DataAcess.FK_escola_ibfk_2" FromRole="escola1" ToRole="tipoescola1" />
+          <NavigationProperty Name="estado" Relationship="DataAcess.FK_escola_ibfk_3" FromRole="escola1" ToRole="estado1" />
+          <NavigationProperty Name="escolaescolhida" Relationship="DataAcess.FK_EscolaDestino" FromRole="escola1" ToRole="escolaescolhida1" />
+          <NavigationProperty Name="escolaescolhida1" Relationship="DataAcess.FK_EscolaOrigem" FromRole="escola1" ToRole="escolaescolhida1" />
+        </EntityType>
+        <EntityType Name="escolaescolhida1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="escola" Relationship="DataAcess.FK_EscolaDestino" FromRole="escolaescolhida1" ToRole="escola1" />
+          <NavigationProperty Name="escola1" Relationship="DataAcess.FK_EscolaOrigem" FromRole="escolaescolhida1" ToRole="escola1" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_UsuarioEscolaEscolhida" FromRole="escolaescolhida1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="estado1">
+          <Key>
+            <PropertyRef Name="IdEstado" />
+          </Key>
+          <Property Type="Int32" Name="IdEstado" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" />
+          <Property Type="String" Name="Sigla" />
+          <NavigationProperty Name="certidaonascimento" Relationship="DataAcess.FK_certidaonascimento_ibfk_2" FromRole="estado1" ToRole="certidaonascimento1" />
+          <NavigationProperty Name="cidade" Relationship="DataAcess.FK_cidade_ibfk_1" FromRole="estado1" ToRole="cidade1" />
+          <NavigationProperty Name="conselhotutelar" Relationship="DataAcess.FK_conselhotutelar_ibfk_3" FromRole="estado1" ToRole="conselhotutelar1" />
+          <NavigationProperty Name="escola" Relationship="DataAcess.FK_escola_ibfk_3" FromRole="estado1" ToRole="escola1" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_usuario_ibfk_9" FromRole="estado1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="motivomatricula1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Motivo" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_usuario_ibfk_5" FromRole="motivomatricula1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="pesquisa1">
+          <Key>
+            <PropertyRef Name="IdPesquisa" />
+          </Key>
+          <Property Type="Int32" Name="IdPesquisa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="JaEstudou" />
+          <Property Type="String" Name="RecebePensaoAlimenticia" />
+          <Property Type="String" Name="Inss" />
+          <Property Type="String" Name="BolsaFamilia" />
+          <Property Type="String" Name="EstaGravida" />
+          <Property Type="String" Name="MesGravidez" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_usuario_ibfk_3" FromRole="pesquisa1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="responsavel1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="IdetidadeResponsavel" />
+          <Property Type="String" Name="NomePai" />
+          <Property Type="String" Name="NomeMae" />
+          <Property Type="String" Name="NomeResponsavel" />
+          <Property Type="String" Name="CelularResponsavel" />
+          <Property Type="String" Name="TelefoneResponsavel" />
+          <Property Type="String" Name="cpfResponsavel" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_usuario_ibfk_7" FromRole="responsavel1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="serieescola1">
+          <Key>
+            <PropertyRef Name="IdSerie" />
+          </Key>
+          <Property Type="Int32" Name="IdSerie" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Serie" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_usuario_ibfk_4" FromRole="serieescola1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="status1">
+          <Key>
+            <PropertyRef Name="IdStatus" />
+          </Key>
+          <Property Type="Int32" Name="IdStatus" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_Status_Usuario" FromRole="status1" ToRole="usuario1" />
+        </EntityType>
+        <EntityType Name="tipoescola1">
+          <Key>
+            <PropertyRef Name="IdTipoEscola" />
+          </Key>
+          <Property Type="Int32" Name="IdTipoEscola" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TipoEscola1" />
+          <NavigationProperty Name="escola" Relationship="DataAcess.FK_escola_ibfk_2" FromRole="tipoescola1" ToRole="escola1" />
+        </EntityType>
+        <EntityType Name="usuario1">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" />
+          <Property Type="String" Name="Cpf" />
+          <Property Type="DateTime" Name="DataNascimento" Nullable="false" />
+          <Property Type="String" Name="Sexo" Nullable="false" />
+          <Property Type="String" Name="Identidade" />
+          <Property Type="String" Name="OrgaoEmissor" />
+          <Property Type="String" Name="Endereco" />
+          <Property Type="String" Name="Cep" />
+          <Property Type="DateTime" Name="DataCadastro" />
+          <NavigationProperty Name="bairro" Relationship="DataAcess.FK_usuario_ibfk_8" FromRole="usuario1" ToRole="bairro1" />
+          <NavigationProperty Name="certidaonascimento" Relationship="DataAcess.FK_usuario_ibfk_1" FromRole="usuario1" ToRole="certidaonascimento1" />
+          <NavigationProperty Name="cidade" Relationship="DataAcess.FK_usuario_ibfk_6" FromRole="usuario1" ToRole="cidade1" />
+          <NavigationProperty Name="escolaescolhida" Relationship="DataAcess.FK_UsuarioEscolaEscolhida" FromRole="usuario1" ToRole="escolaescolhida1" />
+          <NavigationProperty Name="estado" Relationship="DataAcess.FK_usuario_ibfk_9" FromRole="usuario1" ToRole="estado1" />
+          <NavigationProperty Name="motivomatricula" Relationship="DataAcess.FK_usuario_ibfk_5" FromRole="usuario1" ToRole="motivomatricula1" />
+          <NavigationProperty Name="pesquisa" Relationship="DataAcess.FK_usuario_ibfk_3" FromRole="usuario1" ToRole="pesquisa1" />
+          <NavigationProperty Name="responsavel" Relationship="DataAcess.FK_usuario_ibfk_7" FromRole="usuario1" ToRole="responsavel1" />
+          <NavigationProperty Name="serieescola" Relationship="DataAcess.FK_usuario_ibfk_4" FromRole="usuario1" ToRole="serieescola1" />
+          <NavigationProperty Name="status" Relationship="DataAcess.FK_Status_Usuario" FromRole="usuario1" ToRole="status1" />
+          <NavigationProperty Name="usudeficiencia" Relationship="DataAcess.FK_UsuarioDeficiencia" FromRole="usuario1" ToRole="usudeficiencia1" />
+        </EntityType>
+        <EntityType Name="usudeficiencia1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="deficiencia" Relationship="DataAcess.FK_UsuDeficiencia_Deficiencia" FromRole="usudeficiencia1" ToRole="deficiencia1" />
+          <NavigationProperty Name="usuario" Relationship="DataAcess.FK_UsuarioDeficiencia" FromRole="usudeficiencia1" ToRole="usuario1" />
+        </EntityType>
+        <Association Name="FK_Bairro_Administrador_fk">
+          <End Type="DataAcess.bairro1" Role="bairro1" Multiplicity="1" />
+          <End Type="DataAcess.administrador1" Role="administrador1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Cidade_Administrador_fk">
+          <End Type="DataAcess.cidade1" Role="cidade1" Multiplicity="1" />
+          <End Type="DataAcess.administrador1" Role="administrador1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_bairro_ibfk_1">
+          <End Type="DataAcess.cidade1" Role="cidade1" Multiplicity="0..1" />
+          <End Type="DataAcess.bairro1" Role="bairro1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_conselhotutelar_ibfk_1">
+          <End Type="DataAcess.bairro1" Role="bairro1" Multiplicity="0..1" />
+          <End Type="DataAcess.conselhotutelar1" Role="conselhotutelar1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_escola_ibfk_4">
+          <End Type="DataAcess.bairro1" Role="bairro1" Multiplicity="0..1" />
+          <End Type="DataAcess.escola1" Role="escola1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_usuario_ibfk_8">
+          <End Type="DataAcess.bairro1" Role="bairro1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_certidaonascimento_ibfk_1">
+          <End Type="DataAcess.cidade1" Role="cidade1" Multiplicity="0..1" />
+          <End Type="DataAcess.certidaonascimento1" Role="certidaonascimento1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_certidaonascimento_ibfk_2">
+          <End Type="DataAcess.estado1" Role="estado1" Multiplicity="0..1" />
+          <End Type="DataAcess.certidaonascimento1" Role="certidaonascimento1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_usuario_ibfk_1">
+          <End Type="DataAcess.certidaonascimento1" Role="certidaonascimento1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_cidade_ibfk_1">
+          <End Type="DataAcess.estado1" Role="estado1" Multiplicity="0..1" />
+          <End Type="DataAcess.cidade1" Role="cidade1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_conselhotutelar_ibfk_2">
+          <End Type="DataAcess.cidade1" Role="cidade1" Multiplicity="0..1" />
+          <End Type="DataAcess.conselhotutelar1" Role="conselhotutelar1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_escola_ibfk_1">
+          <End Type="DataAcess.cidade1" Role="cidade1" Multiplicity="0..1" />
+          <End Type="DataAcess.escola1" Role="escola1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_usuario_ibfk_6">
+          <End Type="DataAcess.cidade1" Role="cidade1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_conselhotutelar_ibfk_3">
+          <End Type="DataAcess.estado1" Role="estado1" Multiplicity="0..1" />
+          <End Type="DataAcess.conselhotutelar1" Role="conselhotutelar1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_UsuDeficiencia_Deficiencia">
+          <End Type="DataAcess.deficiencia1" Role="deficiencia1" Multiplicity="0..1" />
+          <End Type="DataAcess.usudeficiencia1" Role="usudeficiencia1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_escola_ibfk_2">
+          <End Type="DataAcess.tipoescola1" Role="tipoescola1" Multiplicity="0..1" />
+          <End Type="DataAcess.escola1" Role="escola1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_escola_ibfk_3">
+          <End Type="DataAcess.estado1" Role="estado1" Multiplicity="0..1" />
+          <End Type="DataAcess.escola1" Role="escola1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_EscolaDestino">
+          <End Type="DataAcess.escola1" Role="escola1" Multiplicity="0..1" />
+          <End Type="DataAcess.escolaescolhida1" Role="escolaescolhida1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_EscolaOrigem">
+          <End Type="DataAcess.escola1" Role="escola1" Multiplicity="0..1" />
+          <End Type="DataAcess.escolaescolhida1" Role="escolaescolhida1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_UsuarioEscolaEscolhida">
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="0..1" />
+          <End Type="DataAcess.escolaescolhida1" Role="escolaescolhida1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_usuario_ibfk_9">
+          <End Type="DataAcess.estado1" Role="estado1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_usuario_ibfk_5">
+          <End Type="DataAcess.motivomatricula1" Role="motivomatricula1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_usuario_ibfk_3">
+          <End Type="DataAcess.pesquisa1" Role="pesquisa1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_usuario_ibfk_7">
+          <End Type="DataAcess.responsavel1" Role="responsavel1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_usuario_ibfk_4">
+          <End Type="DataAcess.serieescola1" Role="serieescola1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Status_Usuario">
+          <End Type="DataAcess.status1" Role="status1" Multiplicity="0..1" />
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_UsuarioDeficiencia">
+          <End Type="DataAcess.usuario1" Role="usuario1" Multiplicity="0..1" />
+          <End Type="DataAcess.usudeficiencia1" Role="usudeficiencia1" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataAcessStoreContainer" CdmEntityContainer="ADOContainer">
+          <EntitySetMapping Name="administrador1Set">
+            <EntityTypeMapping TypeName="DataAcess.administrador1">
+              <MappingFragment StoreEntitySet="administrador">
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="DataRemovido" ColumnName="DataRemovido" />
+                <ScalarProperty Name="AutorRemoveu" ColumnName="AutorRemoveu" />
+                <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="Organizacao" ColumnName="Organizacao" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdAdministrador" ColumnName="IdAdministrador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bairro1Set">
+            <EntityTypeMapping TypeName="DataAcess.bairro1">
+              <MappingFragment StoreEntitySet="bairro">
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="certidaonascimento1Set">
+            <EntityTypeMapping TypeName="DataAcess.certidaonascimento1">
+              <MappingFragment StoreEntitySet="certidaonascimento">
+                <ScalarProperty Name="DataCertidao" ColumnName="DataCertidao" />
+                <ScalarProperty Name="Cartorio" ColumnName="Cartorio" />
+                <ScalarProperty Name="Folha" ColumnName="Folha" />
+                <ScalarProperty Name="Livro" ColumnName="Livro" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="IdCertidao" ColumnName="IdCertidao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cidade1Set">
+            <EntityTypeMapping TypeName="DataAcess.cidade1">
+              <MappingFragment StoreEntitySet="cidade">
+                <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conselhotutelar1Set">
+            <EntityTypeMapping TypeName="DataAcess.conselhotutelar1">
+              <MappingFragment StoreEntitySet="conselhotutelar">
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Cep" ColumnName="Cep" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdConselho" ColumnName="IdConselho" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="deficiencia1Set">
+            <EntityTypeMapping TypeName="DataAcess.deficiencia1">
+              <MappingFragment StoreEntitySet="deficiencia">
+                <ScalarProperty Name="Deficiencia1" ColumnName="Deficiencia1" />
+                <ScalarProperty Name="IdDeficiencia" ColumnName="IdDeficiencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="escola1Set">
+            <EntityTypeMapping TypeName="DataAcess.escola1">
+              <MappingFragment StoreEntitySet="escola">
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="escolaescolhida1Set">
+            <EntityTypeMapping TypeName="DataAcess.escolaescolhida1">
+              <MappingFragment StoreEntitySet="escolaescolhida">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estado1Set">
+            <EntityTypeMapping TypeName="DataAcess.estado1">
+              <MappingFragment StoreEntitySet="estado">
+                <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="motivomatricula1Set">
+            <EntityTypeMapping TypeName="DataAcess.motivomatricula1">
+              <MappingFragment StoreEntitySet="motivomatricula">
+                <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pesquisa1Set">
+            <EntityTypeMapping TypeName="DataAcess.pesquisa1">
+              <MappingFragment StoreEntitySet="pesquisa">
+                <ScalarProperty Name="MesGravidez" ColumnName="MesGravidez" />
+                <ScalarProperty Name="EstaGravida" ColumnName="EstaGravida" />
+                <ScalarProperty Name="BolsaFamilia" ColumnName="BolsaFamilia" />
+                <ScalarProperty Name="Inss" ColumnName="Inss" />
+                <ScalarProperty Name="RecebePensaoAlimenticia" ColumnName="RecebePensaoAlimenticia" />
+                <ScalarProperty Name="JaEstudou" ColumnName="JaEstudou" />
+                <ScalarProperty Name="IdPesquisa" ColumnName="IdPesquisa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="responsavel1Set">
+            <EntityTypeMapping TypeName="DataAcess.responsavel1">
+              <MappingFragment StoreEntitySet="responsavel">
+                <ScalarProperty Name="cpfResponsavel" ColumnName="cpfResponsavel" />
+                <ScalarProperty Name="TelefoneResponsavel" ColumnName="TelefoneResponsavel" />
+                <ScalarProperty Name="CelularResponsavel" ColumnName="CelularResponsavel" />
+                <ScalarProperty Name="NomeResponsavel" ColumnName="NomeResponsavel" />
+                <ScalarProperty Name="NomeMae" ColumnName="NomeMae" />
+                <ScalarProperty Name="NomePai" ColumnName="NomePai" />
+                <ScalarProperty Name="IdetidadeResponsavel" ColumnName="IdetidadeResponsavel" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="serieescola1Set">
+            <EntityTypeMapping TypeName="DataAcess.serieescola1">
+              <MappingFragment StoreEntitySet="serieescola">
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="IdSerie" ColumnName="IdSerie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="status1Set">
+            <EntityTypeMapping TypeName="DataAcess.status1">
+              <MappingFragment StoreEntitySet="status">
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipoescola1Set">
+            <EntityTypeMapping TypeName="DataAcess.tipoescola1">
+              <MappingFragment StoreEntitySet="tipoescola">
+                <ScalarProperty Name="TipoEscola1" ColumnName="TipoEscola1" />
+                <ScalarProperty Name="IdTipoEscola" ColumnName="IdTipoEscola" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario1Set">
+            <EntityTypeMapping TypeName="DataAcess.usuario1">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+                <ScalarProperty Name="Cep" ColumnName="Cep" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="OrgaoEmissor" ColumnName="OrgaoEmissor" />
+                <ScalarProperty Name="Identidade" ColumnName="Identidade" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usudeficiencia1Set">
+            <EntityTypeMapping TypeName="DataAcess.usudeficiencia1">
+              <MappingFragment StoreEntitySet="usudeficiencia">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_Bairro_Administrador_fk" TypeName="DataAcess.FK_Bairro_Administrador_fk" StoreEntitySet="administrador">
+            <EndProperty Name="administrador1">
+              <ScalarProperty Name="IdAdministrador" ColumnName="IdAdministrador" />
+            </EndProperty>
+            <EndProperty Name="bairro1">
+              <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Cidade_Administrador_fk" TypeName="DataAcess.FK_Cidade_Administrador_fk" StoreEntitySet="administrador">
+            <EndProperty Name="administrador1">
+              <ScalarProperty Name="IdAdministrador" ColumnName="IdAdministrador" />
+            </EndProperty>
+            <EndProperty Name="cidade1">
+              <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_bairro_ibfk_1" TypeName="DataAcess.FK_bairro_ibfk_1" StoreEntitySet="bairro">
+            <EndProperty Name="bairro1">
+              <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+            </EndProperty>
+            <EndProperty Name="cidade1">
+              <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+            </EndProperty>
+            <Condition ColumnName="IdCidade" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_conselhotutelar_ibfk_1" TypeName="DataAcess.FK_conselhotutelar_ibfk_1" StoreEntitySet="conselhotutelar">
+            <EndProperty Name="conselhotutelar1">
+              <ScalarProperty Name="IdConselho" ColumnName="IdConselho" />
+            </EndProperty>
+            <EndProperty Name="bairro1">
+              <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+            </EndProperty>
+            <Condition ColumnName="IdBairro" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_escola_ibfk_4" TypeName="DataAcess.FK_escola_ibfk_4" StoreEntitySet="escola">
+            <EndProperty Name="escola1">
+              <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+            </EndProperty>
+            <EndProperty Name="bairro1">
+              <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+            </EndProperty>
+            <Condition ColumnName="IdBairro" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuario_ibfk_8" TypeName="DataAcess.FK_usuario_ibfk_8" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="bairro1">
+              <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+            </EndProperty>
+            <Condition ColumnName="IdBairro" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_certidaonascimento_ibfk_1" TypeName="DataAcess.FK_certidaonascimento_ibfk_1" StoreEntitySet="certidaonascimento">
+            <EndProperty Name="certidaonascimento1">
+              <ScalarProperty Name="IdCertidao" ColumnName="IdCertidao" />
+            </EndProperty>
+            <EndProperty Name="cidade1">
+              <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+            </EndProperty>
+            <Condition ColumnName="IdCidade" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_certidaonascimento_ibfk_2" TypeName="DataAcess.FK_certidaonascimento_ibfk_2" StoreEntitySet="certidaonascimento">
+            <EndProperty Name="certidaonascimento1">
+              <ScalarProperty Name="IdCertidao" ColumnName="IdCertidao" />
+            </EndProperty>
+            <EndProperty Name="estado1">
+              <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+            </EndProperty>
+            <Condition ColumnName="IdEstado" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuario_ibfk_1" TypeName="DataAcess.FK_usuario_ibfk_1" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="certidaonascimento1">
+              <ScalarProperty Name="IdCertidao" ColumnName="IdCertidao" />
+            </EndProperty>
+            <Condition ColumnName="IdCertidao" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_cidade_ibfk_1" TypeName="DataAcess.FK_cidade_ibfk_1" StoreEntitySet="cidade">
+            <EndProperty Name="cidade1">
+              <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+            </EndProperty>
+            <EndProperty Name="estado1">
+              <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+            </EndProperty>
+            <Condition ColumnName="IdEstado" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_conselhotutelar_ibfk_2" TypeName="DataAcess.FK_conselhotutelar_ibfk_2" StoreEntitySet="conselhotutelar">
+            <EndProperty Name="conselhotutelar1">
+              <ScalarProperty Name="IdConselho" ColumnName="IdConselho" />
+            </EndProperty>
+            <EndProperty Name="cidade1">
+              <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+            </EndProperty>
+            <Condition ColumnName="IdCidade" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_escola_ibfk_1" TypeName="DataAcess.FK_escola_ibfk_1" StoreEntitySet="escola">
+            <EndProperty Name="escola1">
+              <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+            </EndProperty>
+            <EndProperty Name="cidade1">
+              <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+            </EndProperty>
+            <Condition ColumnName="IdCidade" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuario_ibfk_6" TypeName="DataAcess.FK_usuario_ibfk_6" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="cidade1">
+              <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+            </EndProperty>
+            <Condition ColumnName="IdCidade" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_conselhotutelar_ibfk_3" TypeName="DataAcess.FK_conselhotutelar_ibfk_3" StoreEntitySet="conselhotutelar">
+            <EndProperty Name="conselhotutelar1">
+              <ScalarProperty Name="IdConselho" ColumnName="IdConselho" />
+            </EndProperty>
+            <EndProperty Name="estado1">
+              <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+            </EndProperty>
+            <Condition ColumnName="IdEstado" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_UsuDeficiencia_Deficiencia" TypeName="DataAcess.FK_UsuDeficiencia_Deficiencia" StoreEntitySet="usudeficiencia">
+            <EndProperty Name="usudeficiencia1">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <EndProperty Name="deficiencia1">
+              <ScalarProperty Name="IdDeficiencia" ColumnName="IdDeficiencia" />
+            </EndProperty>
+            <Condition ColumnName="IdDeficiencia" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_escola_ibfk_2" TypeName="DataAcess.FK_escola_ibfk_2" StoreEntitySet="escola">
+            <EndProperty Name="escola1">
+              <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+            </EndProperty>
+            <EndProperty Name="tipoescola1">
+              <ScalarProperty Name="IdTipoEscola" ColumnName="IdTipoEscola" />
+            </EndProperty>
+            <Condition ColumnName="IdTipoEscola" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_escola_ibfk_3" TypeName="DataAcess.FK_escola_ibfk_3" StoreEntitySet="escola">
+            <EndProperty Name="escola1">
+              <ScalarProperty Name="IdEscola" ColumnName="IdEscola" />
+            </EndProperty>
+            <EndProperty Name="estado1">
+              <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+            </EndProperty>
+            <Condition ColumnName="IdEstado" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_EscolaDestino" TypeName="DataAcess.FK_EscolaDestino" StoreEntitySet="escolaescolhida">
+            <EndProperty Name="escolaescolhida1">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <EndProperty Name="escola1">
+              <ScalarProperty Name="IdEscola" ColumnName="IdEscolaDestino" />
+            </EndProperty>
+            <Condition ColumnName="IdEscolaDestino" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_EscolaOrigem" TypeName="DataAcess.FK_EscolaOrigem" StoreEntitySet="escolaescolhida">
+            <EndProperty Name="escolaescolhida1">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <EndProperty Name="escola1">
+              <ScalarProperty Name="IdEscola" ColumnName="IdEscolaOrigem" />
+            </EndProperty>
+            <Condition ColumnName="IdEscolaOrigem" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_UsuarioEscolaEscolhida" TypeName="DataAcess.FK_UsuarioEscolaEscolhida" StoreEntitySet="escolaescolhida">
+            <EndProperty Name="escolaescolhida1">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <Condition ColumnName="IdUsuario" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuario_ibfk_9" TypeName="DataAcess.FK_usuario_ibfk_9" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="estado1">
+              <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+            </EndProperty>
+            <Condition ColumnName="IdEstado" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuario_ibfk_5" TypeName="DataAcess.FK_usuario_ibfk_5" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="motivomatricula1">
+              <ScalarProperty Name="Id" ColumnName="IdMotivoMatricula" />
+            </EndProperty>
+            <Condition ColumnName="IdMotivoMatricula" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuario_ibfk_3" TypeName="DataAcess.FK_usuario_ibfk_3" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="pesquisa1">
+              <ScalarProperty Name="IdPesquisa" ColumnName="IdPesquisa" />
+            </EndProperty>
+            <Condition ColumnName="IdPesquisa" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuario_ibfk_7" TypeName="DataAcess.FK_usuario_ibfk_7" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="responsavel1">
+              <ScalarProperty Name="Id" ColumnName="IdResponsavel" />
+            </EndProperty>
+            <Condition ColumnName="IdResponsavel" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuario_ibfk_4" TypeName="DataAcess.FK_usuario_ibfk_4" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="serieescola1">
+              <ScalarProperty Name="IdSerie" ColumnName="IdEscola" />
+            </EndProperty>
+            <Condition ColumnName="IdEscola" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Status_Usuario" TypeName="DataAcess.FK_Status_Usuario" StoreEntitySet="usuario">
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <EndProperty Name="status1">
+              <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+            </EndProperty>
+            <Condition ColumnName="IdStatus" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_UsuarioDeficiencia" TypeName="DataAcess.FK_UsuarioDeficiencia" StoreEntitySet="usudeficiencia">
+            <EndProperty Name="usudeficiencia1">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <EndProperty Name="usuario1">
+              <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+            </EndProperty>
+            <Condition ColumnName="IdUsuario" IsNull="false" />
+          </AssociationSetMapping>
+          <EntitySetMapping Name="Estado">
+            <EntityTypeMapping TypeName="IsTypeOf(DataAcess.Estado)">
+              <MappingFragment StoreEntitySet="estado">
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="DDLGenerationTemplate" Value="$(VSEFTools)\DBGen\SSDLToMySQL.tt" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ADO" ZoomLevel="86" DisplayType="true">
+        <EntityTypeShape EntityType="DataAcess.Administrador" Width="2.125" PointX="7.5" PointY="16.75" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Bairro" Width="1.5" PointX="5.25" PointY="14.875" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.certidaonascimento" Width="1.5" PointX="5.25" PointY="10.75" Height="3.1340950520833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Cidade" Width="1.5" PointX="3" PointY="14.5" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.ConselhoTutelar" Width="1.5" PointX="7.5" PointY="12.625" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Deficiencia" Width="1.5" PointX="7.5" PointY="2.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Escola" Width="1.5" PointX="10.5" PointY="12.5" Height="3.7109993489583335" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.EscolaEscolhida" Width="1.5" PointX="12.75" PointY="9.375" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Estado" Width="1.5" PointX="0.75" PointY="11" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.MotivoMatricula" Width="1.75" PointX="5" PointY="1.625" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Pesquisa" Width="2.25" PointX="4.5" PointY="4" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Responsavel" Width="1.5" PointX="5.25" PointY="18.375" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.SerieEscola" Width="1.5" PointX="4.25" PointY="7.625" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Status" Width="1.5" PointX="5.25" PointY="22.125" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.TipoEscola" Width="1.5" PointX="8.25" PointY="22.5" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.Usuario" Width="1.5" PointX="7.5" PointY="4.875" Height="6.787822265624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAcess.UsuDeficiencia" Width="1.5" PointX="10" PointY="7.25" Height="1.9802864583333388" IsExpanded="true" />
+        <AssociationConnector Association="DataAcess.Bairro_Administrador_fk" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="17.091095377604166" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="17.091095377604166" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="17.091095377604166" />
+          <ConnectorPoint PointX="7.5" PointY="17.091095377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.Cidade_Administrador_fk" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="17.564392903645832" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="17.564392903645832" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="17.564392903645832" />
+          <ConnectorPoint PointX="7.5" PointY="17.564392903645832" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.bairro_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="16.153595377604166" />
+          <ConnectorPoint PointX="5.25" PointY="16.153595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.conselhotutelar_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="15.4131982421875" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="15.4131982421875" />
+          <ConnectorPoint PointX="7.286458333333333" PointY="15.4131982421875" />
+          <ConnectorPoint PointX="7.5" PointY="15.4131982421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.escola_ibfk_4" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.112447916666667" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="16.112447916666667" />
+          <ConnectorPoint PointX="7.286458333333333" PointY="16.112447916666667" />
+          <ConnectorPoint PointX="10.041666666666666" PointY="16.112447916666667" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="16.112447916666667" />
+          <ConnectorPoint PointX="10.5" PointY="16.112447916666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.usuario_ibfk_8" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="14.876152846153847" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="14.469902846153847" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="7.6875005000000005" />
+          <ConnectorPoint PointX="7.5" PointY="7.6875005000000005" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.certidaonascimento_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="14.5" />
+          <ConnectorPoint PointX="3.75" PointY="12.317047526041668" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="12.317047526041668" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="12.317047526041668" />
+          <ConnectorPoint PointX="5.25" PointY="12.317047526041668" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.certidaonascimento_ibfk_2" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.596023763020835" />
+          <ConnectorPoint PointX="3.2604141666666666" PointY="11.596023763020835" />
+          <ConnectorPoint PointX="3.4270808333333336" PointY="11.596023763020835" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="11.596023763020835" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="11.596023763020835" />
+          <ConnectorPoint PointX="5.25" PointY="11.596023763020835" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.usuario_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="11.206411132812498" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="11.206411132812496" />
+          <ConnectorPoint PointX="7.3437500000000009" PointY="11.206411132812498" />
+          <ConnectorPoint PointX="7.5" PointY="11.206411132812498" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.cidade_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="13.557190755208332" />
+          <ConnectorPoint PointX="1.5" PointY="16.067047526041666" />
+          <ConnectorPoint PointX="3" PointY="16.067047526041666" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.conselhotutelar_ibfk_2" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.65625" />
+          <ConnectorPoint PointX="6.8922080473372773" PointY="14.656249999999998" />
+          <ConnectorPoint PointX="7.2864583333333321" PointY="14.65625" />
+          <ConnectorPoint PointX="7.5" PointY="14.65625" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.escola_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="17.634095052083332" />
+          <ConnectorPoint PointX="3.75" PointY="17.884095052083332" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="17.884095052083332" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="17.884095052083332" />
+          <ConnectorPoint PointX="7.25" PointY="17.884095052083332" />
+          <ConnectorPoint PointX="7.25" PointY="16.201396484375" />
+          <ConnectorPoint PointX="10.125" PointY="16.201396484375" />
+          <ConnectorPoint PointX="10.125" PointY="14.274971958333332" />
+          <ConnectorPoint PointX="10.5" PointY="14.274971958333332" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.usuario_ibfk_6" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.3437475" PointY="14.5" />
+          <ConnectorPoint PointX="3.3437475" PointY="7.0910953776041659" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="7.091095377604165" />
+          <ConnectorPoint PointX="7.286458333333333" PointY="7.0910953776041659" />
+          <ConnectorPoint PointX="7.5" PointY="7.0910953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.conselhotutelar_ibfk_3" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="13.557190755208332" />
+          <ConnectorPoint PointX="1.9062525" PointY="14.192047526041668" />
+          <ConnectorPoint PointX="3.2604141666666666" PointY="14.192047526041668" />
+          <ConnectorPoint PointX="3.4270808333333336" PointY="14.192047526041668" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="14.192047526041668" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="14.192047526041668" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="14.192047526041668" />
+          <ConnectorPoint PointX="7.286458333333333" PointY="14.192047526041668" />
+          <ConnectorPoint PointX="7.5" PointY="14.192047526041668" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.UsuDeficiencia_Deficiencia" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="3.172841796875" />
+          <ConnectorPoint PointX="10.75" PointY="3.172841796875" />
+          <ConnectorPoint PointX="10.75" PointY="7.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.escola_ibfk_2" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.71875" PointY="22.5" />
+          <ConnectorPoint PointX="9.71875" PointY="16.143700416666668" />
+          <ConnectorPoint PointX="10.5" PointY="16.143700416666668" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.escola_ibfk_3" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.937118640625" />
+          <ConnectorPoint PointX="3.2604141666666666" PointY="12.937118640625" />
+          <ConnectorPoint PointX="3.4270808333333336" PointY="12.937118640625" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="12.937118640625" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="12.937118640625" />
+          <ConnectorPoint PointX="5" PointY="12.937118640625" />
+          <ConnectorPoint PointX="5" PointY="10.5" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="10.5" />
+          <ConnectorPoint PointX="7.2500000000000009" PointY="10.5" />
+          <ConnectorPoint PointX="7.260416666666667" PointY="10.5" />
+          <ConnectorPoint PointX="7.260416666666667" PointY="12.25" />
+          <ConnectorPoint PointX="10.760414166666665" PointY="12.25" />
+          <ConnectorPoint PointX="10.927080833333333" PointY="12.25" />
+          <ConnectorPoint PointX="11.25" PointY="12.25" />
+          <ConnectorPoint PointX="11.25" PointY="12.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.EscolaDestino" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.6562525" PointY="12.5" />
+          <ConnectorPoint PointX="11.6562525" PointY="10.557444661458334" />
+          <ConnectorPoint PointX="12.75" PointY="10.557444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.EscolaOrigem" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.8437475" PointY="12.5" />
+          <ConnectorPoint PointX="10.8437475" PointY="11.179919492187501" />
+          <ConnectorPoint PointX="11.572919166666667" PointY="11.179919492187501" />
+          <ConnectorPoint PointX="11.739585833333335" PointY="11.179919492187501" />
+          <ConnectorPoint PointX="12.75" PointY="11.179919492187501" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.UsuarioEscolaEscolhida" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="9.9037223307291669" />
+          <ConnectorPoint PointX="12.75" PointY="9.9037223307291669" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.usuario_ibfk_9" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="11" />
+          <ConnectorPoint PointX="1.5" PointY="9.8915917968750016" />
+          <ConnectorPoint PointX="3.2604141666666666" PointY="9.8915917968750016" />
+          <ConnectorPoint PointX="3.4270808333333336" PointY="9.8915917968750016" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="9.8915917968750016" />
+          <ConnectorPoint PointX="7.286458333333333" PointY="9.8915917968750016" />
+          <ConnectorPoint PointX="7.5" PointY="9.8915917968750016" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.usuario_ibfk_5" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="3.2194551448317306" />
+          <ConnectorPoint PointX="7.125" PointY="3.5944551448317306" />
+          <ConnectorPoint PointX="7.125" PointY="7.6875005000000005" />
+          <ConnectorPoint PointX="7.5" PointY="7.6875005000000005" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.usuario_ibfk_3" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="5.7160953776041659" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="5.716095377604165" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="5.7160953776041659" />
+          <ConnectorPoint PointX="7.5" PointY="5.7160953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.usuario_ibfk_7" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="18.376152846153843" />
+          <ConnectorPoint PointX="7.125" PointY="18.001152846153843" />
+          <ConnectorPoint PointX="7.125" PointY="9.1250027499999931" />
+          <ConnectorPoint PointX="7.5" PointY="9.1250027499999931" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.usuario_ibfk_4" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.75" PointY="8.80729736328125" />
+          <ConnectorPoint PointX="7.0833333333333339" PointY="8.80729736328125" />
+          <ConnectorPoint PointX="7.2864583333333339" PointY="8.80729736328125" />
+          <ConnectorPoint PointX="7.5" PointY="8.80729736328125" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.Status_Usuario" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="22.141152846153844" />
+          <ConnectorPoint PointX="7.203125" PointY="21.688027846153844" />
+          <ConnectorPoint PointX="7.203125" PointY="6.2499982500000062" />
+          <ConnectorPoint PointX="7.5" PointY="6.2499982500000062" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.UsuarioDeficiencia" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="8.24014322916667" />
+          <ConnectorPoint PointX="10" PointY="8.24014322916667" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="DataAcess.administrador1" Width="1.5" PointX="20.125" PointY="26.125" Height="4.2879036458333388" />
+        <EntityTypeShape EntityType="DataAcess.bairro1" Width="1.5" PointX="17.875" PointY="29.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="DataAcess.certidaonascimento1" Width="1.5" PointX="17.875" PointY="22.75" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="DataAcess.cidade1" Width="1.5" PointX="15.625" PointY="24.375" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="DataAcess.conselhotutelar1" Width="1.5" PointX="20.125" PointY="22.125" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="DataAcess.deficiencia1" Width="1.5" PointX="23.125" PointY="15.75" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="DataAcess.escola1" Width="1.5" PointX="23.125" PointY="25.125" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="DataAcess.escolaescolhida1" Width="1.5" PointX="25.375" PointY="22.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="DataAcess.estado1" Width="1.5" PointX="13.375" PointY="21" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="DataAcess.motivomatricula1" Width="1.5" PointX="20.875" PointY="15" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="DataAcess.pesquisa1" Width="1.5" PointX="20.875" PointY="17.375" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="DataAcess.responsavel1" Width="1.5" PointX="20.875" PointY="10.625" Height="2.749492187499996" />
+        <EntityTypeShape EntityType="DataAcess.serieescola1" Width="1.5" PointX="20.875" PointY="31.125" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="DataAcess.status1" Width="1.5" PointX="20.875" PointY="33.5" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="DataAcess.tipoescola1" Width="1.5" PointX="20.875" PointY="36.75" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="DataAcess.usuario1" Width="1.5" PointX="23.125" PointY="19" Height="5.05710937500001" />
+        <EntityTypeShape EntityType="DataAcess.usudeficiencia1" Width="1.5" PointX="25.375" PointY="19.75" Height="1.5956835937500102" />
+        <AssociationConnector Association="DataAcess.FK_Bairro_Administrador_fk" >
+          <ConnectorPoint PointX="19.375" PointY="30.018951822916669" />
+          <ConnectorPoint PointX="20.125" PointY="30.018951822916669" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_Cidade_Administrador_fk" >
+          <ConnectorPoint PointX="17.125" PointY="26.720896809895834" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="26.720896809895834" />
+          <ConnectorPoint PointX="19.989583333333332" PointY="26.720896809895834" />
+          <ConnectorPoint PointX="20.125" PointY="26.720896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_bairro_ibfk_1" >
+          <ConnectorPoint PointX="16.375" PointY="27.316793619791667" />
+          <ConnectorPoint PointX="16.375" PointY="30.807444661458334" />
+          <ConnectorPoint PointX="17.875" PointY="30.807444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_conselhotutelar_ibfk_1" >
+          <ConnectorPoint PointX="19.375" PointY="29.681537461538461" />
+          <ConnectorPoint PointX="19.90625" PointY="29.150287461538461" />
+          <ConnectorPoint PointX="19.90625" PointY="23.499746093750005" />
+          <ConnectorPoint PointX="20.125" PointY="23.499746093750005" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_escola_ibfk_4" >
+          <ConnectorPoint PointX="19.375" PointY="30.768951822916669" />
+          <ConnectorPoint PointX="22.947916666666668" PointY="30.768951822916669" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="30.768951822916669" />
+          <ConnectorPoint PointX="23.385414166666667" PointY="30.768951822916669" />
+          <ConnectorPoint PointX="23.552080833333331" PointY="30.768951822916669" />
+          <ConnectorPoint PointX="23.875" PointY="30.768951822916669" />
+          <ConnectorPoint PointX="23.875" PointY="28.066793619791667" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_usuario_ibfk_8" >
+          <ConnectorPoint PointX="19.350769230769231" PointY="29.625" />
+          <ConnectorPoint PointX="19.75" PointY="29.225769230769231" />
+          <ConnectorPoint PointX="19.75" PointY="21.028595377604162" />
+          <ConnectorPoint PointX="22.666666666666668" PointY="21.028595377604162" />
+          <ConnectorPoint PointX="22.833333333333332" PointY="21.028595377604162" />
+          <ConnectorPoint PointX="22.854166666666668" PointY="21.028595377604162" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="21.028595377604162" />
+          <ConnectorPoint PointX="23.125" PointY="21.028595377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_certidaonascimento_ibfk_1" >
+          <ConnectorPoint PointX="17.125" PointY="24.93724609375" />
+          <ConnectorPoint PointX="17.875" PointY="24.93724609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_certidaonascimento_ibfk_2" >
+          <ConnectorPoint PointX="14.875" PointY="23.153595377604169" />
+          <ConnectorPoint PointX="16.291666666666668" PointY="23.153595377604169" />
+          <ConnectorPoint PointX="16.458333333333332" PointY="23.153595377604169" />
+          <ConnectorPoint PointX="16.697919166666669" PointY="23.153595377604169" />
+          <ConnectorPoint PointX="16.864585833333333" PointY="23.153595377604169" />
+          <ConnectorPoint PointX="17.875" PointY="23.153595377604169" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_usuario_ibfk_1" >
+          <ConnectorPoint PointX="18.625" PointY="22.75" />
+          <ConnectorPoint PointX="18.625" PointY="21.576800188802075" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="21.576800188802075" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="21.576800188802075" />
+          <ConnectorPoint PointX="22.666666666666668" PointY="21.576800188802075" />
+          <ConnectorPoint PointX="22.833333333333332" PointY="21.576800188802075" />
+          <ConnectorPoint PointX="22.854166666666668" PointY="21.576800188802075" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="21.576800188802075" />
+          <ConnectorPoint PointX="23.125" PointY="21.576800188802075" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_cidade_ibfk_1" >
+          <ConnectorPoint PointX="14.125" PointY="23.557190755208339" />
+          <ConnectorPoint PointX="14.125" PointY="25.845896809895834" />
+          <ConnectorPoint PointX="15.625" PointY="25.845896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_conselhotutelar_ibfk_2" >
+          <ConnectorPoint PointX="16.375" PointY="24.375" />
+          <ConnectorPoint PointX="16.375" PointY="22.40625" />
+          <ConnectorPoint PointX="16.697919166666669" PointY="22.40625" />
+          <ConnectorPoint PointX="16.864585833333333" PointY="22.40625" />
+          <ConnectorPoint PointX="18.541666666666668" PointY="22.40625" />
+          <ConnectorPoint PointX="18.708333333333332" PointY="22.40625" />
+          <ConnectorPoint PointX="19.541666666666668" PointY="22.40625" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="22.40625" />
+          <ConnectorPoint PointX="20.125" PointY="22.40625" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_escola_ibfk_1" >
+          <ConnectorPoint PointX="17.125" PointY="25.81224609375" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="25.81224609375" />
+          <ConnectorPoint PointX="19.989583333333332" PointY="25.81224609375" />
+          <ConnectorPoint PointX="22.729166666666668" PointY="25.81224609375" />
+          <ConnectorPoint PointX="22.895833333333332" PointY="25.81224609375" />
+          <ConnectorPoint PointX="22.947916666666668" PointY="25.81224609375" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="25.81224609375" />
+          <ConnectorPoint PointX="23.125" PointY="25.81224609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_usuario_ibfk_6" >
+          <ConnectorPoint PointX="16.7812525" PointY="24.375" />
+          <ConnectorPoint PointX="16.7812525" PointY="20.48039056640625" />
+          <ConnectorPoint PointX="22.666666666666668" PointY="20.48039056640625" />
+          <ConnectorPoint PointX="22.833333333333332" PointY="20.48039056640625" />
+          <ConnectorPoint PointX="22.854166666666668" PointY="20.48039056640625" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="20.48039056640625" />
+          <ConnectorPoint PointX="23.125" PointY="20.48039056640625" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_conselhotutelar_ibfk_3" >
+          <ConnectorPoint PointX="14.875" PointY="22.609375" />
+          <ConnectorPoint PointX="16.291666666666668" PointY="22.609375" />
+          <ConnectorPoint PointX="16.458333333333332" PointY="22.609375" />
+          <ConnectorPoint PointX="16.697919166666669" PointY="22.609375" />
+          <ConnectorPoint PointX="16.864585833333333" PointY="22.609375" />
+          <ConnectorPoint PointX="18.541666666666668" PointY="22.609375" />
+          <ConnectorPoint PointX="18.708333333333332" PointY="22.609375" />
+          <ConnectorPoint PointX="19.541666666666668" PointY="22.609375" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="22.609375" />
+          <ConnectorPoint PointX="20.125" PointY="22.609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_UsuDeficiencia_Deficiencia" >
+          <ConnectorPoint PointX="24.625" PointY="16.547841796874998" />
+          <ConnectorPoint PointX="26.125" PointY="16.547841796874998" />
+          <ConnectorPoint PointX="26.125" PointY="19.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_escola_ibfk_2" >
+          <ConnectorPoint PointX="22.375" PointY="37.547841796875" />
+          <ConnectorPoint PointX="23.4687475" PointY="37.547841796875" />
+          <ConnectorPoint PointX="23.4687475" PointY="28.066793619791667" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_escola_ibfk_3" >
+          <ConnectorPoint PointX="14.875" PointY="21.991525094401037" />
+          <ConnectorPoint PointX="16.697919166666669" PointY="21.991525094401037" />
+          <ConnectorPoint PointX="16.864585833333333" PointY="21.991525094401037" />
+          <ConnectorPoint PointX="18.541666666666668" PointY="21.991525094401037" />
+          <ConnectorPoint PointX="18.708333333333332" PointY="21.991525094401037" />
+          <ConnectorPoint PointX="19.625" PointY="21.991525094401037" />
+          <ConnectorPoint PointX="19.625" PointY="25.12449218750001" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="25.12449218750001" />
+          <ConnectorPoint PointX="19.989583333333332" PointY="25.12449218750001" />
+          <ConnectorPoint PointX="22.875" PointY="25.12449218750001" />
+          <ConnectorPoint PointX="22.875" PointY="24.875" />
+          <ConnectorPoint PointX="22.947916666666668" PointY="24.875" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="24.875" />
+          <ConnectorPoint PointX="23.875" PointY="24.875" />
+          <ConnectorPoint PointX="23.875" PointY="25.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_EscolaDestino" >
+          <ConnectorPoint PointX="24.625" PointY="26.595896809895834" />
+          <ConnectorPoint PointX="26.125" PointY="26.595896809895834" />
+          <ConnectorPoint PointX="26.125" PointY="24.412985026041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_EscolaOrigem" >
+          <ConnectorPoint PointX="24.625" PointY="25.829195904947923" />
+          <ConnectorPoint PointX="25.7187475" PointY="25.829195904947923" />
+          <ConnectorPoint PointX="25.7187475" PointY="24.412985026041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_UsuarioEscolaEscolhida" >
+          <ConnectorPoint PointX="24.625" PointY="23.341054687500005" />
+          <ConnectorPoint PointX="25.375" PointY="23.341054687500005" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_usuario_ibfk_9" >
+          <ConnectorPoint PointX="14.875" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="16.697919166666669" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="16.864585833333333" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="22.666666666666668" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="22.833333333333332" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="22.854166666666668" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="21.302697783203119" />
+          <ConnectorPoint PointX="23.125" PointY="21.302697783203119" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_usuario_ibfk_5" >
+          <ConnectorPoint PointX="22.375" PointY="16.595683593749996" />
+          <ConnectorPoint PointX="22.75" PointY="16.970683593749996" />
+          <ConnectorPoint PointX="22.75" PointY="22.848206781901034" />
+          <ConnectorPoint PointX="22.947916666666668" PointY="22.848206781901034" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="22.848206781901034" />
+          <ConnectorPoint PointX="23.125" PointY="22.848206781901034" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_usuario_ibfk_3" >
+          <ConnectorPoint PointX="22.375" PointY="19.466095377604162" />
+          <ConnectorPoint PointX="22.666666666666668" PointY="19.466095377604162" />
+          <ConnectorPoint PointX="22.833333333333332" PointY="19.466095377604162" />
+          <ConnectorPoint PointX="22.854166666666668" PointY="19.466095377604162" />
+          <ConnectorPoint PointX="23.020833333333332" PointY="19.466095377604162" />
+          <ConnectorPoint PointX="23.125" PointY="19.466095377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_usuario_ibfk_7" >
+          <ConnectorPoint PointX="22.375" PointY="13.312183495192306" />
+          <ConnectorPoint PointX="22.9375" PointY="13.874683495192306" />
+          <ConnectorPoint PointX="22.9375" PointY="22.212503485351554" />
+          <ConnectorPoint PointX="22.947916666666668" PointY="22.212503485351554" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="22.212503485351554" />
+          <ConnectorPoint PointX="23.125" PointY="22.212503485351554" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_usuario_ibfk_4" >
+          <ConnectorPoint PointX="22.375" PointY="31.18730669230769" />
+          <ConnectorPoint PointX="22.8125" PointY="30.749806692307686" />
+          <ConnectorPoint PointX="22.8125" PointY="23.483910078450513" />
+          <ConnectorPoint PointX="22.947916666666668" PointY="23.483910078450513" />
+          <ConnectorPoint PointX="23.114583333333332" PointY="23.483910078450513" />
+          <ConnectorPoint PointX="23.125" PointY="23.483910078450513" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_Status_Usuario" >
+          <ConnectorPoint PointX="22.375" PointY="33.531152846153844" />
+          <ConnectorPoint PointX="23.03125" PointY="32.874902846153844" />
+          <ConnectorPoint PointX="23.03125" PointY="19.973242972005206" />
+          <ConnectorPoint PointX="23.125" PointY="19.973242972005206" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataAcess.FK_UsuarioDeficiencia" >
+          <ConnectorPoint PointX="24.625" PointY="20.547841796875005" />
+          <ConnectorPoint PointX="25.375" PointY="20.547841796875005" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

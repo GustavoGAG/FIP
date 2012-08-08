@@ -1,0 +1,91 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using Business;
+using Ferramentas;
+
+namespace WebSite
+{
+    public partial class EstatisticaCadastro:System.Web.UI.Page
+    {
+        protected void Page_Load(object sender,EventArgs e)
+        {
+
+            try
+            {
+                if(!IsPostBack)
+                {
+                    PreencherListViewEstado();
+
+                }
+            }
+            #region Exceçoes
+            catch(AlertaException erro)
+            {
+
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
+               
+            }
+            catch(Exception Error)
+            {
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(Error);
+                divAlerta.Visible = true;
+                 
+            }
+            
+            #endregion
+        
+        }
+
+        protected void PreencherListViewEstado()
+        {
+            try
+            {
+                lvEstatisticaEstado.DataSource = UsuarioBus.Estatistica();
+                lvEstatisticaEstado.DataBind();
+            }
+            #region Exceçoes
+            catch(AlertaException erro)
+            {
+
+                divAlerta.InnerHtml = erro.Alerta;
+                divAlerta.Visible = true;
+
+            }
+            catch(Exception Error)
+            {
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(Error);
+                divAlerta.Visible = true;
+
+            }
+
+            #endregion
+        }
+
+        protected void PreencherListViewEstado(object sender,ListViewItemEventArgs e)
+        {
+            ListViewItem item = e.Item;
+            object dados = e.Item.DataItem;
+            try
+            {
+
+                Label lblEstado = (Label)item.FindControl("lblEstado"),
+            lblQtd = (Label)item.FindControl("lblQtd");
+
+                lblQtd.Text = DataBinder.Eval(dados,"qtd").ToString();
+
+                lblEstado.Text = DataBinder.Eval(dados,"nome").ToString();
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+    }
+}
