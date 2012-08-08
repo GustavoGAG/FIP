@@ -11,7 +11,7 @@ namespace WebSite
     public partial class Matricula:System.Web.UI.Page
     {
         private ListItem _motivo;
-
+        private bool _data;
         protected static DataTable DTable;
 
         #region Propriedades da Classe
@@ -90,11 +90,11 @@ namespace WebSite
         {
             // Propriedades do Usuario (Somente Leitura)
             int.TryParse(ddlEstado.SelectedValue,out _idEstado);
-            int.TryParse(ddlBairro.SelectedValue,out _idBairro);
+            int.TryParse(ddlBairroEndereco.SelectedValue,out _idBairro);
             int.TryParse(DDLCidade.SelectedValue,out _idCidade);
             int.TryParse(DDLMotivo.SelectedValue,out _idMotivoMatricula);
 
-            DateTime.TryParse(TxtDataNascimento.Text,out _dataNascimento);
+            _data = DateTime.TryParse(TxtDataNascimento.Text,out _dataNascimento);
 
             _cpfAluno = TxtCPF.Text;
             _cep = txtCep.Text;
@@ -122,9 +122,17 @@ namespace WebSite
         protected void Matricularse(object sender,EventArgs e)
         {
             InicializarVariaveis();
-            if(!VerificarSeAceitouTermo())
-                return;
+            if(!VerificarSeAceitouTermo() && _data)
+            {
+                divAlerta.InnerHtml = _data ?
+                    "Aceito nossos termos para efetuar a matricula" :
+                    "A data de Nascimento é Invalida";
 
+
+                divAlerta.Visible = true;
+                return;
+            }
+            divAlerta.Visible = false;
             _idResponsavel = CadastrarResponsavel();
             _idPesquisa = CadastrarPesquisa();
             _idCertidao = CadastrarCertidao();
@@ -152,12 +160,12 @@ namespace WebSite
             }
             catch(Exception ex)
             {
-                divAlerta.InnerHtml =   AlertaException.EnviarEmailSuporte(ex);
+                divAlerta.InnerHtml = AlertaException.EnviarEmailSuporte(ex);
                 divAlerta.Visible = true;
                 CancelarMatricula();
 
             }
-          
+
 
         }
 
@@ -526,7 +534,8 @@ ddlEstado,ddlEstadoNatal);
             try
             {
                 int.TryParse(DDLCidade.SelectedValue,out _idCidade);
-                BairroBus.Pesquisar(ddlBairro,_idCidade);
+                BairroBus.Pesquisar(ddlBairroEndereco,_idCidade);
+                 
             }
             #region Exceçoes
             catch(AlertaException erro)
@@ -612,6 +621,14 @@ ddlEstado,ddlEstadoNatal);
 
         #endregion
 
+        protected void PorraNenhuma(object sender,EventArgs e)
+        {
+            var send = (sender as DropDownList).SelectedItem.Text;
+            
+            var ddl = ddlBairroEndereco.SelectedItem.Text;
+
+           // ddlBairroEndereco.Items.FindByText(send).Selected = true;
+        }
 
 
     }

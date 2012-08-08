@@ -73,6 +73,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -84,6 +85,7 @@
     <Content Include="Contato.aspx" />
     <Content Include="google45dc922c57694e61.html" />
     <Content Include="icon.ico" />
+    <Content Include="Login.aspx" />
     <Content Include="Modais\Modal_Estatistica.aspx" />
     <Content Include="Public\EstatisticaCadastro.aspx" />
     <Content Include="Index.aspx" />
@@ -131,8 +133,8 @@
     <Content Include="Settings\Cidade_CDT.aspx" />
     <Content Include="Settings\Deficiencia_CDT.aspx" />
     <Content Include="Settings\Escola_CDT.aspx" />
-    <Content Include="Settings\Login.aspx" />
-    <Content Include="Settings\Settings.Master" />
+    <Content Include="Settings\Index.aspx" />
+    <Content Include="Settings\SettingsPage.Master" />
     <Content Include="Sobre.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -158,6 +160,13 @@
     </Compile>
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modal.Master.cs">
       <DependentUpon>Modal.Master</DependentUpon>
@@ -250,19 +259,19 @@
     <Compile Include="Settings\Escola_CDT.aspx.designer.cs">
       <DependentUpon>Escola_CDT.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Settings\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Settings\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Settings\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Settings\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Settings\Settings.Master.cs">
-      <DependentUpon>Settings.Master</DependentUpon>
+    <Compile Include="Settings\SettingsPage.Master.cs">
+      <DependentUpon>SettingsPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Settings\Settings.Master.designer.cs">
-      <DependentUpon>Settings.Master</DependentUpon>
+    <Compile Include="Settings\SettingsPage.Master.designer.cs">
+      <DependentUpon>SettingsPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Sobre.aspx.cs">
       <DependentUpon>Sobre.aspx</DependentUpon>
@@ -280,7 +289,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Modal.Master" />
-    <Content Include="App.Config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

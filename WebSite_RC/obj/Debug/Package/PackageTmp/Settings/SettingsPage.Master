@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Settings.master.cs" Inherits="WebSite.Settings.Settings" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SettingsPage.Master.cs" Inherits="WebSite.Settings.Settings" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -12,8 +12,7 @@
 <body>
     <form id="formSettings" runat="server">
  
-    <ajax:ToolkitScriptManager ID="ToolkitScriptManager" runat="server">
-    </ajax:ToolkitScriptManager>
+     
     <div>
         <asp:ContentPlaceHolder ID="BodySettings" runat="server">
         

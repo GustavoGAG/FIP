@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadMain" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyMain" runat="server">
-    <div runat="server" id="divAlert" visible="false" class="alert">
+    <div runat="server" id="divAlerta" visible="false" class="alert">
     </div>
     <section class="caixa1">
         <section class="form">

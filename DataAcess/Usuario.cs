@@ -586,7 +586,7 @@ namespace DataAcess
                 {
                     ado.Usuario.AddObject(this);
                     ado.SaveChanges();
-                    return this.Id;
+                    return  Id;
                 }
 
             }

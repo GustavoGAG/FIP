@@ -66,7 +66,6 @@ namespace WebSite.Settings {
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefone;
         
- 
         /// <summary>
         /// Controle rfvTelefone.
         /// </summary>
@@ -94,7 +93,6 @@ namespace WebSite.Settings {
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFax;
         
- 
         /// <summary>
         /// Controle lblTipoEscola.
         /// </summary>
@@ -229,7 +227,5 @@ namespace WebSite.Settings {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView lvEscola;
-
-       
     }
 }

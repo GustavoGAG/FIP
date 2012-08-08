@@ -115,8 +115,7 @@ namespace Business
             dTable = new DataTable();
             dTable.Columns.Add("id",typeof(string));
             dTable.Columns.Add("nomeBairro",typeof(string));
-            try
-            {
+           
                 foreach(Bairro b in bairro.Pesquisar(idCidade))
                 {
                     DataRow dRow = dTable.NewRow();
@@ -127,14 +126,7 @@ namespace Business
                 }
 
 
-            }
-            catch(Exception b)
-            {
-                DataRow dRow = dTable.NewRow();
-                dRow["id"] = b.GetHashCode();
-                dRow["nomeBairro"] = b.Message;
-                dTable.Rows.Add(dRow);
-            }
+         
             return dTable;
 
         }
@@ -146,22 +138,19 @@ namespace Business
         public static DropDownList Pesquisar(DropDownList ddlBairro,int idCidade)
         {
             ddlBairro.Items.Clear();
-            ListItem li = new ListItem();
-            li.Text = "Selecione".ToUpper();
-            li.Value = "0";
 
-            ddlBairro.Items.Add(li);
-            foreach(Bairro b in bairro.Pesquisar(idCidade))
-            {
+            ddlBairro.Items.Add(new ListItem{
+                                            Text = "SELECIONE",
+                                            Value = "0" 
+                                            
+                                            }
+                              );
 
-                ddlBairro.Items.Add
-                    (new ListItem
-                         {
-                             Text = b.Nome.ToUpper(), Value = Convert.ToString(b.IdCidade)
-                         }
-                    );
-
-            }
+            ddlBairro.DataSource = BairroBus.Pesquisar(idCidade);
+            ddlBairro.DataTextField = "nomeBairro";
+            ddlBairro.DataValueField = "Id";
+            ddlBairro.DataBind();
+            
             return ddlBairro;
 
         }
@@ -175,13 +164,19 @@ namespace Business
         {
             ddlBairro.Items.Clear();
             ddlBairro1.Items.Clear();
-            ListItem li = new ListItem {Text = "Selecione", Value = "0"};
+            ListItem li = new ListItem
+            {
+                Text = "Selecione", Value = "0"
+            };
 
             ddlBairro.Items.Add(li);
             ddlBairro1.Items.Add(li);
             foreach(Bairro b in bairro.Pesquisar(idCidade))
             {
-                li = new ListItem {Text = b.Nome.ToUpper(), Value = b.IdCidade.ToString()};
+                li = new ListItem
+                {
+                    Text = b.Nome.ToUpper(), Value = b.IdCidade.ToString()
+                };
                 ddlBairro.Items.Add(li);
                 ddlBairro1.Items.Add(li);
             }

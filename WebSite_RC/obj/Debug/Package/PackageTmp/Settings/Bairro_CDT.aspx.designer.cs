@@ -49,13 +49,22 @@ namespace WebSite.Settings {
         protected global::System.Web.UI.WebControls.DropDownList ddlCidade;
         
         /// <summary>
-        /// Controle lblAlert.
+        /// Controle btNewBairro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlert;
+        protected global::System.Web.UI.WebControls.Button btNewBairro;
+        
+        /// <summary>
+        /// Controle divAlerta.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAlerta;
         
         /// <summary>
         /// Controle lvBairro.

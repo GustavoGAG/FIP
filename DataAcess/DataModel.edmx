@@ -1029,7 +1029,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="DataModel" ZoomLevel="65">
+      <Diagram Name="DataModel" ZoomLevel="146">
         <EntityTypeShape EntityType="DataAcess.Administrador" Width="1.5" PointX="7.5" PointY="7.75" Height="4.0956022135416656" />
         <EntityTypeShape EntityType="DataAcess.Bairro" Width="1.5" PointX="5.25" PointY="10.125" Height="2.5571907552083388" />
         <EntityTypeShape EntityType="DataAcess.CertidaoNascimento" Width="1.5" PointX="5.25" PointY="15.875" Height="2.749492187499996" />

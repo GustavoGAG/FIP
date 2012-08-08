@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/Settings.Master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/SettingsPage.Master" AutoEventWireup="true"
     CodeBehind="Cidade_CDT.aspx.cs" Inherits="WebSite.Settings.Cidade_CDT" %>
 
 <asp:Content ID="HeadBairro" ContentPlaceHolderID="HeadSettings" runat="server">

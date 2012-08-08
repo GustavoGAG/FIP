@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="MatriculaPrintBody" ContentPlaceHolderID="BodyMain" runat="server">
     
-    <div runat="server" id="divAlert" visible="false" class="alert">   </div>
+    <div runat="server" id="divAlerta" visible="false" class="alert">   </div>
 
     <section class="caixa1"> 
       <p>Se voce fez o seu cadastro e precisa do comprovante procure ele aqui.</p>  

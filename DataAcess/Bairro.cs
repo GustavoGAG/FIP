@@ -30,7 +30,7 @@ namespace DataAcess
             catch
             (Exception e)
             {
-                ArgumentException argExc = new ArgumentException(e.Message, e.Source, e.InnerException);
+                ArgumentException argExc = new ArgumentException(e.Message,e.Source,e.InnerException);
                 throw argExc;
             }
             return intRet;
@@ -38,7 +38,7 @@ namespace DataAcess
         }
 
 
-        public int Editar(int idBairro, string nome, int idCidade)
+        public int Editar(int idBairro,string nome,int idCidade)
         {
             try
             {
@@ -46,9 +46,9 @@ namespace DataAcess
                 using(Context fip = new Context(Context.ObterStringConexaoWebConfig()))
                 {
                     IQueryable<Bairro> bairros = from b in fip.Bairro
-                                                 where b.Id  == idBairro
+                                                 where b.Id == idBairro
                                                  select b;
-                    foreach (Bairro b in bairros)
+                    foreach(Bairro b in bairros)
                     {
                         b.Nome = nome;
                         b.IdCidade = idCidade;
@@ -57,9 +57,9 @@ namespace DataAcess
                     }
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
-                ArgumentException argExc = new ArgumentException(e.Message, e.Source, e.InnerException);
+                ArgumentException argExc = new ArgumentException(e.Message,e.Source,e.InnerException);
                 throw argExc;
             }
             return intRet;
@@ -73,21 +73,21 @@ namespace DataAcess
             {
                 using(Context fip = new Context(Context.ObterStringConexaoWebConfig()))
                 {
-                    Bairro bairro  = (from b in fip.Bairro
-                                      where b.Id  == idBairro
-                                      select b).First();
+                    Bairro bairro = (from b in fip.Bairro
+                                     where b.Id == idBairro
+                                     select b).First();
 
                     fip.Bairro.DeleteObject(bairro);
-                        intRet = fip.SaveChanges();
-                    
+                    intRet = fip.SaveChanges();
+
 
                 }
 
 
             }
-            catch (Exception e)
+            catch(Exception e)
             {
-                ArgumentException argExc = new ArgumentException(e.Message, e.Source, e.InnerException);
+                ArgumentException argExc = new ArgumentException(e.Message,e.Source,e.InnerException);
                 throw argExc;
             }
             return intRet;
@@ -105,13 +105,13 @@ namespace DataAcess
             {
                 using(Context fip = new Context(Context.ObterStringConexaoWebConfig()))
                 {
-                    if ((Pesquisar(nome) != null) || (Pesquisar(nome).Count > 0))
+                    if((Pesquisar(nome) != null) || (Pesquisar(nome).Count > 0))
                         existe = true;
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
-                ArgumentException argExc = new ArgumentException(e.Message, e.Source, e.InnerException);
+                ArgumentException argExc = new ArgumentException(e.Message,e.Source,e.InnerException);
                 throw argExc;
             }
             return existe;
@@ -120,7 +120,7 @@ namespace DataAcess
         }
 
 
-        public bool ValidarExistencia(int idCidade, string nomeBairro)
+        public bool ValidarExistencia(int idCidade,string nomeBairro)
         {
             bool existe = false;
             try
@@ -133,14 +133,14 @@ namespace DataAcess
                              where b.IdCidade == idCidade && b.Nome == nomeBairro
                              select b;
 
-                    if (ve != null || ve.Count() > 0)
+                    if(ve != null || ve.Count() > 0)
                         existe = true;
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
-                throw new ArgumentException(e.Message, e.Source, e.InnerException);
-                
+                throw new ArgumentException(e.Message,e.Source,e.InnerException);
+
             }
             return existe;
 
@@ -158,17 +158,17 @@ namespace DataAcess
                 {
 
                     var ve = from b in fip.Bairro
-                             where b.Id  == idBairro
+                             where b.Id == idBairro
                              select b;
 
-                    if (ve != null || ve.Count() > 0)
+                    if(ve != null || ve.Count() > 0)
                         existe = true;
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
-                throw new ArgumentException(e.Message, e.Source, e.InnerException);
-               
+                throw new ArgumentException(e.Message,e.Source,e.InnerException);
+
             }
             return existe;
 
@@ -181,28 +181,17 @@ namespace DataAcess
         /// <summary>Pesquisa os Bairros de uma determinada Cidade</summary>
         /// <param name="idCidade">ID da Cidade que o bairro esta</param>
         /// <returns>Lista IQueryble do tipo Bairro</returns>
-        public List<Bairro> Pesquisar(int idCidade)
+        public IEnumerable<Bairro> Pesquisar(int idCidade)
         {
-            List<Bairro> lstBairro = new List<Bairro>();
-            try
-            {
-                using(Context fip = new Context(Context.ObterStringConexaoWebConfig()))
-                {
-                    IQueryable<Bairro> bairro = from b in fip.Bairro
-                                                where b.IdCidade == idCidade
-                                                orderby b.Nome
-                                                select b;
 
-                    lstBairro = bairro.ToList();
-                }
-            }
-            catch
-            (Exception e)
+            using(Context fip = new Context(Context.ObterStringConexaoWebConfig()))
             {
-                ArgumentException argExc = new ArgumentException(e.Message, e.Source, e.InnerException);
-                throw argExc;
+                return (fip.Bairro.Where(b => b.IdCidade == idCidade).OrderBy(b => b.Nome)).ToList();
+
+
             }
-            return lstBairro;
+
+
         }
 
 
@@ -222,9 +211,9 @@ namespace DataAcess
                     return lstBairro = bairro.ToList();
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
-                ArgumentException argExc = new ArgumentException(e.Message, e.Source, e.InnerException);
+                ArgumentException argExc = new ArgumentException(e.Message,e.Source,e.InnerException);
                 throw argExc;
             }
         }

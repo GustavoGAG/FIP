@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/Settings.Master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Settings/SettingsPage.Master" AutoEventWireup="true"
     CodeBehind="Bairro_CDT.aspx.cs" Inherits="WebSite.Settings.Bairro_CDT" %>
 
 <asp:Content ID="HeadBairro" ContentPlaceHolderID="HeadSettings" runat="server">
@@ -20,11 +20,12 @@
                 Cidade:
                 <asp:DropDownList ID="ddlCidade" runat="server" AutoPostBack="true" ToolTip="Escolha uma Cidade"
                     OnSelectedIndexChanged="CarregarListView" />
+                <asp:Button ID="btNewBairro" runat="server" Text="Cadastrar Bairro" OnClick="NewBairro"/>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <asp:Label ID="lblAlert" runat="server" Visible="false" />
+                <div ID="divAlerta" runat="server" Visible="false" />
             </td>
         </tr>
     </table>
@@ -39,7 +40,7 @@
                 </caption>
                 <tr>
                     <td colspan="3">
-                        <asp:Button ID="btNewBairro" runat="server" Text="Cadastrar Bairro" OnClick="NewBairro" />
+         
                     </td>
                 </tr>
                 <tr>
@@ -85,15 +86,17 @@
             <tr>
                 <td visible="false" runat="server">
                     <asp:Label ID="lblId" runat="server" Visible="false" />
+               
+                </td>
+                <td>
+                   
+                    <asp:TextBox ID="txtBairro" runat="server" />
                     <asp:RequiredFieldValidator ID="rfvTxtbairro" ControlToValidate="txtbairro" ErrorMessage="* Campo Obrigatorio"
                         runat="server" Display="Dynamic" SetFocusOnError="true" />
                 </td>
                 <td>
-                    <asp:TextBox ID="txtBairro" runat="server" />
-                </td>
-                <td>
-                    <asp:Button ID="Save" CommandName="Update" runat="server" Text="Salvar" />
-                    <asp:Button ID="Cancel" CommandName="Cancel" runat="server" Text="Cancelar" />
+                    <asp:Button ID="btSave" CommandName="Update" runat="server" Text="Salvar" />
+                    <asp:Button ID="btCancel" CommandName="Cancel" runat="server" Text="Cancelar" />
                 </td>
             </tr>
         </EditItemTemplate>

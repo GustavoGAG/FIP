@@ -56,7 +56,8 @@
                         <li><a href="Matricula.aspx">CADASTRO</a></li>
                         <li><a href="Matricula_Print.aspx">PESQUISA</a></li>
                         <li><a href="Contato.aspx">FALE CONOSCO</a></li>
-                        <li><a href="Sobre.aspx">SOBRE</a></li>
+                       <%-- <li><a href="Sobre.aspx">SOBRE</a></li>--%>
+                        <li><a href="Login.aspx">Login</a></li>
                     </ul>
                 </nav>
                 <header id="normalheader">

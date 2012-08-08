@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Login Administrativo - MI5" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebSite.Login" Culture="pt-BR" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebSite.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadMain" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyMain" runat="server">

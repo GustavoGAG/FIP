@@ -118,11 +118,11 @@ namespace WebSite.Settings
         {
             if (e.Item.ItemType == ListViewItemType.DataItem)
             {
-                Label lblID = (Label)e.Item.FindControl("lblID");
-                lblID.Text = DataBinder.Eval(e.Item.DataItem, "id").ToString();
+                Label lblId = (Label)e.Item.FindControl("lblID");
+                lblId.Text = DataBinder.Eval(e.Item.DataItem, "id").ToString();
 
                 Label lblDeficiencia = (Label)e.Item.FindControl("lblDeficiencia");
-                lblID.Text = DataBinder.Eval(e.Item.DataItem, "deficiencia").ToString();
+                lblDeficiencia.Text = DataBinder.Eval(e.Item.DataItem,"deficiencia").ToString();
 
 
             }

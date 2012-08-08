@@ -10,24 +10,15 @@
 namespace WebSite {
     
     
-    public partial class EstatisticaCadastro {
+    public partial class Login {
         
         /// <summary>
-        /// Controle divAlerta.
+        /// Controle formLogin.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAlerta;
-        
-        /// <summary>
-        /// Controle lvEstatisticaEstado.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lvEstatisticaEstado;
+        protected global::System.Web.UI.WebControls.Login formLogin;
     }
 }
