@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="DataAcess.ADOContext" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CMARCAgEAhAIACQACAAAIACFAEgBADUMWSAEMEBhOsk=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Administrador" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JCBRMYgAhCiDAmAQZqE8JYgAJj9ghFADxSUQBNmRhOg=</HashCode>
+      <FileName>Administrador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Bairro">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <Members>
+      <Field Name="_IdBairro" Hidden="true" />
+      <Field Name="_IdCidade" Hidden="true" />
+      <Method Name="OnIdBairroChanged" Hidden="true" />
+      <Method Name="OnIdBairroChanging" Hidden="true" />
+      <Method Name="OnIdCidadeChanged" Hidden="true" />
+      <Method Name="OnIdCidadeChanging" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIgAIAAAAAAAAAAAAAAgIYAFAAyEAAEBgAAAAJkQAMg=</HashCode>
+      <FileName>Bairro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.CertidaoNascimento" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAhAIJACAYAAAAAEIICgUYAAEsgAAGkCBAQICJkRAIQ=</HashCode>
+      <FileName>CertidaoNascimento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Cidade">
+    <Position X="4.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIIIIQAACAACAIIAgMZAFAIgEAAAAgAAAABkYAIA=</HashCode>
+      <FileName>Cidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Escola" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oCgAIIAEgAgAAAASIYAgMZBEBIwAAAEBggCDAJ0QIMg=</HashCode>
+      <FileName>Escola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Estado" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAIIIAAIAAAKAIIAAIAAAEAgAgAQAgAAAAAkQAAA=</HashCode>
+      <FileName>Estado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.MotivoMatricula" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgAAAAAAAAAAAACAAAAAABAAAAAQEAAAAAAEUAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Pesquisa" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIDiAQAAgiAAAAgAEBAABIARBYQAEBSQAggAAEA=</HashCode>
+      <FileName>Pesquisa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Responsavel" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIASABQgCAAAAAIIgABEAACCVIAQAwQIAgIERJQUgAA=</HashCode>
+      <FileName>Responsavel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.SerieEscola" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABQAAAAACAAAAAEAEQAAAgAAACQgEAAQAJAAAAM=</HashCode>
+      <FileName>SerieEscola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.TipoEscola" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQBAAgIQBEAAgEAAACgAAAAJEQIAA=</HashCode>
+      <FileName>TipoEscola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Usuario" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>FEigKp6DQgKEAGA04JC0L5okri6gwFKNhBMDxE2UFMs=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAcess.Properties.Settings">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

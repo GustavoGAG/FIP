@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite_RC", "WebSite_RC\WebSite_RC.csproj", "{0F838790-5430-4574-804C-4C0E56367560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcess", "DataAcess\DataAcess.csproj", "{F8563C3B-C597-4F59-9978-5286D20708B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{3100A9A9-6A9C-42F5-9427-C0241876D472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoDeTeste", "ProjetoDeTeste\ProjetoDeTeste.csproj", "{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B2E42FB8-715D-4459-B5CA-E081A6B3795A}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Solution_RC.vsmdi = Solution_RC.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferramentas", "..\..\Dropbox\z.Trabalhos\z.DLLs\Ultilitarios\Ferramentas.csproj", "{560AC010-3C76-4FF1-9F4F-E998C6494C5C}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Solution_RC.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = WebSite Fundação Iolanda Pascoá auxiliando a matricula escolar.
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F838790-5430-4574-804C-4C0E56367560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F838790-5430-4574-804C-4C0E56367560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F838790-5430-4574-804C-4C0E56367560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F838790-5430-4574-804C-4C0E56367560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8563C3B-C597-4F59-9978-5286D20708B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8563C3B-C597-4F59-9978-5286D20708B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8563C3B-C597-4F59-9978-5286D20708B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8563C3B-C597-4F59-9978-5286D20708B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3100A9A9-6A9C-42F5-9427-C0241876D472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3100A9A9-6A9C-42F5-9427-C0241876D472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3100A9A9-6A9C-42F5-9427-C0241876D472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3100A9A9-6A9C-42F5-9427-C0241876D472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50ADB4CD-0FFC-459D-A6F7-0BECBE734B64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{560AC010-3C76-4FF1-9F4F-E998C6494C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{560AC010-3C76-4FF1-9F4F-E998C6494C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{560AC010-3C76-4FF1-9F4F-E998C6494C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{560AC010-3C76-4FF1-9F4F-E998C6494C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
